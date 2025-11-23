@@ -1,19 +1,35 @@
 [
   {
     "rulesetId": "ironsworn-core",
+    "key": "discover_a_site",
+    "name": "Discover a Site",
+    "category": "delve",
+    "rollType": "special",
+    "statsUsed": [],
+    "text": {
+      "summary": "Define a site before delving it.",
+      "trigger": "When you resolve to enter a perilous site, choose its theme, domain, and rank; if returning, roll both challenge dice, clear progress equal to the lowest, and resume exploration.",
+      "outcomes": {
+        "strongHit": "Set theme/domain/rank, clear returning progress as directed, then Delve the Depths. No roll is made for this move.",
+        "weakHit": "Set theme/domain/rank, clear returning progress as directed, then Delve the Depths. No roll is made for this move.",
+        "miss": "Set theme/domain/rank, clear returning progress as directed, then Delve the Depths. No roll is made for this move."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
     "key": "delve_the_depths",
     "name": "Delve the Depths",
     "category": "delve",
     "rollType": "action",
     "statsUsed": ["edge", "shadow", "wits"],
-    "rankOptions": ["Troublesome", "Dangerous", "Formidable", "Extreme", "Epic"],
     "text": {
-      "summary": "Explore a perilous site to advance deeper.",
-      "trigger": "When you traverse a perilous site in search of objectives, roll to delve.",
+      "summary": "Explore a perilous site area by area.",
+      "trigger": "When you traverse an area within a perilous site, describe the approach (edge for haste, shadow for stealth, wits for observation) and roll.",
       "outcomes": {
-        "strongHit": "You make good progress and avoid new dangers. Mark progress according to the site rank.",
-        "weakHit": "You mark progress but encounter a complication or danger.",
-        "miss": "You are waylaid by a peril or discover a new threat. Pay the price."
+        "strongHit": "You delve deeper. Mark progress per rank and Find an Opportunity (on a match or by choice when allowed).",
+        "weakHit": "Mark progress, then consult the approach table: results vary from also Revealing a Danger, simply marking progress, choosing between progress or opportunity, taking both, or marking progress twice and Revealing a Danger depending on the roll range for your stat.",
+        "miss": "Reveal a Danger."
       }
     }
   },
@@ -23,13 +39,82 @@
     "name": "Find an Opportunity",
     "category": "delve",
     "rollType": "special",
+    "statsUsed": [],
     "text": {
-      "summary": "A fortunate event or helpful discovery is revealed.",
-      "trigger": "When an opportunity is revealed within a site, envision it and take an appropriate bonus.",
+      "summary": "Leverage a helpful situation inside a site.",
+      "trigger": "When you encounter a helpful situation or feature within a site (often from Delve the Depths), roll on the opportunity table or envision one.",
       "outcomes": {
-        "strongHit": "You capitalize on the moment. Choose an immediate benefit such as +1 momentum or progress.",
-        "weakHit": "The opportunity comes with a cost or complication. Gain a benefit but also a new threat.",
-        "miss": "The supposed opportunity was a trap or distraction. Face a new peril."
+        "strongHit": "Gain insight or prepare: take +1 momentum; or act now by making a non-progress move that leverages the opportunity with +1 and take +1 momentum on a hit.",
+        "weakHit": "Gain insight or prepare: take +1 momentum; or act now by making a non-progress move that leverages the opportunity with +1 and take +1 momentum on a hit.",
+        "miss": "Gain insight or prepare: take +1 momentum; or act now by making a non-progress move that leverages the opportunity with +1 and take +1 momentum on a hit."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "reveal_a_danger",
+    "name": "Reveal a Danger",
+    "category": "delve",
+    "rollType": "special",
+    "statsUsed": [],
+    "text": {
+      "summary": "Bring a new peril into play inside the site.",
+      "trigger": "When you encounter a risky situation within a site (often on a weak hit or miss), envision the danger or roll on the danger table.",
+      "outcomes": {
+        "strongHit": "Reveal the danger per the table: it may come from theme/domain, a hostile denizen, hazard, complication, blocked path, lost resource, delay, mystery, or rolling twice. No success/failure is rolled for this move.",
+        "weakHit": "Reveal the danger per the table: it may come from theme/domain, a hostile denizen, hazard, complication, blocked path, lost resource, delay, mystery, or rolling twice. No success/failure is rolled for this move.",
+        "miss": "Reveal the danger per the table: it may come from theme/domain, a hostile denizen, hazard, complication, blocked path, lost resource, delay, mystery, or rolling twice. No success/failure is rolled for this move."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "check_your_gear",
+    "name": "Check Your Gear",
+    "category": "delve",
+    "rollType": "action",
+    "statsUsed": ["supply"],
+    "text": {
+      "summary": "See if you packed what you need.",
+      "trigger": "When you look for a specific helpful item and have at least +1 supply, roll +supply.",
+      "outcomes": {
+        "strongHit": "You have it. Take +1 momentum.",
+        "weakHit": "You have it, but resources are stretched. Take +1 momentum and suffer -1 supply.",
+        "miss": "You don’t have it and the situation worsens. Pay the Price."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "locate_your_objective",
+    "name": "Locate Your Objective",
+    "category": "delve",
+    "rollType": "progress",
+    "statsUsed": [],
+    "text": {
+      "summary": "Resolve the outcome of exploring the site.",
+      "trigger": "When your exploration of a site comes to an end, roll the site’s progress against the challenge dice (ignore momentum).",
+      "outcomes": {
+        "strongHit": "You locate your objective and the situation favors you. Choose one: make another (non-progress) move now with +1, or take +1 momentum.",
+        "weakHit": "You locate your objective but face an unforeseen hazard or complication. Envision it.",
+        "miss": "Your objective is out of reach or was misunderstood, or the site extends further. If you press on, clear all but one progress and raise the site’s rank by one (to a max of epic)."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "finish_an_expedition",
+    "name": "Finish an Expedition",
+    "category": "delve",
+    "rollType": "progress",
+    "statsUsed": [],
+    "text": {
+      "summary": "Resolve travel through a perilous expedition track.",
+      "trigger": "When your expedition or long trek reaches its end, roll its progress against the challenge dice (ignore momentum).",
+      "outcomes": {
+        "strongHit": "You reach the destination and the situation favors you. Choose one: make another (non-progress) move now with +1, or take +1 momentum.",
+        "weakHit": "You arrive but face an unforeseen hazard or complication. Envision what awaits.",
+        "miss": "The destination slips away or new threats arise. Clear all but one progress if you continue, and face the cost before pressing on."
       }
     }
   },
@@ -38,14 +123,117 @@
     "key": "escape_the_depths",
     "name": "Escape the Depths",
     "category": "delve",
-    "rollType": "progress",
+    "rollType": "action",
+    "statsUsed": ["edge", "heart", "iron", "wits", "shadow"],
     "text": {
-      "summary": "Flee or withdraw from a perilous site.",
-      "trigger": "When you attempt to escape a site and get to safety, roll your progress.",
+      "summary": "Withdraw or flee from a site.",
+      "trigger": "When you try to get out of a site, choose your approach (edge to move fast, heart to steel yourself, iron to fight through, wits to retrace or find a path, shadow to stay unseen) and roll.",
       "outcomes": {
-        "strongHit": "You get out quickly or avoid pursuit. You and any allies are safe.",
-        "weakHit": "You escape but the situation remains tense or you leave something behind.",
-        "miss": "You are pursued, trapped, or face a new calamity within the depths."
+        "strongHit": "You make your way out safely. Take +1 momentum.",
+        "weakHit": "You get out, but choose one price: Endure Harm, Endure Stress, delay with a cost, leave something behind, face a new complication outside, or a denizen plots revenge.",
+        "miss": "A dire threat or obstacle blocks your escape. Reveal a Danger; if you survive, you may try again."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "advance_a_threat",
+    "name": "Advance a Threat",
+    "category": "delve",
+    "rollType": "special",
+    "statsUsed": [],
+    "text": {
+      "summary": "Resolve menace track changes when threats press forward.",
+      "trigger": "When inaction, failure, or delay lets a threat press its agenda, roll on the threat table and envision the development.",
+      "outcomes": {
+        "strongHit": "1-30: the threat readies a step or new danger; if you can prevent it and succeed, Reach a Milestone, otherwise mark menace. 31-70: mark menace. 71-100: mark menace twice for a dramatic move. A match also reveals something surprising. No direct hit/miss roll is made for this move.",
+        "weakHit": "1-30: the threat readies a step or new danger; if you can prevent it and succeed, Reach a Milestone, otherwise mark menace. 31-70: mark menace. 71-100: mark menace twice for a dramatic move. A match also reveals something surprising. No direct hit/miss roll is made for this move.",
+        "miss": "1-30: the threat readies a step or new danger; if you can prevent it and succeed, Reach a Milestone, otherwise mark menace. 31-70: mark menace. 71-100: mark menace twice for a dramatic move. A match also reveals something surprising. No direct hit/miss roll is made for this move."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "take_a_hiatus",
+    "name": "Take a Hiatus",
+    "category": "delve",
+    "rollType": "special",
+    "statsUsed": [],
+    "text": {
+      "summary": "Recover while threats loom.",
+      "trigger": "When you spend extended time recovering in a safe place while threats are active, perform hiatus steps.",
+      "outcomes": {
+        "strongHit": "Clear any conditions, set health/spirit/supply/companion health to max, and reset momentum. Then, for each active threat, Advance a Threat. No roll is made for this move.",
+        "weakHit": "Clear any conditions, set health/spirit/supply/companion health to max, and reset momentum. Then, for each active threat, Advance a Threat. No roll is made for this move.",
+        "miss": "Clear any conditions, set health/spirit/supply/companion health to max, and reset momentum. Then, for each active threat, Advance a Threat. No roll is made for this move."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "mark_your_failure",
+    "name": "Mark Your Failure",
+    "category": "delve",
+    "rollType": "special",
+    "statsUsed": [],
+    "text": {
+      "summary": "Track misses on the failure track.",
+      "trigger": "When you make a move and score a miss, mark a tick on your failure track (mark two ticks on a progress move miss).",
+      "outcomes": {
+        "strongHit": "Mark the ticks as prescribed. No roll is made for this move.",
+        "weakHit": "Mark the ticks as prescribed. No roll is made for this move.",
+        "miss": "Mark the ticks as prescribed. No roll is made for this move."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "learn_from_your_failures",
+    "name": "Learn From Your Failures",
+    "category": "delve",
+    "rollType": "progress",
+    "statsUsed": [],
+    "text": {
+      "summary": "Convert failure track progress into experience.",
+      "trigger": "When your failure track is +6 or greater and you spend time reflecting, roll the failure track’s progress against the challenge dice (ignore momentum).",
+      "outcomes": {
+        "strongHit": "Take 3 experience and clear the track, then choose: discard an asset and gain 2 XP per marked ability, Swear an Iron Vow and reroll any dice, or take +3 momentum.",
+        "weakHit": "Take 2 experience and clear the track.",
+        "miss": "Take 1 experience and clear the track, but you set off on an ill-fated path; envision the fallout."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "wield_a_rarity",
+    "name": "Wield a Rarity",
+    "category": "delve",
+    "rollType": "special",
+    "statsUsed": [],
+    "text": {
+      "summary": "Channel the power of an augmented asset.",
+      "trigger": "When a rarity aids a move, roll its rarity die instead of your action die and resolve the move normally.",
+      "outcomes": {
+        "strongHit": "If the rarity die shows 6, the power manifests dramatically: count it as an automatic strong hit and take +1 momentum.",
+        "weakHit": "If the rarity die shows 5 on a hit, the power manifests subtly: take +1 momentum.",
+        "miss": "If you miss and the rarity die shows 1, the rarity’s power fails or works against you."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "reveal_a_danger_alternate",
+    "name": "Reveal a Danger (Alternate)",
+    "category": "delve",
+    "rollType": "special",
+    "statsUsed": [],
+    "text": {
+      "summary": "Use the alternate danger table for sites.",
+      "trigger": "When you encounter a risky situation within a site, you may use the alternate danger table instead of the standard one.",
+      "outcomes": {
+        "strongHit": "Reveal the danger per the alternate table: hostile denizen, hazard, complication, harrowing sensation, consequence of prior choice, blocked path, lost resource, mystery, delay, or rolling twice. No success/failure roll is made for this move.",
+        "weakHit": "Reveal the danger per the alternate table: hostile denizen, hazard, complication, harrowing sensation, consequence of prior choice, blocked path, lost resource, mystery, delay, or rolling twice. No success/failure roll is made for this move.",
+        "miss": "Reveal the danger per the alternate table: hostile denizen, hazard, complication, harrowing sensation, consequence of prior choice, blocked path, lost resource, mystery, delay, or rolling twice. No success/failure roll is made for this move."
       }
     }
   }
