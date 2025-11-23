@@ -1,37 +1,7054 @@
 [
   {
     "rulesetId": "ironsworn-core",
-    "oracleId": "ironsworn:delve:reveal_danger",
-    "group": "Delve",
-    "name": "Reveal a Danger",
+    "oracleId": "ironsworn:delve:character:activity",
+    "group": "Character",
+    "name": "Activity",
     "dice": "1d100",
     "entries": [
-      { "min": 1, "max": 10, "result": "An alarm is triggered or guardians are alerted" },
-      { "min": 11, "max": 20, "result": "A hidden trap is sprung" },
-      { "min": 21, "max": 30, "result": "A path is blocked by a recent collapse" },
-      { "min": 31, "max": 40, "result": "You are separated or disoriented" },
-      { "min": 41, "max": 50, "result": "A rival or hostile denizen arrives" },
-      { "min": 51, "max": 60, "result": "Resources are depleted or equipment fails" },
-      { "min": 61, "max": 70, "result": "A clue is misleading or a false trail" },
-      { "min": 71, "max": 80, "result": "You attract unwanted attention from within" },
-      { "min": 81, "max": 90, "result": "A lurking horror reveals its presence" },
-      { "min": 91, "max": 100, "result": "Roll twice and combine the threats" }
+      {
+        "min": 1,
+        "max": 2,
+        "result": "Guarding"
+      },
+      {
+        "min": 3,
+        "max": 4,
+        "result": "Preserving"
+      },
+      {
+        "min": 5,
+        "max": 6,
+        "result": "Constructing"
+      },
+      {
+        "min": 7,
+        "max": 8,
+        "result": "Mending"
+      },
+      {
+        "min": 9,
+        "max": 10,
+        "result": "Assisting"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "Securing"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "Learning"
+      },
+      {
+        "min": 15,
+        "max": 16,
+        "result": "Sneaking"
+      },
+      {
+        "min": 17,
+        "max": 18,
+        "result": "Fleeing"
+      },
+      {
+        "min": 19,
+        "max": 20,
+        "result": "Sacrificing"
+      },
+      {
+        "min": 21,
+        "max": 22,
+        "result": "Creating"
+      },
+      {
+        "min": 23,
+        "max": 24,
+        "result": "Luring"
+      },
+      {
+        "min": 25,
+        "max": 26,
+        "result": "Hunting"
+      },
+      {
+        "min": 27,
+        "max": 28,
+        "result": "Seizing"
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "result": "Bargaining"
+      },
+      {
+        "min": 31,
+        "max": 32,
+        "result": "Mimicking"
+      },
+      {
+        "min": 33,
+        "max": 34,
+        "result": "Tricking"
+      },
+      {
+        "min": 35,
+        "max": 36,
+        "result": "Tracking"
+      },
+      {
+        "min": 37,
+        "max": 38,
+        "result": "Escorting"
+      },
+      {
+        "min": 39,
+        "max": 40,
+        "result": "Hiding"
+      },
+      {
+        "min": 41,
+        "max": 42,
+        "result": "Raiding"
+      },
+      {
+        "min": 43,
+        "max": 44,
+        "result": "Socializing"
+      },
+      {
+        "min": 45,
+        "max": 46,
+        "result": "Exploring"
+      },
+      {
+        "min": 47,
+        "max": 48,
+        "result": "Journeying"
+      },
+      {
+        "min": 49,
+        "max": 50,
+        "result": "Supporting"
+      },
+      {
+        "min": 51,
+        "max": 52,
+        "result": "Avoiding"
+      },
+      {
+        "min": 53,
+        "max": 54,
+        "result": "Disabling"
+      },
+      {
+        "min": 55,
+        "max": 56,
+        "result": "Leading"
+      },
+      {
+        "min": 57,
+        "max": 58,
+        "result": "Assaulting"
+      },
+      {
+        "min": 59,
+        "max": 60,
+        "result": "Ensnaring"
+      },
+      {
+        "min": 61,
+        "max": 62,
+        "result": "Defending"
+      },
+      {
+        "min": 63,
+        "max": 64,
+        "result": "Recovering"
+      },
+      {
+        "min": 65,
+        "max": 66,
+        "result": "Patrolling"
+      },
+      {
+        "min": 67,
+        "max": 68,
+        "result": "Resting"
+      },
+      {
+        "min": 69,
+        "max": 70,
+        "result": "Distracting"
+      },
+      {
+        "min": 71,
+        "max": 72,
+        "result": "Leaving"
+      },
+      {
+        "min": 73,
+        "max": 74,
+        "result": "Fighting"
+      },
+      {
+        "min": 75,
+        "max": 76,
+        "result": "Ambushing"
+      },
+      {
+        "min": 77,
+        "max": 78,
+        "result": "Controlling"
+      },
+      {
+        "min": 79,
+        "max": 80,
+        "result": "Observing"
+      },
+      {
+        "min": 81,
+        "max": 82,
+        "result": "Gathering"
+      },
+      {
+        "min": 83,
+        "max": 84,
+        "result": "Suffering"
+      },
+      {
+        "min": 85,
+        "max": 86,
+        "result": "Threatening"
+      },
+      {
+        "min": 87,
+        "max": 88,
+        "result": "Searching"
+      },
+      {
+        "min": 89,
+        "max": 90,
+        "result": "Destroying"
+      },
+      {
+        "min": 91,
+        "max": 92,
+        "result": "Restoring"
+      },
+      {
+        "min": 93,
+        "max": 94,
+        "result": "Consuming"
+      },
+      {
+        "min": 95,
+        "max": 96,
+        "result": "Removing"
+      },
+      {
+        "min": 97,
+        "max": 98,
+        "result": "Inspecting"
+      },
+      {
+        "min": 99,
+        "max": 100,
+        "result": "Summoning"
+      }
     ],
-    "description": "Complications that appear while exploring a site."
+    "description": "To give an NPC or faction a task or objective, use the Activity oracle. For more detail, you can combine this prompt with the [Focus](id:delve/oracles/feature/focus) oracle or [Theme](id:classic/oracles/action_and_theme/theme) oracle."
   },
   {
     "rulesetId": "ironsworn-core",
-    "oracleId": "ironsworn:delve:feature",
-    "group": "Delve",
-    "name": "Discover a Feature",
+    "oracleId": "ironsworn:delve:character:disposition",
+    "group": "Character",
+    "name": "Disposition",
     "dice": "1d100",
     "entries": [
-      { "min": 1, "max": 20, "result": "Ancient carving depicting forgotten oaths" },
-      { "min": 21, "max": 40, "result": "Collapsed hall exposing a hidden chamber" },
-      { "min": 41, "max": 60, "result": "Still pool reflecting distant lights" },
-      { "min": 61, "max": 80, "result": "Makeshift camp left by a previous delver" },
-      { "min": 81, "max": 100, "result": "Whispering winds carrying ominous voices" }
+      {
+        "min": 1,
+        "max": 6,
+        "result": "Helpful"
+      },
+      {
+        "min": 7,
+        "max": 13,
+        "result": "Friendly"
+      },
+      {
+        "min": 14,
+        "max": 20,
+        "result": "Cooperative"
+      },
+      {
+        "min": 21,
+        "max": 28,
+        "result": "Curious"
+      },
+      {
+        "min": 29,
+        "max": 36,
+        "result": "Indifferent"
+      },
+      {
+        "min": 37,
+        "max": 47,
+        "result": "Suspicious"
+      },
+      {
+        "min": 48,
+        "max": 57,
+        "result": "Wanting"
+      },
+      {
+        "min": 58,
+        "max": 67,
+        "result": "Desperate"
+      },
+      {
+        "min": 68,
+        "max": 76,
+        "result": "Demanding"
+      },
+      {
+        "min": 77,
+        "max": 85,
+        "result": "Unfriendly"
+      },
+      {
+        "min": 86,
+        "max": 93,
+        "result": "Threatening"
+      },
+      {
+        "min": 94,
+        "max": 100,
+        "result": "Hostile"
+      }
     ],
-    "description": "Details to flesh out chambers, passages, or rooms."
+    "description": "Use this oracle when you want to define the initial tone of an encounter with an NPC or faction."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:combat_event:method",
+    "group": "Combat Event",
+    "name": "Method",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 2,
+        "result": "Defy"
+      },
+      {
+        "min": 3,
+        "max": 4,
+        "result": "Break"
+      },
+      {
+        "min": 5,
+        "max": 6,
+        "result": "Trick"
+      },
+      {
+        "min": 7,
+        "max": 8,
+        "result": "Evade"
+      },
+      {
+        "min": 9,
+        "max": 10,
+        "result": "Protect"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "Overwhelm"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "Persevere"
+      },
+      {
+        "min": 15,
+        "max": 16,
+        "result": "Assist"
+      },
+      {
+        "min": 17,
+        "max": 18,
+        "result": "Await"
+      },
+      {
+        "min": 19,
+        "max": 20,
+        "result": "Abort"
+      },
+      {
+        "min": 21,
+        "max": 22,
+        "result": "Block"
+      },
+      {
+        "min": 23,
+        "max": 24,
+        "result": "Collide"
+      },
+      {
+        "min": 25,
+        "max": 26,
+        "result": "Focus"
+      },
+      {
+        "min": 27,
+        "max": 28,
+        "result": "Advance"
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "result": "Breach"
+      },
+      {
+        "min": 31,
+        "max": 32,
+        "result": "Endure"
+      },
+      {
+        "min": 33,
+        "max": 34,
+        "result": "Assault"
+      },
+      {
+        "min": 35,
+        "max": 36,
+        "result": "Charge"
+      },
+      {
+        "min": 37,
+        "max": 38,
+        "result": "Escalate"
+      },
+      {
+        "min": 39,
+        "max": 40,
+        "result": "Sunder"
+      },
+      {
+        "min": 41,
+        "max": 42,
+        "result": "Shatter"
+      },
+      {
+        "min": 43,
+        "max": 44,
+        "result": "Aim"
+      },
+      {
+        "min": 45,
+        "max": 46,
+        "result": "Stagger"
+      },
+      {
+        "min": 47,
+        "max": 48,
+        "result": "Counter"
+      },
+      {
+        "min": 49,
+        "max": 50,
+        "result": "Seize"
+      },
+      {
+        "min": 51,
+        "max": 52,
+        "result": "Impact"
+      },
+      {
+        "min": 53,
+        "max": 54,
+        "result": "Entangle"
+      },
+      {
+        "min": 55,
+        "max": 56,
+        "result": "Hold"
+      },
+      {
+        "min": 57,
+        "max": 58,
+        "result": "Deflect"
+      },
+      {
+        "min": 59,
+        "max": 60,
+        "result": "Drop"
+      },
+      {
+        "min": 61,
+        "max": 62,
+        "result": "Lose"
+      },
+      {
+        "min": 63,
+        "max": 64,
+        "result": "Sweep"
+      },
+      {
+        "min": 65,
+        "max": 66,
+        "result": "Secure"
+      },
+      {
+        "min": 67,
+        "max": 68,
+        "result": "Cover"
+      },
+      {
+        "min": 69,
+        "max": 70,
+        "result": "Withdraw"
+      },
+      {
+        "min": 71,
+        "max": 72,
+        "result": "Clash"
+      },
+      {
+        "min": 73,
+        "max": 74,
+        "result": "Amplify"
+      },
+      {
+        "min": 75,
+        "max": 76,
+        "result": "Batter"
+      },
+      {
+        "min": 77,
+        "max": 78,
+        "result": "Feint"
+      },
+      {
+        "min": 79,
+        "max": 80,
+        "result": "Shove"
+      },
+      {
+        "min": 81,
+        "max": 82,
+        "result": "Embed"
+      },
+      {
+        "min": 83,
+        "max": 84,
+        "result": "Affect"
+      },
+      {
+        "min": 85,
+        "max": 86,
+        "result": "Probe"
+      },
+      {
+        "min": 87,
+        "max": 88,
+        "result": "Force"
+      },
+      {
+        "min": 89,
+        "max": 90,
+        "result": "Intensify"
+      },
+      {
+        "min": 91,
+        "max": 92,
+        "result": "Distract"
+      },
+      {
+        "min": 93,
+        "max": 94,
+        "result": "Challenge"
+      },
+      {
+        "min": 95,
+        "max": 96,
+        "result": "Brawl"
+      },
+      {
+        "min": 97,
+        "max": 98,
+        "result": "Coordinate"
+      },
+      {
+        "min": 99,
+        "max": 100,
+        "result": "Overrun"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:combat_event:target",
+    "group": "Combat Event",
+    "name": "Target",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 2,
+        "result": "Control"
+      },
+      {
+        "min": 3,
+        "max": 4,
+        "result": "Defense"
+      },
+      {
+        "min": 5,
+        "max": 6,
+        "result": "Limbs"
+      },
+      {
+        "min": 7,
+        "max": 8,
+        "result": "Focus"
+      },
+      {
+        "min": 9,
+        "max": 10,
+        "result": "Advantage"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "Range"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "Stress"
+      },
+      {
+        "min": 15,
+        "max": 16,
+        "result": "Sense"
+      },
+      {
+        "min": 17,
+        "max": 18,
+        "result": "Weakness"
+      },
+      {
+        "min": 19,
+        "max": 20,
+        "result": "Opening"
+      },
+      {
+        "min": 21,
+        "max": 22,
+        "result": "Fear"
+      },
+      {
+        "min": 23,
+        "max": 24,
+        "result": "Instinct"
+      },
+      {
+        "min": 25,
+        "max": 26,
+        "result": "Footing"
+      },
+      {
+        "min": 27,
+        "max": 28,
+        "result": "Maneuver"
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "result": "Reach"
+      },
+      {
+        "min": 31,
+        "max": 32,
+        "result": "Harm"
+      },
+      {
+        "min": 33,
+        "max": 34,
+        "result": "Finesse"
+      },
+      {
+        "min": 35,
+        "max": 36,
+        "result": "Weapon"
+      },
+      {
+        "min": 37,
+        "max": 38,
+        "result": "Environment"
+      },
+      {
+        "min": 39,
+        "max": 40,
+        "result": "Technique"
+      },
+      {
+        "min": 41,
+        "max": 42,
+        "result": "Surprise"
+      },
+      {
+        "min": 43,
+        "max": 44,
+        "result": "Pride"
+      },
+      {
+        "min": 45,
+        "max": 46,
+        "result": "Wound"
+      },
+      {
+        "min": 47,
+        "max": 48,
+        "result": "Precision"
+      },
+      {
+        "min": 49,
+        "max": 50,
+        "result": "Ally"
+      },
+      {
+        "min": 51,
+        "max": 52,
+        "result": "Ground"
+      },
+      {
+        "min": 53,
+        "max": 54,
+        "result": "Courage"
+      },
+      {
+        "min": 55,
+        "max": 56,
+        "result": "Companion"
+      },
+      {
+        "min": 57,
+        "max": 58,
+        "result": "Object"
+      },
+      {
+        "min": 59,
+        "max": 60,
+        "result": "Momentum"
+      },
+      {
+        "min": 61,
+        "max": 62,
+        "result": "Speed"
+      },
+      {
+        "min": 63,
+        "max": 64,
+        "result": "Strength"
+      },
+      {
+        "min": 65,
+        "max": 66,
+        "result": "Supply"
+      },
+      {
+        "min": 67,
+        "max": 68,
+        "result": "Terrain"
+      },
+      {
+        "min": 69,
+        "max": 70,
+        "result": "Armor"
+      },
+      {
+        "min": 71,
+        "max": 72,
+        "result": "Skill"
+      },
+      {
+        "min": 73,
+        "max": 74,
+        "result": "Body"
+      },
+      {
+        "min": 75,
+        "max": 76,
+        "result": "Protection"
+      },
+      {
+        "min": 77,
+        "max": 78,
+        "result": "Resolve"
+      },
+      {
+        "min": 79,
+        "max": 80,
+        "result": "Ferocity"
+      },
+      {
+        "min": 81,
+        "max": 82,
+        "result": "Shield"
+      },
+      {
+        "min": 83,
+        "max": 84,
+        "result": "Ammo"
+      },
+      {
+        "min": 85,
+        "max": 86,
+        "result": "Anger"
+      },
+      {
+        "min": 87,
+        "max": 88,
+        "result": "Opportunity"
+      },
+      {
+        "min": 89,
+        "max": 90,
+        "result": "Balance"
+      },
+      {
+        "min": 91,
+        "max": 92,
+        "result": "Position"
+      },
+      {
+        "min": 93,
+        "max": 94,
+        "result": "Barrier"
+      },
+      {
+        "min": 95,
+        "max": 96,
+        "result": "Strategy"
+      },
+      {
+        "min": 97,
+        "max": 98,
+        "result": "Grasp"
+      },
+      {
+        "min": 99,
+        "max": 100,
+        "result": "Power"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:feature:aspect",
+    "group": "Feature",
+    "name": "Aspect",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 2,
+        "result": "Blocked"
+      },
+      {
+        "min": 3,
+        "max": 4,
+        "result": "Crafted"
+      },
+      {
+        "min": 5,
+        "max": 6,
+        "result": "Ancient"
+      },
+      {
+        "min": 7,
+        "max": 8,
+        "result": "Sunken"
+      },
+      {
+        "min": 9,
+        "max": 10,
+        "result": "Trapped"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "Secret"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "Toxic"
+      },
+      {
+        "min": 15,
+        "max": 16,
+        "result": "Ruined"
+      },
+      {
+        "min": 17,
+        "max": 18,
+        "result": "Defended"
+      },
+      {
+        "min": 19,
+        "max": 20,
+        "result": "Decaying"
+      },
+      {
+        "min": 21,
+        "max": 22,
+        "result": "Marked"
+      },
+      {
+        "min": 23,
+        "max": 24,
+        "result": "Guarded"
+      },
+      {
+        "min": 25,
+        "max": 26,
+        "result": "Inaccessible"
+      },
+      {
+        "min": 27,
+        "max": 28,
+        "result": "Foreboding"
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "result": "Veiled"
+      },
+      {
+        "min": 31,
+        "max": 32,
+        "result": "Deep"
+      },
+      {
+        "min": 33,
+        "max": 34,
+        "result": "Depleted"
+      },
+      {
+        "min": 35,
+        "max": 36,
+        "result": "Foul"
+      },
+      {
+        "min": 37,
+        "max": 38,
+        "result": "Elevated"
+      },
+      {
+        "min": 39,
+        "max": 40,
+        "result": "Moving"
+      },
+      {
+        "min": 41,
+        "max": 42,
+        "result": "Unnatural"
+      },
+      {
+        "min": 43,
+        "max": 44,
+        "result": "Active"
+      },
+      {
+        "min": 45,
+        "max": 46,
+        "result": "Confined"
+      },
+      {
+        "min": 47,
+        "max": 48,
+        "result": "Fortified"
+      },
+      {
+        "min": 49,
+        "max": 50,
+        "result": "Collapsed"
+      },
+      {
+        "min": 51,
+        "max": 52,
+        "result": "Isolated"
+      },
+      {
+        "min": 53,
+        "max": 54,
+        "result": "Destroyed"
+      },
+      {
+        "min": 55,
+        "max": 56,
+        "result": "Open"
+      },
+      {
+        "min": 57,
+        "max": 58,
+        "result": "Sacred"
+      },
+      {
+        "min": 59,
+        "max": 60,
+        "result": "Flooded"
+      },
+      {
+        "min": 61,
+        "max": 62,
+        "result": "Complex"
+      },
+      {
+        "min": 63,
+        "max": 64,
+        "result": "Abundant"
+      },
+      {
+        "min": 65,
+        "max": 66,
+        "result": "Hidden"
+      },
+      {
+        "min": 67,
+        "max": 68,
+        "result": "Expansive"
+      },
+      {
+        "min": 69,
+        "max": 70,
+        "result": "Mysterious"
+      },
+      {
+        "min": 71,
+        "max": 72,
+        "result": "Unstable"
+      },
+      {
+        "min": 73,
+        "max": 74,
+        "result": "Fragile"
+      },
+      {
+        "min": 75,
+        "max": 76,
+        "result": "Broken"
+      },
+      {
+        "min": 77,
+        "max": 78,
+        "result": "Ensnaring"
+      },
+      {
+        "min": 79,
+        "max": 80,
+        "result": "Pillaged"
+      },
+      {
+        "min": 81,
+        "max": 82,
+        "result": "Sealed"
+      },
+      {
+        "min": 83,
+        "max": 84,
+        "result": "Makeshift"
+      },
+      {
+        "min": 85,
+        "max": 86,
+        "result": "Treacherous"
+      },
+      {
+        "min": 87,
+        "max": 88,
+        "result": "Natural"
+      },
+      {
+        "min": 89,
+        "max": 90,
+        "result": "Dead"
+      },
+      {
+        "min": 91,
+        "max": 92,
+        "result": "Unusual"
+      },
+      {
+        "min": 93,
+        "max": 94,
+        "result": "Abandoned"
+      },
+      {
+        "min": 95,
+        "max": 96,
+        "result": "Deadly"
+      },
+      {
+        "min": 97,
+        "max": 98,
+        "result": "Forgotten"
+      },
+      {
+        "min": 99,
+        "max": 100,
+        "result": "Mystical"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:feature:focus",
+    "group": "Feature",
+    "name": "Focus",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 2,
+        "result": "Attack"
+      },
+      {
+        "min": 3,
+        "max": 4,
+        "result": "Threshold"
+      },
+      {
+        "min": 5,
+        "max": 6,
+        "result": "Boundary"
+      },
+      {
+        "min": 7,
+        "max": 8,
+        "result": "Alarm"
+      },
+      {
+        "min": 9,
+        "max": 10,
+        "result": "Exit"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "Passage"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "Crossing"
+      },
+      {
+        "min": 15,
+        "max": 16,
+        "result": "Trigger"
+      },
+      {
+        "min": 17,
+        "max": 18,
+        "result": "Trap"
+      },
+      {
+        "min": 19,
+        "max": 20,
+        "result": "Hideaway"
+      },
+      {
+        "min": 21,
+        "max": 22,
+        "result": "Nature"
+      },
+      {
+        "min": 23,
+        "max": 24,
+        "result": "Sign"
+      },
+      {
+        "min": 25,
+        "max": 26,
+        "result": "Refuge"
+      },
+      {
+        "min": 27,
+        "max": 28,
+        "result": "Valuables"
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "result": "Breach"
+      },
+      {
+        "min": 31,
+        "max": 32,
+        "result": "Route"
+      },
+      {
+        "min": 33,
+        "max": 34,
+        "result": "Location"
+      },
+      {
+        "min": 35,
+        "max": 36,
+        "result": "Trail"
+      },
+      {
+        "min": 37,
+        "max": 38,
+        "result": "Supply"
+      },
+      {
+        "min": 39,
+        "max": 40,
+        "result": "History"
+      },
+      {
+        "min": 41,
+        "max": 42,
+        "result": "Prisoner"
+      },
+      {
+        "min": 43,
+        "max": 44,
+        "result": "Habitation"
+      },
+      {
+        "min": 45,
+        "max": 46,
+        "result": "Debris"
+      },
+      {
+        "min": 47,
+        "max": 48,
+        "result": "Creature"
+      },
+      {
+        "min": 49,
+        "max": 50,
+        "result": "Lair"
+      },
+      {
+        "min": 51,
+        "max": 52,
+        "result": "Person"
+      },
+      {
+        "min": 53,
+        "max": 54,
+        "result": "Enclosure"
+      },
+      {
+        "min": 55,
+        "max": 56,
+        "result": "Remains"
+      },
+      {
+        "min": 57,
+        "max": 58,
+        "result": "Water"
+      },
+      {
+        "min": 59,
+        "max": 60,
+        "result": "Message"
+      },
+      {
+        "min": 61,
+        "max": 62,
+        "result": "Darkness"
+      },
+      {
+        "min": 63,
+        "max": 64,
+        "result": "Opening"
+      },
+      {
+        "min": 65,
+        "max": 66,
+        "result": "Weapon"
+      },
+      {
+        "min": 67,
+        "max": 68,
+        "result": "Entry"
+      },
+      {
+        "min": 69,
+        "max": 70,
+        "result": "Illumination"
+      },
+      {
+        "min": 71,
+        "max": 72,
+        "result": "Obstacle"
+      },
+      {
+        "min": 73,
+        "max": 74,
+        "result": "Craft"
+      },
+      {
+        "min": 75,
+        "max": 76,
+        "result": "Container"
+      },
+      {
+        "min": 77,
+        "max": 78,
+        "result": "Information"
+      },
+      {
+        "min": 79,
+        "max": 80,
+        "result": "Grave"
+      },
+      {
+        "min": 81,
+        "max": 82,
+        "result": "Equipment"
+      },
+      {
+        "min": 83,
+        "max": 84,
+        "result": "Shelter"
+      },
+      {
+        "min": 85,
+        "max": 86,
+        "result": "Denizen"
+      },
+      {
+        "min": 87,
+        "max": 88,
+        "result": "Environment"
+      },
+      {
+        "min": 89,
+        "max": 90,
+        "result": "Material"
+      },
+      {
+        "min": 91,
+        "max": 92,
+        "result": "Resource"
+      },
+      {
+        "min": 93,
+        "max": 94,
+        "result": "Corruption"
+      },
+      {
+        "min": 95,
+        "max": 96,
+        "result": "Death"
+      },
+      {
+        "min": 97,
+        "max": 98,
+        "result": "Function"
+      },
+      {
+        "min": 99,
+        "max": 100,
+        "result": "Power"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:monstrosity:size",
+    "group": "Monstrosity",
+    "name": "Size",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 5,
+        "result": "Tiny (rodent-sized)"
+      },
+      {
+        "min": 6,
+        "max": 30,
+        "result": "Small (hound-sized)"
+      },
+      {
+        "min": 31,
+        "max": 65,
+        "result": "Medium (person-sized)"
+      },
+      {
+        "min": 66,
+        "max": 94,
+        "result": "Large (giant-sized)"
+      },
+      {
+        "min": 95,
+        "max": 99,
+        "result": "Huge (whale-sized)"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "Titanic (incomprehensible)"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:monstrosity:primary_form",
+    "group": "Monstrosity",
+    "name": "Primary Form",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 15,
+        "result": "Beast / mammal"
+      },
+      {
+        "min": 16,
+        "max": 25,
+        "result": "Humanoid"
+      },
+      {
+        "min": 26,
+        "max": 31,
+        "result": "Bird"
+      },
+      {
+        "min": 32,
+        "max": 37,
+        "result": "Spider"
+      },
+      {
+        "min": 38,
+        "max": 43,
+        "result": "Snake"
+      },
+      {
+        "min": 44,
+        "max": 49,
+        "result": "Worm / slug"
+      },
+      {
+        "min": 50,
+        "max": 55,
+        "result": "Lizard"
+      },
+      {
+        "min": 56,
+        "max": 61,
+        "result": "Insect"
+      },
+      {
+        "min": 62,
+        "max": 66,
+        "result": "Amorphous"
+      },
+      {
+        "min": 67,
+        "max": 69,
+        "result": "Crustacean"
+      },
+      {
+        "min": 70,
+        "max": 71,
+        "result": "Fish"
+      },
+      {
+        "min": 72,
+        "max": 73,
+        "result": "Octopoid"
+      },
+      {
+        "min": 74,
+        "max": 75,
+        "result": "Amphibian"
+      },
+      {
+        "min": 76,
+        "max": 77,
+        "result": "Plant"
+      },
+      {
+        "min": 78,
+        "max": 78,
+        "result": "Incorporeal"
+      },
+      {
+        "min": 79,
+        "max": 79,
+        "result": "Mineral"
+      },
+      {
+        "min": 80,
+        "max": 80,
+        "result": "Elemental"
+      },
+      {
+        "min": 81,
+        "max": 100,
+        "result": "Hybrid (roll twice)"
+      }
+    ],
+    "description": "Some results on these tables include two related options separated by a slash (/). Pick the one which best fits the nature of the creature or is the most interesting. You can also make one of the options likely, and [Ask the Oracle](id:classic/moves/fate/ask_the_oracle) (using the pick two procedure) to confirm your choice. Or just take both!"
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:monstrosity:characteristics",
+    "group": "Monstrosity",
+    "name": "Characteristics",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 5,
+        "result": "Extra limbs"
+      },
+      {
+        "min": 6,
+        "max": 10,
+        "result": "Fangs / rows of sharp teeth"
+      },
+      {
+        "min": 11,
+        "max": 15,
+        "result": "Claws / talons"
+      },
+      {
+        "min": 16,
+        "max": 20,
+        "result": "Strange color / markings"
+      },
+      {
+        "min": 21,
+        "max": 25,
+        "result": "Horns / tusks"
+      },
+      {
+        "min": 26,
+        "max": 30,
+        "result": "Oversized mouth"
+      },
+      {
+        "min": 31,
+        "max": 35,
+        "result": "Spikes / spines"
+      },
+      {
+        "min": 36,
+        "max": 40,
+        "result": "Tail"
+      },
+      {
+        "min": 41,
+        "max": 45,
+        "result": "Multi-segmented body"
+      },
+      {
+        "min": 46,
+        "max": 50,
+        "result": "Wings"
+      },
+      {
+        "min": 51,
+        "max": 54,
+        "result": "Stinger / barbs"
+      },
+      {
+        "min": 55,
+        "max": 58,
+        "result": "Many-eyed"
+      },
+      {
+        "min": 59,
+        "max": 62,
+        "result": "Distinctive sound"
+      },
+      {
+        "min": 63,
+        "max": 66,
+        "result": "Tentacles / tendrils"
+      },
+      {
+        "min": 67,
+        "max": 69,
+        "result": "Mandibles / pincers"
+      },
+      {
+        "min": 70,
+        "max": 72,
+        "result": "Luminescent"
+      },
+      {
+        "min": 73,
+        "max": 75,
+        "result": "Antennae / sensory organs"
+      },
+      {
+        "min": 76,
+        "max": 78,
+        "result": "Proboscis / inner jaw"
+      },
+      {
+        "min": 79,
+        "max": 81,
+        "result": "Exoskeleton / shell"
+      },
+      {
+        "min": 82,
+        "max": 84,
+        "result": "Bony protuberances"
+      },
+      {
+        "min": 85,
+        "max": 87,
+        "result": "Corrupted flesh"
+      },
+      {
+        "min": 88,
+        "max": 90,
+        "result": "Semi-transparent"
+      },
+      {
+        "min": 91,
+        "max": 93,
+        "result": "Scarred / injured"
+      },
+      {
+        "min": 94,
+        "max": 95,
+        "result": "Egg sac / carried offspring"
+      },
+      {
+        "min": 96,
+        "max": 97,
+        "result": "Rotting / skeletal"
+      },
+      {
+        "min": 98,
+        "max": 98,
+        "result": "Mummified / desiccated"
+      },
+      {
+        "min": 99,
+        "max": 99,
+        "result": "Multi-headed"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "Etched with mystic runes"
+      }
+    ],
+    "description": "Roll up to four times for Characteristics and keep up to three of those results."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:monstrosity:abilities",
+    "group": "Monstrosity",
+    "name": "Abilities",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 4,
+        "result": "Keen senses"
+      },
+      {
+        "min": 5,
+        "max": 8,
+        "result": "Intimidating vocalization"
+      },
+      {
+        "min": 9,
+        "max": 12,
+        "result": "Climber"
+      },
+      {
+        "min": 13,
+        "max": 16,
+        "result": "Intelligent"
+      },
+      {
+        "min": 17,
+        "max": 20,
+        "result": "Swift"
+      },
+      {
+        "min": 21,
+        "max": 24,
+        "result": "Powerful bite"
+      },
+      {
+        "min": 25,
+        "max": 28,
+        "result": "Stealthy / ambusher"
+      },
+      {
+        "min": 29,
+        "max": 32,
+        "result": "Horrid visage"
+      },
+      {
+        "min": 33,
+        "max": 36,
+        "result": "Strong"
+      },
+      {
+        "min": 37,
+        "max": 40,
+        "result": "Camouflaged"
+      },
+      {
+        "min": 41,
+        "max": 43,
+        "result": "Flier / glider"
+      },
+      {
+        "min": 44,
+        "max": 46,
+        "result": "Poisonous"
+      },
+      {
+        "min": 47,
+        "max": 49,
+        "result": "Semiaquatic / swimmer"
+      },
+      {
+        "min": 50,
+        "max": 52,
+        "result": "Grappler / entangler"
+      },
+      {
+        "min": 53,
+        "max": 55,
+        "result": "Leaper"
+      },
+      {
+        "min": 56,
+        "max": 58,
+        "result": "Crusher / constrictor"
+      },
+      {
+        "min": 59,
+        "max": 61,
+        "result": "Armored"
+      },
+      {
+        "min": 62,
+        "max": 64,
+        "result": "Burrower"
+      },
+      {
+        "min": 65,
+        "max": 67,
+        "result": "Noxious smell"
+      },
+      {
+        "min": 68,
+        "max": 69,
+        "result": "Trap-setter"
+      },
+      {
+        "min": 70,
+        "max": 71,
+        "result": "Parasitic"
+      },
+      {
+        "min": 72,
+        "max": 73,
+        "result": "Vibration sense"
+      },
+      {
+        "min": 74,
+        "max": 75,
+        "result": "Breath weapon / toxic spew"
+      },
+      {
+        "min": 76,
+        "max": 77,
+        "result": "Mimicry"
+      },
+      {
+        "min": 78,
+        "max": 79,
+        "result": "Shapeshifting"
+      },
+      {
+        "min": 80,
+        "max": 81,
+        "result": "Control lesser creatures"
+      },
+      {
+        "min": 82,
+        "max": 83,
+        "result": "Echolocation"
+      },
+      {
+        "min": 84,
+        "max": 85,
+        "result": "Electric shock"
+      },
+      {
+        "min": 86,
+        "max": 87,
+        "result": "Acidic"
+      },
+      {
+        "min": 88,
+        "max": 89,
+        "result": "Symbiotic"
+      },
+      {
+        "min": 90,
+        "max": 91,
+        "result": "Shoot projectiles"
+      },
+      {
+        "min": 92,
+        "max": 92,
+        "result": "Paralyzing"
+      },
+      {
+        "min": 93,
+        "max": 93,
+        "result": "Immune to iron"
+      },
+      {
+        "min": 94,
+        "max": 94,
+        "result": "Feels no pain"
+      },
+      {
+        "min": 95,
+        "max": 95,
+        "result": "Enact rituals"
+      },
+      {
+        "min": 96,
+        "max": 96,
+        "result": "Create illusions"
+      },
+      {
+        "min": 97,
+        "max": 97,
+        "result": "Mind control / telepathy"
+      },
+      {
+        "min": 98,
+        "max": 98,
+        "result": "Move between realities"
+      },
+      {
+        "min": 99,
+        "max": 99,
+        "result": "Wield weapons"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "Control elements"
+      }
+    ],
+    "description": "Roll up to four times for Abilities and keep up to three of those results."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:moves:find_an_opportunity",
+    "group": "Moves",
+    "name": "Find an Opportunity",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 25,
+        "result": "The terrain favors you, or you find a hidden path."
+      },
+      {
+        "min": 26,
+        "max": 45,
+        "result": "An aspect of the history or nature of this place is revealed."
+      },
+      {
+        "min": 46,
+        "max": 57,
+        "result": "You locate a secure area."
+      },
+      {
+        "min": 58,
+        "max": 68,
+        "result": "A clue offers insight or direction."
+      },
+      {
+        "min": 69,
+        "max": 78,
+        "result": "You get the drop on a denizen."
+      },
+      {
+        "min": 79,
+        "max": 86,
+        "result": "This area provides an opportunity to scavenge, forage, or hunt."
+      },
+      {
+        "min": 87,
+        "max": 90,
+        "result": "You locate an interesting or helpful object."
+      },
+      {
+        "min": 91,
+        "max": 94,
+        "result": "You are alerted to a potential threat."
+      },
+      {
+        "min": 95,
+        "max": 98,
+        "result": "You encounter a denizen who might support you."
+      },
+      {
+        "min": 99,
+        "max": 100,
+        "result": "You encounter a denizen in need of help."
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:moves:reveal_a_danger",
+    "group": "Moves",
+    "name": "Reveal a Danger",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 30,
+        "result": "Check the theme card."
+      },
+      {
+        "min": 31,
+        "max": 45,
+        "result": "Check the domain card."
+      },
+      {
+        "min": 46,
+        "max": 57,
+        "result": "You encounter a hostile denizen."
+      },
+      {
+        "min": 58,
+        "max": 68,
+        "result": "You face an environmental or architectural hazard."
+      },
+      {
+        "min": 69,
+        "max": 76,
+        "result": "A discovery undermines or complicates your quest."
+      },
+      {
+        "min": 77,
+        "max": 79,
+        "result": "You confront a harrowing situation or sensation."
+      },
+      {
+        "min": 80,
+        "max": 82,
+        "result": "You face the consequences of an earlier choice or approach."
+      },
+      {
+        "min": 83,
+        "max": 85,
+        "result": "Your way is blocked or trapped."
+      },
+      {
+        "min": 86,
+        "max": 88,
+        "result": "A resource is diminished, broken, or lost."
+      },
+      {
+        "min": 89,
+        "max": 91,
+        "result": "You face a perplexing mystery or tough choice."
+      },
+      {
+        "min": 92,
+        "max": 94,
+        "result": "You lose your way or are delayed."
+      },
+      {
+        "min": 95,
+        "max": 100,
+        "result": "Roll twice more on this table. Both results occur. If they are the same result, make it worse."
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:moves:reveal_a_danger_alt",
+    "group": "Moves",
+    "name": "Reveal a Danger (alternate version)",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 22,
+        "result": "You encounter a hostile denizen."
+      },
+      {
+        "min": 23,
+        "max": 42,
+        "result": "You face an environmental or architectural hazard."
+      },
+      {
+        "min": 43,
+        "max": 58,
+        "result": "A discovery undermines or complicates your quest."
+      },
+      {
+        "min": 59,
+        "max": 64,
+        "result": "You confront a harrowing situation or sensation."
+      },
+      {
+        "min": 65,
+        "max": 70,
+        "result": "You face the consequences of an earlier choice or approach."
+      },
+      {
+        "min": 71,
+        "max": 76,
+        "result": "Your way is blocked or trapped."
+      },
+      {
+        "min": 77,
+        "max": 82,
+        "result": "A resource is diminished, broken, or lost."
+      },
+      {
+        "min": 83,
+        "max": 88,
+        "result": "You face a perplexing mystery or tough choice."
+      },
+      {
+        "min": 89,
+        "max": 94,
+        "result": "You lose your way or are delayed."
+      },
+      {
+        "min": 95,
+        "max": 100,
+        "result": "Roll twice more on this table. Both results occur. If they are the same result, make it worse."
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:moves:advance_a_threat",
+    "group": "Moves",
+    "name": "Advance a Threat",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 30,
+        "result": "The threat readies its next step, or a new danger looms. If you are in a position to prevent this development, you may attempt to do so. If you succeed, [Reach a Milestone](id:classic/moves/quest/reach_a_milestone). Otherwise, mark menace."
+      },
+      {
+        "min": 31,
+        "max": 70,
+        "result": "The threat works subtly to advance toward its goal, or the danger escalates. Mark menace."
+      },
+      {
+        "min": 71,
+        "max": 100,
+        "result": "The threat makes a dramatic and immediate move, or a major event reveals new complications. Mark menace twice."
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:site_name:format",
+    "group": "Site Name",
+    "name": "Format",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 25,
+        "result": "[Description](id:delve/oracles/site_name/description) [Place](id:delve/oracles/site_name/place)"
+      },
+      {
+        "min": 26,
+        "max": 50,
+        "result": "[Place](id:delve/oracles/site_name/place) of [Detail](id:delve/oracles/site_name/detail)"
+      },
+      {
+        "min": 51,
+        "max": 70,
+        "result": "[Place](id:delve/oracles/site_name/place) of [Description](id:delve/oracles/site_name/description) [Detail](id:delve/oracles/site_name/detail)"
+      },
+      {
+        "min": 71,
+        "max": 80,
+        "result": "[Place](id:delve/oracles/site_name/place) of [Namesake's](id:delve/oracles/site_name/namesake) [Detail](id:delve/oracles/site_name/detail)"
+      },
+      {
+        "min": 81,
+        "max": 85,
+        "result": "[Namesake's](id:delve/oracles/site_name/namesake) [Place](id:delve/oracles/site_name/place)"
+      },
+      {
+        "min": 86,
+        "max": 95,
+        "result": "[Description](id:delve/oracles/site_name/description) [Place](id:delve/oracles/site_name/place) of [Namesake](id:delve/oracles/site_name/namesake)"
+      },
+      {
+        "min": 96,
+        "max": 100,
+        "result": "[Place](id:delve/oracles/site_name/place) of [Namesake](id:delve/oracles/site_name/namesake)"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:site_name:description",
+    "group": "Site Name",
+    "name": "Description",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 2,
+        "result": "Deep"
+      },
+      {
+        "min": 3,
+        "max": 4,
+        "result": "Tainted"
+      },
+      {
+        "min": 5,
+        "max": 6,
+        "result": "Grey"
+      },
+      {
+        "min": 7,
+        "max": 8,
+        "result": "Forgotten"
+      },
+      {
+        "min": 9,
+        "max": 10,
+        "result": "Flooded"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "Forbidden"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "Barren"
+      },
+      {
+        "min": 15,
+        "max": 16,
+        "result": "Lost"
+      },
+      {
+        "min": 17,
+        "max": 18,
+        "result": "Cursed"
+      },
+      {
+        "min": 19,
+        "max": 20,
+        "result": "Fell"
+      },
+      {
+        "min": 21,
+        "max": 22,
+        "result": "Sunken"
+      },
+      {
+        "min": 23,
+        "max": 24,
+        "result": "Nightmare"
+      },
+      {
+        "min": 25,
+        "max": 26,
+        "result": "Infernal"
+      },
+      {
+        "min": 27,
+        "max": 28,
+        "result": "Dark"
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "result": "Bloodstained"
+      },
+      {
+        "min": 31,
+        "max": 32,
+        "result": "Haunted"
+      },
+      {
+        "min": 33,
+        "max": 34,
+        "result": "White"
+      },
+      {
+        "min": 35,
+        "max": 36,
+        "result": "Shrouded"
+      },
+      {
+        "min": 37,
+        "max": 38,
+        "result": "Wasted"
+      },
+      {
+        "min": 39,
+        "max": 40,
+        "result": "Grim"
+      },
+      {
+        "min": 41,
+        "max": 42,
+        "result": "Endless"
+      },
+      {
+        "min": 43,
+        "max": 44,
+        "result": "Crumbling"
+      },
+      {
+        "min": 45,
+        "max": 46,
+        "result": "Undying"
+      },
+      {
+        "min": 47,
+        "max": 48,
+        "result": "Bloodied"
+      },
+      {
+        "min": 49,
+        "max": 50,
+        "result": "Forsaken"
+      },
+      {
+        "min": 51,
+        "max": 52,
+        "result": "Silent"
+      },
+      {
+        "min": 53,
+        "max": 54,
+        "result": "Blighted"
+      },
+      {
+        "min": 55,
+        "max": 56,
+        "result": "Iron"
+      },
+      {
+        "min": 57,
+        "max": 58,
+        "result": "Frozen"
+      },
+      {
+        "min": 59,
+        "max": 60,
+        "result": "Abyssal"
+      },
+      {
+        "min": 61,
+        "max": 62,
+        "result": "Crimson"
+      },
+      {
+        "min": 63,
+        "max": 64,
+        "result": "Silver"
+      },
+      {
+        "min": 65,
+        "max": 66,
+        "result": "Desecrated"
+      },
+      {
+        "min": 67,
+        "max": 68,
+        "result": "Ashen"
+      },
+      {
+        "min": 69,
+        "max": 70,
+        "result": "Elder"
+      },
+      {
+        "min": 71,
+        "max": 72,
+        "result": "Scorched"
+      },
+      {
+        "min": 73,
+        "max": 74,
+        "result": "Unknown"
+      },
+      {
+        "min": 75,
+        "max": 76,
+        "result": "Scarred"
+      },
+      {
+        "min": 77,
+        "max": 78,
+        "result": "Broken"
+      },
+      {
+        "min": 79,
+        "max": 80,
+        "result": "Chaotic"
+      },
+      {
+        "min": 81,
+        "max": 82,
+        "result": "Black"
+      },
+      {
+        "min": 83,
+        "max": 84,
+        "result": "Hidden"
+      },
+      {
+        "min": 85,
+        "max": 86,
+        "result": "Sundered"
+      },
+      {
+        "min": 87,
+        "max": 88,
+        "result": "Shattered"
+      },
+      {
+        "min": 89,
+        "max": 90,
+        "result": "Dreaded"
+      },
+      {
+        "min": 91,
+        "max": 92,
+        "result": "Secret"
+      },
+      {
+        "min": 93,
+        "max": 94,
+        "result": "High"
+      },
+      {
+        "min": 95,
+        "max": 96,
+        "result": "Sacred"
+      },
+      {
+        "min": 97,
+        "max": 98,
+        "result": "Fallen"
+      },
+      {
+        "min": 99,
+        "max": 100,
+        "result": "Ruined"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:site_name:detail",
+    "group": "Site Name",
+    "name": "Detail",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 2,
+        "result": "Blight"
+      },
+      {
+        "min": 3,
+        "max": 4,
+        "result": "Strife"
+      },
+      {
+        "min": 5,
+        "max": 6,
+        "result": "Nightfall"
+      },
+      {
+        "min": 7,
+        "max": 8,
+        "result": "Fury"
+      },
+      {
+        "min": 9,
+        "max": 10,
+        "result": "Terror"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "Truth"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "Spring"
+      },
+      {
+        "min": 15,
+        "max": 16,
+        "result": "Sanctuary"
+      },
+      {
+        "min": 17,
+        "max": 18,
+        "result": "Bone"
+      },
+      {
+        "min": 19,
+        "max": 20,
+        "result": "Specters"
+      },
+      {
+        "min": 21,
+        "max": 22,
+        "result": "Daybreak"
+      },
+      {
+        "min": 23,
+        "max": 24,
+        "result": "Doom"
+      },
+      {
+        "min": 25,
+        "max": 26,
+        "result": "Treachery"
+      },
+      {
+        "min": 27,
+        "max": 28,
+        "result": "Blood"
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "result": "War"
+      },
+      {
+        "min": 31,
+        "max": 32,
+        "result": "Torment"
+      },
+      {
+        "min": 33,
+        "max": 34,
+        "result": "Iron"
+      },
+      {
+        "min": 35,
+        "max": 36,
+        "result": "Silence"
+      },
+      {
+        "min": 37,
+        "max": 38,
+        "result": "Mist"
+      },
+      {
+        "min": 39,
+        "max": 40,
+        "result": "Isolation"
+      },
+      {
+        "min": 41,
+        "max": 42,
+        "result": "Runes"
+      },
+      {
+        "min": 43,
+        "max": 44,
+        "result": "Rot"
+      },
+      {
+        "min": 45,
+        "max": 46,
+        "result": "Corruption"
+      },
+      {
+        "min": 47,
+        "max": 48,
+        "result": "Prophecy"
+      },
+      {
+        "min": 49,
+        "max": 50,
+        "result": "Fate"
+      },
+      {
+        "min": 51,
+        "max": 52,
+        "result": "Twilight"
+      },
+      {
+        "min": 53,
+        "max": 54,
+        "result": "Power"
+      },
+      {
+        "min": 55,
+        "max": 56,
+        "result": "Darkness"
+      },
+      {
+        "min": 57,
+        "max": 58,
+        "result": "Gloom"
+      },
+      {
+        "min": 59,
+        "max": 60,
+        "result": "Storms"
+      },
+      {
+        "min": 61,
+        "max": 62,
+        "result": "Hope"
+      },
+      {
+        "min": 63,
+        "max": 64,
+        "result": "Lament"
+      },
+      {
+        "min": 65,
+        "max": 66,
+        "result": "Frost"
+      },
+      {
+        "min": 67,
+        "max": 68,
+        "result": "Souls"
+      },
+      {
+        "min": 69,
+        "max": 70,
+        "result": "Winter"
+      },
+      {
+        "min": 71,
+        "max": 72,
+        "result": "Sadness"
+      },
+      {
+        "min": 73,
+        "max": 74,
+        "result": "Desolation"
+      },
+      {
+        "min": 75,
+        "max": 76,
+        "result": "Bane"
+      },
+      {
+        "min": 77,
+        "max": 78,
+        "result": "Lies"
+      },
+      {
+        "min": 79,
+        "max": 80,
+        "result": "Ash"
+      },
+      {
+        "min": 81,
+        "max": 82,
+        "result": "Banishment"
+      },
+      {
+        "min": 83,
+        "max": 84,
+        "result": "Shadow"
+      },
+      {
+        "min": 85,
+        "max": 86,
+        "result": "Madness"
+      },
+      {
+        "min": 87,
+        "max": 88,
+        "result": "Stone"
+      },
+      {
+        "min": 89,
+        "max": 90,
+        "result": "Secrets"
+      },
+      {
+        "min": 91,
+        "max": 92,
+        "result": "Despair"
+      },
+      {
+        "min": 93,
+        "max": 94,
+        "result": "Blades"
+      },
+      {
+        "min": 95,
+        "max": 96,
+        "result": "Dread"
+      },
+      {
+        "min": 97,
+        "max": 98,
+        "result": "Light"
+      },
+      {
+        "min": 99,
+        "max": 100,
+        "result": "Wrath"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:site_name:namesake",
+    "group": "Site Name",
+    "name": "Namesake",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 2,
+        "result": "Breckon"
+      },
+      {
+        "min": 3,
+        "max": 4,
+        "result": "Issara"
+      },
+      {
+        "min": 5,
+        "max": 6,
+        "result": "Milenna"
+      },
+      {
+        "min": 7,
+        "max": 8,
+        "result": "Thorval"
+      },
+      {
+        "min": 9,
+        "max": 10,
+        "result": "Khulan"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "Aurvang"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "Kalida"
+      },
+      {
+        "min": 15,
+        "max": 16,
+        "result": "Keeara"
+      },
+      {
+        "min": 17,
+        "max": 18,
+        "result": "Andor"
+      },
+      {
+        "min": 19,
+        "max": 20,
+        "result": "Zakaria"
+      },
+      {
+        "min": 21,
+        "max": 22,
+        "result": "Willa"
+      },
+      {
+        "min": 23,
+        "max": 24,
+        "result": "Etana"
+      },
+      {
+        "min": 25,
+        "max": 26,
+        "result": "Valgard"
+      },
+      {
+        "min": 27,
+        "max": 28,
+        "result": "Kenrick"
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "result": "Wyland"
+      },
+      {
+        "min": 31,
+        "max": 32,
+        "result": "Sidura"
+      },
+      {
+        "min": 33,
+        "max": 34,
+        "result": "Svala"
+      },
+      {
+        "min": 35,
+        "max": 36,
+        "result": "Kajir"
+      },
+      {
+        "min": 37,
+        "max": 38,
+        "result": "Saiven"
+      },
+      {
+        "min": 39,
+        "max": 40,
+        "result": "Callwen"
+      },
+      {
+        "min": 41,
+        "max": 42,
+        "result": "Zhan"
+      },
+      {
+        "min": 43,
+        "max": 44,
+        "result": "Solana"
+      },
+      {
+        "min": 45,
+        "max": 46,
+        "result": "Ildar"
+      },
+      {
+        "min": 47,
+        "max": 48,
+        "result": "Keelan"
+      },
+      {
+        "min": 49,
+        "max": 50,
+        "result": "Thrain"
+      },
+      {
+        "min": 51,
+        "max": 52,
+        "result": "Kynan"
+      },
+      {
+        "min": 53,
+        "max": 54,
+        "result": "Jadina"
+      },
+      {
+        "min": 55,
+        "max": 56,
+        "result": "Radek"
+      },
+      {
+        "min": 57,
+        "max": 58,
+        "result": "Wulan"
+      },
+      {
+        "min": 59,
+        "max": 60,
+        "result": "Garion"
+      },
+      {
+        "min": 61,
+        "max": 62,
+        "result": "Eysa"
+      },
+      {
+        "min": 63,
+        "max": 64,
+        "result": "Kolor"
+      },
+      {
+        "min": 65,
+        "max": 66,
+        "result": "Katarra"
+      },
+      {
+        "min": 67,
+        "max": 68,
+        "result": "Dain"
+      },
+      {
+        "min": 69,
+        "max": 70,
+        "result": "Farina"
+      },
+      {
+        "min": 71,
+        "max": 72,
+        "result": "Yala"
+      },
+      {
+        "min": 73,
+        "max": 74,
+        "result": "Kodroth"
+      },
+      {
+        "min": 75,
+        "max": 76,
+        "result": "Morien"
+      },
+      {
+        "min": 77,
+        "max": 78,
+        "result": "Akida"
+      },
+      {
+        "min": 79,
+        "max": 80,
+        "result": "Haldorr"
+      },
+      {
+        "min": 81,
+        "max": 82,
+        "result": "Nyrad"
+      },
+      {
+        "min": 83,
+        "max": 84,
+        "result": "Edda"
+      },
+      {
+        "min": 85,
+        "max": 86,
+        "result": "Jorund"
+      },
+      {
+        "min": 87,
+        "max": 88,
+        "result": "Morraine"
+      },
+      {
+        "min": 89,
+        "max": 90,
+        "result": "Lindar"
+      },
+      {
+        "min": 91,
+        "max": 92,
+        "result": "Sithra"
+      },
+      {
+        "min": 93,
+        "max": 94,
+        "result": "Torgan"
+      },
+      {
+        "min": 95,
+        "max": 96,
+        "result": "Arnorr"
+      },
+      {
+        "min": 97,
+        "max": 98,
+        "result": "Thyri"
+      },
+      {
+        "min": 99,
+        "max": 100,
+        "result": "Erisia"
+      }
+    ],
+    "description": "You may also use your preferred name randomizer to generate a Namesake for your site. If you want to add details for the Namesake, use the [Character oracles](id:classic/collections/oracles/character) in *Ironsworn Core*. This may help inspire a deeper understanding of the history of the site."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:site_name:place",
+    "group": "Site Name",
+    "name": "Place",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 6,
+        "result": "[Barrow](id:delve/site_domains/barrow)"
+      },
+      {
+        "min": 7,
+        "max": 18,
+        "result": "[Cavern](id:delve/site_domains/cavern)"
+      },
+      {
+        "min": 19,
+        "max": 28,
+        "result": "[Frozen Cavern](id:delve/site_domains/frozen_cavern)"
+      },
+      {
+        "min": 29,
+        "max": 32,
+        "result": "[Icereach](id:delve/site_domains/icereach)"
+      },
+      {
+        "min": 33,
+        "max": 38,
+        "result": "[Mine](id:delve/site_domains/mine)"
+      },
+      {
+        "min": 39,
+        "max": 48,
+        "result": "[Pass](id:delve/site_domains/pass)"
+      },
+      {
+        "min": 49,
+        "max": 58,
+        "result": "[Ruin](id:delve/site_domains/ruin)"
+      },
+      {
+        "min": 59,
+        "max": 68,
+        "result": "[Sea Cave](id:delve/site_domains/sea_cave)"
+      },
+      {
+        "min": 69,
+        "max": 78,
+        "result": "[Shadowfen](id:delve/site_domains/shadowfen)"
+      },
+      {
+        "min": 79,
+        "max": 83,
+        "result": "[Stronghold](id:delve/site_domains/stronghold)"
+      },
+      {
+        "min": 84,
+        "max": 95,
+        "result": "[Tanglewood](id:delve/site_domains/tanglewood)"
+      },
+      {
+        "min": 96,
+        "max": 100,
+        "result": "[Underkeep](id:delve/site_domains/underkeep)"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:site_nature:theme",
+    "group": "Site Nature",
+    "name": "Theme",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 11,
+        "result": "[Ancient](id:delve/site_themes/ancient)"
+      },
+      {
+        "min": 12,
+        "max": 23,
+        "result": "[Corrupted](id:delve/site_themes/corrupted)"
+      },
+      {
+        "min": 24,
+        "max": 35,
+        "result": "[Fortified](id:delve/site_themes/fortified)"
+      },
+      {
+        "min": 36,
+        "max": 48,
+        "result": "[Hallowed](id:delve/site_themes/hallowed)"
+      },
+      {
+        "min": 49,
+        "max": 61,
+        "result": "[Haunted](id:delve/site_themes/haunted)"
+      },
+      {
+        "min": 62,
+        "max": 74,
+        "result": "[Infested](id:delve/site_themes/infested)"
+      },
+      {
+        "min": 75,
+        "max": 87,
+        "result": "[Ravaged](id:delve/site_themes/ravaged)"
+      },
+      {
+        "min": 88,
+        "max": 100,
+        "result": "[Wild](id:delve/site_themes/wild)"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:site_nature:domain",
+    "group": "Site Nature",
+    "name": "Domain",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 6,
+        "result": "[Barrow](id:delve/site_domains/barrow)"
+      },
+      {
+        "min": 7,
+        "max": 18,
+        "result": "[Cavern](id:delve/site_domains/cavern)"
+      },
+      {
+        "min": 19,
+        "max": 28,
+        "result": "[Frozen Cavern](id:delve/site_domains/frozen_cavern)"
+      },
+      {
+        "min": 29,
+        "max": 32,
+        "result": "[Icereach](id:delve/site_domains/icereach)"
+      },
+      {
+        "min": 33,
+        "max": 38,
+        "result": "[Mine](id:delve/site_domains/mine)"
+      },
+      {
+        "min": 39,
+        "max": 48,
+        "result": "[Pass](id:delve/site_domains/pass)"
+      },
+      {
+        "min": 49,
+        "max": 58,
+        "result": "[Ruin](id:delve/site_domains/ruin)"
+      },
+      {
+        "min": 59,
+        "max": 68,
+        "result": "[Sea Cave](id:delve/site_domains/sea_cave)"
+      },
+      {
+        "min": 69,
+        "max": 78,
+        "result": "[Shadowfen](id:delve/site_domains/shadowfen)"
+      },
+      {
+        "min": 79,
+        "max": 83,
+        "result": "[Stronghold](id:delve/site_domains/stronghold)"
+      },
+      {
+        "min": 84,
+        "max": 95,
+        "result": "[Tanglewood](id:delve/site_domains/tanglewood)"
+      },
+      {
+        "min": 96,
+        "max": 100,
+        "result": "[Underkeep](id:delve/site_domains/underkeep)"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:threat:category",
+    "group": "Threat",
+    "name": "Category",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 10,
+        "result": "[Burgeoning Conflict](id:delve/oracles/threat/burgeoning_conflict)"
+      },
+      {
+        "min": 11,
+        "max": 20,
+        "result": "[Cursed Site](id:delve/oracles/threat/cursed_site)"
+      },
+      {
+        "min": 21,
+        "max": 30,
+        "result": "[Environmental Calamity](id:delve/oracles/threat/environmental_calamity)"
+      },
+      {
+        "min": 31,
+        "max": 40,
+        "result": "[Malignant Plague](id:delve/oracles/threat/malignant_plague)"
+      },
+      {
+        "min": 41,
+        "max": 50,
+        "result": "[Rampaging Creature](id:delve/oracles/threat/rampaging_creature)"
+      },
+      {
+        "min": 51,
+        "max": 60,
+        "result": "[Ravaging Horde](id:delve/oracles/threat/ravaging_horde)"
+      },
+      {
+        "min": 61,
+        "max": 70,
+        "result": "[Scheming Leader](id:delve/oracles/threat/scheming_leader)"
+      },
+      {
+        "min": 71,
+        "max": 80,
+        "result": "[Power-Hungry Mystic](id:delve/oracles/threat/power_hungry_mystic)"
+      },
+      {
+        "min": 81,
+        "max": 90,
+        "result": "[Zealous Cult](id:delve/oracles/threat/zealous_cult)"
+      },
+      {
+        "min": 91,
+        "max": 100,
+        "result": "Roll twice"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:threat:burgeoning_conflict",
+    "group": "Threat",
+    "name": "Burgeoning Conflict",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 10,
+        "result": "Allow warmongers to gain influence"
+      },
+      {
+        "min": 11,
+        "max": 20,
+        "result": "Break a treaty"
+      },
+      {
+        "min": 21,
+        "max": 30,
+        "result": "Force a hasty decision"
+      },
+      {
+        "min": 31,
+        "max": 40,
+        "result": "Deepen suspicions"
+      },
+      {
+        "min": 41,
+        "max": 50,
+        "result": "Trigger a confrontation"
+      },
+      {
+        "min": 51,
+        "max": 60,
+        "result": "Subvert a potential accord"
+      },
+      {
+        "min": 61,
+        "max": 70,
+        "result": "Isolate the antagonists"
+      },
+      {
+        "min": 71,
+        "max": 80,
+        "result": "Draw new battle lines"
+      },
+      {
+        "min": 81,
+        "max": 90,
+        "result": "Reveal an unexpected aspect of the dispute"
+      },
+      {
+        "min": 91,
+        "max": 100,
+        "result": "Introduce a new person or faction to complicate the situation"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:threat:cursed_site",
+    "group": "Threat",
+    "name": "Cursed Site",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 10,
+        "result": "Unleash a creature or being"
+      },
+      {
+        "min": 11,
+        "max": 20,
+        "result": "Lure the unwary into its depths"
+      },
+      {
+        "min": 21,
+        "max": 30,
+        "result": "Offer promises of power"
+      },
+      {
+        "min": 31,
+        "max": 40,
+        "result": "Reveal a new aspect of its cursed history"
+      },
+      {
+        "min": 41,
+        "max": 50,
+        "result": "Expand its malignancy to surrounding lands"
+      },
+      {
+        "min": 51,
+        "max": 60,
+        "result": "Leave its mark on an inhabitant or visitor"
+      },
+      {
+        "min": 61,
+        "max": 70,
+        "result": "Reveal hidden depths"
+      },
+      {
+        "min": 71,
+        "max": 80,
+        "result": "Ensnare an important person or object"
+      },
+      {
+        "min": 81,
+        "max": 90,
+        "result": "Corrupt the environment"
+      },
+      {
+        "min": 91,
+        "max": 100,
+        "result": "Transform its nature"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:threat:environmental_calamity",
+    "group": "Threat",
+    "name": "Environmental Calamity",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 10,
+        "result": "Devastate a place"
+      },
+      {
+        "min": 11,
+        "max": 20,
+        "result": "Block a path"
+      },
+      {
+        "min": 21,
+        "max": 30,
+        "result": "Threaten a community with imminent destruction"
+      },
+      {
+        "min": 31,
+        "max": 40,
+        "result": "Manifest unexpected effects"
+      },
+      {
+        "min": 41,
+        "max": 50,
+        "result": "Expand in scope or intensity"
+      },
+      {
+        "min": 51,
+        "max": 60,
+        "result": "Allow someone to take advantage"
+      },
+      {
+        "min": 61,
+        "max": 70,
+        "result": "Deprive of resources"
+      },
+      {
+        "min": 71,
+        "max": 80,
+        "result": "Isolate an important person or community"
+      },
+      {
+        "min": 81,
+        "max": 90,
+        "result": "Force refugees into hostile lands"
+      },
+      {
+        "min": 91,
+        "max": 100,
+        "result": "Disrupt natural ecosystems"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:threat:malignant_plague",
+    "group": "Threat",
+    "name": "Malignant Plague",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 10,
+        "result": "Manifest new symptoms or effects"
+      },
+      {
+        "min": 11,
+        "max": 20,
+        "result": "Infect someone important"
+      },
+      {
+        "min": 21,
+        "max": 30,
+        "result": "Expand to new territory or communities"
+      },
+      {
+        "min": 31,
+        "max": 40,
+        "result": "Allow someone to take advantage"
+      },
+      {
+        "min": 41,
+        "max": 50,
+        "result": "Allow someone to take the blame"
+      },
+      {
+        "min": 51,
+        "max": 60,
+        "result": "Create panic or disorder"
+      },
+      {
+        "min": 61,
+        "max": 70,
+        "result": "Force a horrible decision"
+      },
+      {
+        "min": 71,
+        "max": 80,
+        "result": "Lure into complacency"
+      },
+      {
+        "min": 81,
+        "max": 90,
+        "result": "Reveal the root of the sickness"
+      },
+      {
+        "min": 91,
+        "max": 100,
+        "result": "Undermine a potential cure"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:threat:rampaging_creature",
+    "group": "Threat",
+    "name": "Rampaging Creature",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 10,
+        "result": "Reveal a new aspect of its nature or abilities"
+      },
+      {
+        "min": 11,
+        "max": 20,
+        "result": "Expand its territory"
+      },
+      {
+        "min": 21,
+        "max": 30,
+        "result": "Make a sudden and brutal attack"
+      },
+      {
+        "min": 31,
+        "max": 40,
+        "result": "Control or influence lesser creatures"
+      },
+      {
+        "min": 41,
+        "max": 50,
+        "result": "Create confusion or strife"
+      },
+      {
+        "min": 51,
+        "max": 60,
+        "result": "Leave foreboding signs"
+      },
+      {
+        "min": 61,
+        "max": 70,
+        "result": "Lure the unwary"
+      },
+      {
+        "min": 71,
+        "max": 80,
+        "result": "Imperil an event"
+      },
+      {
+        "min": 81,
+        "max": 90,
+        "result": "Assert control over a location"
+      },
+      {
+        "min": 91,
+        "max": 100,
+        "result": "Threaten resources"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:threat:ravaging_horde",
+    "group": "Threat",
+    "name": "Ravaging Horde",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 10,
+        "result": "Overrun defenses"
+      },
+      {
+        "min": 11,
+        "max": 20,
+        "result": "Gather resources"
+      },
+      {
+        "min": 21,
+        "max": 30,
+        "result": "Attack a location"
+      },
+      {
+        "min": 31,
+        "max": 40,
+        "result": "Expand forces"
+      },
+      {
+        "min": 41,
+        "max": 50,
+        "result": "Appoint or reveal a leader"
+      },
+      {
+        "min": 51,
+        "max": 60,
+        "result": "Send forth a champion"
+      },
+      {
+        "min": 61,
+        "max": 70,
+        "result": "Create a diversion"
+      },
+      {
+        "min": 71,
+        "max": 80,
+        "result": "Undermine an opposing force from within"
+      },
+      {
+        "min": 81,
+        "max": 90,
+        "result": "Cut off supplies or reinforcements"
+      },
+      {
+        "min": 91,
+        "max": 100,
+        "result": "Employ a new weapon"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:threat:scheming_leader",
+    "group": "Threat",
+    "name": "Scheming Leader",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 10,
+        "result": "Defeat an enemy"
+      },
+      {
+        "min": 11,
+        "max": 20,
+        "result": "Form a new alliance"
+      },
+      {
+        "min": 21,
+        "max": 30,
+        "result": "Usurp or undermine another leader"
+      },
+      {
+        "min": 31,
+        "max": 40,
+        "result": "Force the loyalty of a community or important person"
+      },
+      {
+        "min": 41,
+        "max": 50,
+        "result": "Enact a new law or tradition"
+      },
+      {
+        "min": 51,
+        "max": 60,
+        "result": "Rescind an old law or tradition"
+      },
+      {
+        "min": 61,
+        "max": 70,
+        "result": "Reveal a true intention"
+      },
+      {
+        "min": 71,
+        "max": 80,
+        "result": "Unravel an existing alliance"
+      },
+      {
+        "min": 81,
+        "max": 90,
+        "result": "Incite conflict"
+      },
+      {
+        "min": 91,
+        "max": 100,
+        "result": "Use an unexpected capability or asset"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:threat:power_hungry_mystic",
+    "group": "Threat",
+    "name": "Power-Hungry Mystic",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 10,
+        "result": "Gain hidden knowledge"
+      },
+      {
+        "min": 11,
+        "max": 20,
+        "result": "Assault an enemy with magic"
+      },
+      {
+        "min": 21,
+        "max": 30,
+        "result": "Despoil a place through magic"
+      },
+      {
+        "min": 31,
+        "max": 40,
+        "result": "Forge a bond with ancient forces"
+      },
+      {
+        "min": 41,
+        "max": 50,
+        "result": "Create magical wards or protections"
+      },
+      {
+        "min": 51,
+        "max": 60,
+        "result": "Obtain a powerful artifact"
+      },
+      {
+        "min": 61,
+        "max": 70,
+        "result": "Tempt with power or secrets"
+      },
+      {
+        "min": 71,
+        "max": 80,
+        "result": "Recruit a follower or ally"
+      },
+      {
+        "min": 81,
+        "max": 90,
+        "result": "Sacrifice something in exchange for greater power"
+      },
+      {
+        "min": 91,
+        "max": 100,
+        "result": "Use magic to trick or deceive"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:threat:zealous_cult",
+    "group": "Threat",
+    "name": "Zealous Cult",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 10,
+        "result": "Overtake a faction or community"
+      },
+      {
+        "min": 11,
+        "max": 20,
+        "result": "Unlock secrets to greater power"
+      },
+      {
+        "min": 21,
+        "max": 30,
+        "result": "Establish false credibility"
+      },
+      {
+        "min": 31,
+        "max": 40,
+        "result": "Appoint or reveal a leader"
+      },
+      {
+        "min": 41,
+        "max": 50,
+        "result": "Lure new members or establish alliances"
+      },
+      {
+        "min": 51,
+        "max": 60,
+        "result": "Subvert opposition through devious schemes"
+      },
+      {
+        "min": 61,
+        "max": 70,
+        "result": "Attack opposition directly"
+      },
+      {
+        "min": 71,
+        "max": 80,
+        "result": "Spread the word of its doctrine"
+      },
+      {
+        "min": 81,
+        "max": 90,
+        "result": "Reveal a dire prophecy"
+      },
+      {
+        "min": 91,
+        "max": 100,
+        "result": "Reveal its true nature or goal"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:trap:trap",
+    "group": "Trap",
+    "name": "Event",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 4,
+        "result": "Block"
+      },
+      {
+        "min": 5,
+        "max": 8,
+        "result": "Create"
+      },
+      {
+        "min": 9,
+        "max": 12,
+        "result": "Break"
+      },
+      {
+        "min": 13,
+        "max": 16,
+        "result": "Puncture"
+      },
+      {
+        "min": 17,
+        "max": 20,
+        "result": "Entangle"
+      },
+      {
+        "min": 21,
+        "max": 24,
+        "result": "Enclose"
+      },
+      {
+        "min": 25,
+        "max": 28,
+        "result": "Ambush"
+      },
+      {
+        "min": 29,
+        "max": 32,
+        "result": "Snare"
+      },
+      {
+        "min": 33,
+        "max": 36,
+        "result": "Change"
+      },
+      {
+        "min": 37,
+        "max": 40,
+        "result": "Imitate"
+      },
+      {
+        "min": 41,
+        "max": 44,
+        "result": "Crush"
+      },
+      {
+        "min": 45,
+        "max": 48,
+        "result": "Drop"
+      },
+      {
+        "min": 49,
+        "max": 52,
+        "result": "Conceal"
+      },
+      {
+        "min": 53,
+        "max": 56,
+        "result": "Lure"
+      },
+      {
+        "min": 57,
+        "max": 60,
+        "result": "Release"
+      },
+      {
+        "min": 61,
+        "max": 64,
+        "result": "Obscure"
+      },
+      {
+        "min": 65,
+        "max": 68,
+        "result": "Cut"
+      },
+      {
+        "min": 69,
+        "max": 72,
+        "result": "Smother"
+      },
+      {
+        "min": 73,
+        "max": 76,
+        "result": "Collapse"
+      },
+      {
+        "min": 77,
+        "max": 80,
+        "result": "Summon"
+      },
+      {
+        "min": 81,
+        "max": 84,
+        "result": "Move"
+      },
+      {
+        "min": 85,
+        "max": 88,
+        "result": "Surprise"
+      },
+      {
+        "min": 89,
+        "max": 92,
+        "result": "Divert"
+      },
+      {
+        "min": 93,
+        "max": 96,
+        "result": "Attack"
+      },
+      {
+        "min": 97,
+        "max": 100,
+        "result": "Trigger"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:trap:component",
+    "group": "Trap",
+    "name": "Component",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 4,
+        "result": "Pit"
+      },
+      {
+        "min": 5,
+        "max": 8,
+        "result": "Water"
+      },
+      {
+        "min": 9,
+        "max": 12,
+        "result": "Fire"
+      },
+      {
+        "min": 13,
+        "max": 16,
+        "result": "Projectile"
+      },
+      {
+        "min": 17,
+        "max": 20,
+        "result": "Passage"
+      },
+      {
+        "min": 21,
+        "max": 24,
+        "result": "Fall"
+      },
+      {
+        "min": 25,
+        "max": 28,
+        "result": "Debris"
+      },
+      {
+        "min": 29,
+        "max": 32,
+        "result": "Fear"
+      },
+      {
+        "min": 33,
+        "max": 36,
+        "result": "Alarm"
+      },
+      {
+        "min": 37,
+        "max": 40,
+        "result": "Trigger"
+      },
+      {
+        "min": 41,
+        "max": 44,
+        "result": "Cold"
+      },
+      {
+        "min": 45,
+        "max": 48,
+        "result": "Weapon"
+      },
+      {
+        "min": 49,
+        "max": 52,
+        "result": "Darkness"
+      },
+      {
+        "min": 53,
+        "max": 56,
+        "result": "Decay"
+      },
+      {
+        "min": 57,
+        "max": 60,
+        "result": "Path"
+      },
+      {
+        "min": 61,
+        "max": 64,
+        "result": "Stone"
+      },
+      {
+        "min": 65,
+        "max": 68,
+        "result": "Terrain"
+      },
+      {
+        "min": 69,
+        "max": 72,
+        "result": "Poison"
+      },
+      {
+        "min": 73,
+        "max": 76,
+        "result": "Barrier"
+      },
+      {
+        "min": 77,
+        "max": 80,
+        "result": "Overhead"
+      },
+      {
+        "min": 81,
+        "max": 84,
+        "result": "Magic"
+      },
+      {
+        "min": 85,
+        "max": 88,
+        "result": "Toxin"
+      },
+      {
+        "min": 89,
+        "max": 92,
+        "result": "Earth"
+      },
+      {
+        "min": 93,
+        "max": 96,
+        "result": "Light"
+      },
+      {
+        "min": 97,
+        "max": 100,
+        "result": "Denizen"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:site_nature:theme",
+    "group": "Delve Site Nature",
+    "name": "Theme",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 11,
+        "result": "[Ancient](id:delve/site_themes/ancient)"
+      },
+      {
+        "min": 12,
+        "max": 23,
+        "result": "[Corrupted](id:delve/site_themes/corrupted)"
+      },
+      {
+        "min": 24,
+        "max": 35,
+        "result": "[Fortified](id:delve/site_themes/fortified)"
+      },
+      {
+        "min": 36,
+        "max": 48,
+        "result": "[Hallowed](id:delve/site_themes/hallowed)"
+      },
+      {
+        "min": 49,
+        "max": 61,
+        "result": "[Haunted](id:delve/site_themes/haunted)"
+      },
+      {
+        "min": 62,
+        "max": 74,
+        "result": "[Infested](id:delve/site_themes/infested)"
+      },
+      {
+        "min": 75,
+        "max": 87,
+        "result": "[Ravaged](id:delve/site_themes/ravaged)"
+      },
+      {
+        "min": 88,
+        "max": 100,
+        "result": "[Wild](id:delve/site_themes/wild)"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:site_nature:domain",
+    "group": "Delve Site Nature",
+    "name": "Domain",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 6,
+        "result": "[Barrow](id:delve/site_domains/barrow)"
+      },
+      {
+        "min": 7,
+        "max": 18,
+        "result": "[Cavern](id:delve/site_domains/cavern)"
+      },
+      {
+        "min": 19,
+        "max": 28,
+        "result": "[Frozen Cavern](id:delve/site_domains/frozen_cavern)"
+      },
+      {
+        "min": 29,
+        "max": 32,
+        "result": "[Icereach](id:delve/site_domains/icereach)"
+      },
+      {
+        "min": 33,
+        "max": 38,
+        "result": "[Mine](id:delve/site_domains/mine)"
+      },
+      {
+        "min": 39,
+        "max": 48,
+        "result": "[Pass](id:delve/site_domains/pass)"
+      },
+      {
+        "min": 49,
+        "max": 58,
+        "result": "[Ruin](id:delve/site_domains/ruin)"
+      },
+      {
+        "min": 59,
+        "max": 68,
+        "result": "[Sea Cave](id:delve/site_domains/sea_cave)"
+      },
+      {
+        "min": 69,
+        "max": 78,
+        "result": "[Shadowfen](id:delve/site_domains/shadowfen)"
+      },
+      {
+        "min": 79,
+        "max": 83,
+        "result": "[Stronghold](id:delve/site_domains/stronghold)"
+      },
+      {
+        "min": 84,
+        "max": 95,
+        "result": "[Tanglewood](id:delve/site_domains/tanglewood)"
+      },
+      {
+        "min": 96,
+        "max": 100,
+        "result": "[Underkeep](id:delve/site_domains/underkeep)"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:theme:ancient:features",
+    "group": "Delve Theme",
+    "name": "Ancient Features",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 4,
+        "result": "Evidence of lost knowledge"
+      },
+      {
+        "min": 5,
+        "max": 8,
+        "result": "Inscrutable relics"
+      },
+      {
+        "min": 9,
+        "max": 12,
+        "result": "Ancient artistry or craft"
+      },
+      {
+        "min": 13,
+        "max": 16,
+        "result": "Preserved corpses or fossils"
+      },
+      {
+        "min": 17,
+        "max": 20,
+        "result": "Visions of this place in another time"
+      }
+    ],
+    "description": "This place holds the secrets of a bygone age."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:theme:ancient:dangers",
+    "group": "Delve Theme",
+    "name": "Ancient Dangers",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 5,
+        "result": "Ancient trap"
+      },
+      {
+        "min": 6,
+        "max": 10,
+        "result": "Hazardous architecture or terrain"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "Blocked or broken path"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "Denizen protects an ancient secret"
+      },
+      {
+        "min": 15,
+        "max": 16,
+        "result": "Denizen reveres an ancient power"
+      },
+      {
+        "min": 17,
+        "max": 18,
+        "result": "Living relics of a lost age"
+      },
+      {
+        "min": 19,
+        "max": 20,
+        "result": "Ancient evil resurgent"
+      },
+      {
+        "min": 21,
+        "max": 22,
+        "result": "Dire warnings of a long-buried danger"
+      },
+      {
+        "min": 23,
+        "max": 24,
+        "result": "Ancient disease or contamination"
+      },
+      {
+        "min": 25,
+        "max": 26,
+        "result": "Artifact of terrible meaning or power"
+      },
+      {
+        "min": 27,
+        "max": 28,
+        "result": "Disturbing evidence of ancient wrongs"
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "result": "Others seek power or knowledge"
+      }
+    ],
+    "description": "This place holds the secrets of a bygone age."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:theme:corrupted:features",
+    "group": "Delve Theme",
+    "name": "Corrupted Features",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 4,
+        "result": "Mystic focus or conduit"
+      },
+      {
+        "min": 5,
+        "max": 8,
+        "result": "Strange environmental disturbances"
+      },
+      {
+        "min": 9,
+        "max": 12,
+        "result": "Mystic runes or markings"
+      },
+      {
+        "min": 13,
+        "max": 16,
+        "result": "Blight or decay"
+      },
+      {
+        "min": 17,
+        "max": 20,
+        "result": "Evidence of a foul ritual"
+      }
+    ],
+    "description": "This place is tainted by dark magic."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:theme:corrupted:dangers",
+    "group": "Delve Theme",
+    "name": "Corrupted Dangers",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 5,
+        "result": "Denizen spawned from dark magic"
+      },
+      {
+        "min": 6,
+        "max": 10,
+        "result": "Denizen controls dark magic"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "Denizen corrupted by dark magic"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "Corruption marks you"
+      },
+      {
+        "min": 15,
+        "max": 16,
+        "result": "Innocents held in thrall"
+      },
+      {
+        "min": 17,
+        "max": 18,
+        "result": "Revelations of a terrible truth"
+      },
+      {
+        "min": 19,
+        "max": 20,
+        "result": "Mystic trap or trigger"
+      },
+      {
+        "min": 21,
+        "max": 22,
+        "result": "Mystic barrier or ward"
+      },
+      {
+        "min": 23,
+        "max": 24,
+        "result": "Illusions lead you astray"
+      },
+      {
+        "min": 25,
+        "max": 26,
+        "result": "Dark ritual in progress"
+      },
+      {
+        "min": 27,
+        "max": 28,
+        "result": "Lingering effects of a dark ritual"
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "result": "Dread harbingers of a greater magic"
+      }
+    ],
+    "description": "This place is tainted by dark magic."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:theme:fortified:features",
+    "group": "Delve Theme",
+    "name": "Fortified Features",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 4,
+        "result": "Camp or quarters"
+      },
+      {
+        "min": 5,
+        "max": 8,
+        "result": "Guarded location"
+      },
+      {
+        "min": 9,
+        "max": 12,
+        "result": "Storage or repository"
+      },
+      {
+        "min": 13,
+        "max": 16,
+        "result": "Work or training area"
+      },
+      {
+        "min": 17,
+        "max": 20,
+        "result": "Command center or leadership"
+      }
+    ],
+    "description": "Foes defend this place against intruders."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:theme:fortified:dangers",
+    "group": "Delve Theme",
+    "name": "Fortified Dangers",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 5,
+        "result": "Denizen patrols the area"
+      },
+      {
+        "min": 6,
+        "max": 10,
+        "result": "Denizen on guard"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "Denizen ready to sound the alarm"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "Denizen sets an ambush"
+      },
+      {
+        "min": 15,
+        "max": 16,
+        "result": "Denizen lures you into a trap"
+      },
+      {
+        "min": 17,
+        "max": 18,
+        "result": "Denizens converge on this area"
+      },
+      {
+        "min": 19,
+        "max": 20,
+        "result": "Pets or underlings"
+      },
+      {
+        "min": 21,
+        "max": 22,
+        "result": "Unexpected alliance revealed"
+      },
+      {
+        "min": 23,
+        "max": 24,
+        "result": "Nefarious plans revealed"
+      },
+      {
+        "min": 25,
+        "max": 26,
+        "result": "Unexpected leader revealed"
+      },
+      {
+        "min": 27,
+        "max": 28,
+        "result": "Trap"
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "result": "Alarm trigger"
+      }
+    ],
+    "description": "Foes defend this place against intruders."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:theme:hallowed:features",
+    "group": "Delve Theme",
+    "name": "Hallowed Features",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 4,
+        "result": "Temple or altar"
+      },
+      {
+        "min": 5,
+        "max": 8,
+        "result": "Offerings or atonements"
+      },
+      {
+        "min": 9,
+        "max": 12,
+        "result": "Religious relic or idol"
+      },
+      {
+        "min": 13,
+        "max": 16,
+        "result": "Consecrated ground"
+      },
+      {
+        "min": 17,
+        "max": 20,
+        "result": "Dwellings or gathering place"
+      }
+    ],
+    "description": "The faithful worship here."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:theme:hallowed:dangers",
+    "group": "Delve Theme",
+    "name": "Hallowed Dangers",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 5,
+        "result": "Denizen defends their sanctum"
+      },
+      {
+        "min": 6,
+        "max": 10,
+        "result": "Denizen enacts the will of their god"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "Denizen seeks martyrdom"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "Secret of the faith is revealed"
+      },
+      {
+        "min": 15,
+        "max": 16,
+        "result": "Greater purpose is revealed"
+      },
+      {
+        "min": 17,
+        "max": 18,
+        "result": "Unexpected disciples are revealed"
+      },
+      {
+        "min": 19,
+        "max": 20,
+        "result": "Divine manifestations"
+      },
+      {
+        "min": 21,
+        "max": 22,
+        "result": "Aspect of the faith beguiles you"
+      },
+      {
+        "min": 23,
+        "max": 24,
+        "result": "Unexpected leader is revealed"
+      },
+      {
+        "min": 25,
+        "max": 26,
+        "result": "Embodiment of a god or myth"
+      },
+      {
+        "min": 27,
+        "max": 28,
+        "result": "Protective ward or barrier"
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "result": "Prophecies reveal a dark fate"
+      }
+    ],
+    "description": "The faithful worship here."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:theme:haunted:features",
+    "group": "Delve Theme",
+    "name": "Haunted Features",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 4,
+        "result": "Tomb or burial site"
+      },
+      {
+        "min": 5,
+        "max": 8,
+        "result": "Blood was spilled here"
+      },
+      {
+        "min": 9,
+        "max": 12,
+        "result": "Unnatural mists or darkness"
+      },
+      {
+        "min": 13,
+        "max": 16,
+        "result": "Messages from beyond the grave"
+      },
+      {
+        "min": 17,
+        "max": 20,
+        "result": "Apparitions of a person or event"
+      }
+    ],
+    "description": "Restless spirits are bound to this place."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:theme:haunted:dangers",
+    "group": "Delve Theme",
+    "name": "Haunted Dangers",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 5,
+        "result": "Denizen haunts this area"
+      },
+      {
+        "min": 6,
+        "max": 10,
+        "result": "Unsettling sounds or foreboding signs"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "Denizen attacks without warning"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "Denizen makes a costly demand"
+      },
+      {
+        "min": 15,
+        "max": 16,
+        "result": "Denizen seizes your body or mind"
+      },
+      {
+        "min": 17,
+        "max": 18,
+        "result": "Denizen taunts or lures you"
+      },
+      {
+        "min": 19,
+        "max": 20,
+        "result": "A disturbing truth is revealed"
+      },
+      {
+        "min": 21,
+        "max": 22,
+        "result": "Frightening visions"
+      },
+      {
+        "min": 23,
+        "max": 24,
+        "result": "The environment is used against you"
+      },
+      {
+        "min": 25,
+        "max": 26,
+        "result": "Trickery leads you astray"
+      },
+      {
+        "min": 27,
+        "max": 28,
+        "result": "True nature of this place is revealed"
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "result": "Sudden, shocking manifestation"
+      }
+    ],
+    "description": "Restless spirits are bound to this place."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:theme:infested:features",
+    "group": "Delve Theme",
+    "name": "Infested Features",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 4,
+        "result": "Inhabited nest"
+      },
+      {
+        "min": 5,
+        "max": 8,
+        "result": "Abandoned nest"
+      },
+      {
+        "min": 9,
+        "max": 12,
+        "result": "Ravaged terrain or architecture"
+      },
+      {
+        "min": 13,
+        "max": 16,
+        "result": "Remains or carrion"
+      },
+      {
+        "min": 17,
+        "max": 20,
+        "result": "Hoarded food"
+      }
+    ],
+    "description": "Foul creatures dwell here."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:theme:infested:dangers",
+    "group": "Delve Theme",
+    "name": "Infested Dangers",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 5,
+        "result": "Denizens swarm and attack"
+      },
+      {
+        "min": 6,
+        "max": 10,
+        "result": "Toxic or sickening environment"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "Denizen stalks you"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "Denizen takes or destroys something"
+      },
+      {
+        "min": 15,
+        "max": 16,
+        "result": "Denizen reveals surprising cleverness"
+      },
+      {
+        "min": 17,
+        "max": 18,
+        "result": "Denizen guided by a greater threat"
+      },
+      {
+        "min": 19,
+        "max": 20,
+        "result": "Denizen blocks the path"
+      },
+      {
+        "min": 21,
+        "max": 22,
+        "result": "Denizen funnels you down a new path"
+      },
+      {
+        "min": 23,
+        "max": 24,
+        "result": "Denizen undermines the path"
+      },
+      {
+        "min": 25,
+        "max": 26,
+        "result": "Denizen lays in wait"
+      },
+      {
+        "min": 27,
+        "max": 28,
+        "result": "Trap or snare"
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "result": "Victim\u2019s horrible fate is revealed"
+      }
+    ],
+    "description": "Foul creatures dwell here."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:theme:ravaged:features",
+    "group": "Delve Theme",
+    "name": "Ravaged Features",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 4,
+        "result": "Path of destruction"
+      },
+      {
+        "min": 5,
+        "max": 8,
+        "result": "Abandoned or ruined dwelling"
+      },
+      {
+        "min": 9,
+        "max": 12,
+        "result": "Untouched or preserved area"
+      },
+      {
+        "min": 13,
+        "max": 16,
+        "result": "Traces of what was lost"
+      },
+      {
+        "min": 17,
+        "max": 20,
+        "result": "Ill-fated victims"
+      }
+    ],
+    "description": "Time, disaster, or strife have taken their toll."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:theme:ravaged:dangers",
+    "group": "Delve Theme",
+    "name": "Ravaged Dangers",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 5,
+        "result": "Precarious architecture or terrain"
+      },
+      {
+        "min": 6,
+        "max": 10,
+        "result": "Imminent collapse or destruction"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "Path undermined"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "Blocked or broken path"
+      },
+      {
+        "min": 15,
+        "max": 16,
+        "result": "Vestiges of a destructive force"
+      },
+      {
+        "min": 17,
+        "max": 18,
+        "result": "Unexpected environmental threat"
+      },
+      {
+        "min": 19,
+        "max": 20,
+        "result": "Echoes of a troubling past"
+      },
+      {
+        "min": 21,
+        "max": 22,
+        "result": "Signs of a horrible fate"
+      },
+      {
+        "min": 23,
+        "max": 24,
+        "result": "Denizen seeks retribution"
+      },
+      {
+        "min": 25,
+        "max": 26,
+        "result": "Denizen leverages the environment"
+      },
+      {
+        "min": 27,
+        "max": 28,
+        "result": "Denizen restores what was lost"
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "result": "Ravages return anew"
+      }
+    ],
+    "description": "Time, disaster, or strife have taken their toll."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:theme:wild:features",
+    "group": "Delve Theme",
+    "name": "Wild Features",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 4,
+        "result": "Denizen\u2019s lair"
+      },
+      {
+        "min": 5,
+        "max": 8,
+        "result": "Territorial markings"
+      },
+      {
+        "min": 9,
+        "max": 12,
+        "result": "Impressive flora or fauna"
+      },
+      {
+        "min": 13,
+        "max": 16,
+        "result": "Hunting ground or watering hole"
+      },
+      {
+        "min": 17,
+        "max": 20,
+        "result": "Remains or carrion"
+      }
+    ],
+    "description": "Nature prevails in this place."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:theme:wild:dangers",
+    "group": "Delve Theme",
+    "name": "Wild Dangers",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 5,
+        "result": "Denizen hunts"
+      },
+      {
+        "min": 6,
+        "max": 10,
+        "result": "Denizen strikes without warning"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "Denizen leverages the environment"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "Denizen wields unexpected abilities"
+      },
+      {
+        "min": 15,
+        "max": 16,
+        "result": "Denizen guided by a greater threat"
+      },
+      {
+        "min": 17,
+        "max": 18,
+        "result": "Denizen protects something"
+      },
+      {
+        "min": 19,
+        "max": 20,
+        "result": "Hazardous terrain"
+      },
+      {
+        "min": 21,
+        "max": 22,
+        "result": "Weather or environmental threat"
+      },
+      {
+        "min": 23,
+        "max": 24,
+        "result": "Benign aspect becomes a threat"
+      },
+      {
+        "min": 25,
+        "max": 26,
+        "result": "Overzealous hunter"
+      },
+      {
+        "min": 27,
+        "max": 28,
+        "result": "Disturbing evidence of a victim\u2019s fate"
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "result": "Ill-fated victim in danger"
+      }
+    ],
+    "description": "Nature prevails in this place."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:barrow:features",
+    "group": "Delve Domain",
+    "name": "Barrow Features",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 21,
+        "max": 43,
+        "result": "Burial chambers"
+      },
+      {
+        "min": 44,
+        "max": 56,
+        "result": "Maze of narrow passages"
+      },
+      {
+        "min": 57,
+        "max": 64,
+        "result": "Shrine"
+      },
+      {
+        "min": 65,
+        "max": 68,
+        "result": "Stately vault"
+      },
+      {
+        "min": 69,
+        "max": 72,
+        "result": "Offerings to the dead"
+      },
+      {
+        "min": 73,
+        "max": 76,
+        "result": "Statuary or tapestries"
+      },
+      {
+        "min": 77,
+        "max": 80,
+        "result": "Remains of a grave robber"
+      },
+      {
+        "min": 81,
+        "max": 84,
+        "result": "Mass grave"
+      },
+      {
+        "min": 85,
+        "max": 88,
+        "result": "Exhumed corpses"
+      },
+      {
+        "min": 89,
+        "max": 98,
+        "result": "Something unusual or unexpected"
+      },
+      {
+        "min": 99,
+        "max": 99,
+        "result": "You transition into a new theme"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "You transition into a new domain"
+      }
+    ],
+    "description": "The dead are enshrined here."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:barrow:dangers",
+    "group": "Delve Domain",
+    "name": "Barrow Dangers",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 31,
+        "max": 33,
+        "result": "Denizen guards this area"
+      },
+      {
+        "min": 34,
+        "max": 36,
+        "result": "Trap"
+      },
+      {
+        "min": 37,
+        "max": 39,
+        "result": "Death makes its presence known"
+      },
+      {
+        "min": 40,
+        "max": 42,
+        "result": "Crumbling architecture"
+      },
+      {
+        "min": 43,
+        "max": 45,
+        "result": "Grave goods with hidden dangers"
+      }
+    ],
+    "description": "The dead are enshrined here."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:cavern:features",
+    "group": "Delve Domain",
+    "name": "Cavern Features",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 21,
+        "max": 43,
+        "result": "Twisting passages"
+      },
+      {
+        "min": 44,
+        "max": 56,
+        "result": "Cramped caves"
+      },
+      {
+        "min": 57,
+        "max": 64,
+        "result": "Vast chamber"
+      },
+      {
+        "min": 65,
+        "max": 68,
+        "result": "Subterranean waterway"
+      },
+      {
+        "min": 69,
+        "max": 72,
+        "result": "Cave pool"
+      },
+      {
+        "min": 73,
+        "max": 76,
+        "result": "Natural bridge"
+      },
+      {
+        "min": 77,
+        "max": 80,
+        "result": "Towering stone formations"
+      },
+      {
+        "min": 81,
+        "max": 84,
+        "result": "Natural illumination"
+      },
+      {
+        "min": 85,
+        "max": 88,
+        "result": "Dark pit"
+      },
+      {
+        "min": 89,
+        "max": 98,
+        "result": "Something unusual or unexpected"
+      },
+      {
+        "min": 99,
+        "max": 99,
+        "result": "You transition into a new theme"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "You transition into a new domain"
+      }
+    ],
+    "description": "A place of stone and darkness."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:cavern:dangers",
+    "group": "Delve Domain",
+    "name": "Cavern Dangers",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 31,
+        "max": 33,
+        "result": "Denizen lairs here"
+      },
+      {
+        "min": 34,
+        "max": 36,
+        "result": "Cave-in"
+      },
+      {
+        "min": 37,
+        "max": 39,
+        "result": "Flooding"
+      },
+      {
+        "min": 40,
+        "max": 42,
+        "result": "Perilous climb or descent"
+      },
+      {
+        "min": 43,
+        "max": 45,
+        "result": "Fissure or sinkhole"
+      }
+    ],
+    "description": "A place of stone and darkness."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:frozen_cavern:features",
+    "group": "Delve Domain",
+    "name": "Frozen cavern Features",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 21,
+        "max": 43,
+        "result": "Maze of icy tunnels"
+      },
+      {
+        "min": 44,
+        "max": 56,
+        "result": "Glistening cave"
+      },
+      {
+        "min": 57,
+        "max": 64,
+        "result": "Vast chamber"
+      },
+      {
+        "min": 65,
+        "max": 68,
+        "result": "Frigid waterway"
+      },
+      {
+        "min": 69,
+        "max": 72,
+        "result": "Icy pools"
+      },
+      {
+        "min": 73,
+        "max": 76,
+        "result": "Magnificent ice formations"
+      },
+      {
+        "min": 77,
+        "max": 80,
+        "result": "Frozen waterfall"
+      },
+      {
+        "min": 81,
+        "max": 84,
+        "result": "Deep crevasses"
+      },
+      {
+        "min": 85,
+        "max": 88,
+        "result": "Discovery locked in the ice"
+      },
+      {
+        "min": 89,
+        "max": 98,
+        "result": "Something unusual or unexpected"
+      },
+      {
+        "min": 99,
+        "max": 99,
+        "result": "You transition into a new theme"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "You transition into a new domain"
+      }
+    ],
+    "description": "A place of deep caves and enduring cold."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:frozen_cavern:dangers",
+    "group": "Delve Domain",
+    "name": "Frozen cavern Dangers",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 31,
+        "max": 33,
+        "result": "Denizen lairs here"
+      },
+      {
+        "min": 34,
+        "max": 36,
+        "result": "Fracturing ice"
+      },
+      {
+        "min": 37,
+        "max": 39,
+        "result": "Crumbling chasm"
+      },
+      {
+        "min": 40,
+        "max": 42,
+        "result": "Bitter chill"
+      },
+      {
+        "min": 43,
+        "max": 45,
+        "result": "Disorienting reflections"
+      }
+    ],
+    "description": "A place of deep caves and enduring cold."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:icereach:features",
+    "group": "Delve Domain",
+    "name": "Icereach Features",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 21,
+        "max": 43,
+        "result": "Plains of ice and snow"
+      },
+      {
+        "min": 44,
+        "max": 56,
+        "result": "Seawater channel"
+      },
+      {
+        "min": 57,
+        "max": 64,
+        "result": "Icy highlands"
+      },
+      {
+        "min": 65,
+        "max": 68,
+        "result": "Crevasse"
+      },
+      {
+        "min": 69,
+        "max": 72,
+        "result": "Ice floes"
+      },
+      {
+        "min": 73,
+        "max": 76,
+        "result": "Ship trapped in ice"
+      },
+      {
+        "min": 77,
+        "max": 80,
+        "result": "Animal herd or habitat"
+      },
+      {
+        "min": 81,
+        "max": 84,
+        "result": "Frozen carcass"
+      },
+      {
+        "min": 85,
+        "max": 88,
+        "result": "Camp or"
+      },
+      {
+        "min": 89,
+        "max": 98,
+        "result": "Something unusual or unexpected"
+      },
+      {
+        "min": 99,
+        "max": 99,
+        "result": "You transition into a new theme"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "You transition into a new domain"
+      }
+    ],
+    "description": "A frigid landscape formed of frozen seas."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:icereach:dangers",
+    "group": "Delve Domain",
+    "name": "Icereach Dangers",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 31,
+        "max": 33,
+        "result": "Denizen hunts"
+      },
+      {
+        "min": 34,
+        "max": 36,
+        "result": "Fragile ice above watery depths"
+      },
+      {
+        "min": 37,
+        "max": 39,
+        "result": "Perilous climb or descent"
+      },
+      {
+        "min": 40,
+        "max": 42,
+        "result": "Avalanche or icefall"
+      },
+      {
+        "min": 43,
+        "max": 45,
+        "result": "Foul weather"
+      }
+    ],
+    "description": "A frigid landscape formed of frozen seas."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:mine:features",
+    "group": "Delve Domain",
+    "name": "Mine Features",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 21,
+        "max": 43,
+        "result": "Cramped tunnels"
+      },
+      {
+        "min": 44,
+        "max": 56,
+        "result": "Mine works"
+      },
+      {
+        "min": 57,
+        "max": 64,
+        "result": "Excavated chamber"
+      },
+      {
+        "min": 65,
+        "max": 68,
+        "result": "Mineshaft"
+      },
+      {
+        "min": 69,
+        "max": 72,
+        "result": "Collapsed tunnel"
+      },
+      {
+        "min": 73,
+        "max": 76,
+        "result": "Cluttered storage"
+      },
+      {
+        "min": 77,
+        "max": 80,
+        "result": "Housing or common areas"
+      },
+      {
+        "min": 81,
+        "max": 84,
+        "result": "Flooded chamber"
+      },
+      {
+        "min": 85,
+        "max": 88,
+        "result": "Unearthed secret"
+      },
+      {
+        "min": 89,
+        "max": 98,
+        "result": "Something unusual or unexpected"
+      },
+      {
+        "min": 99,
+        "max": 99,
+        "result": "You transition into a new theme"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "You transition into a new domain"
+      }
+    ],
+    "description": "Tunnels dug greedily and deep."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:mine:dangers",
+    "group": "Delve Domain",
+    "name": "Mine Dangers",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 31,
+        "max": 33,
+        "result": "Cave-in"
+      },
+      {
+        "min": 34,
+        "max": 36,
+        "result": "Flooding"
+      },
+      {
+        "min": 37,
+        "max": 39,
+        "result": "Unstable platforms or architecture"
+      },
+      {
+        "min": 40,
+        "max": 42,
+        "result": "Hazardous gas pocket"
+      },
+      {
+        "min": 43,
+        "max": 45,
+        "result": "Weakened terrain"
+      }
+    ],
+    "description": "Tunnels dug greedily and deep."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:pass:features",
+    "group": "Delve Domain",
+    "name": "Pass Features",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 21,
+        "max": 43,
+        "result": "Winding mountain path"
+      },
+      {
+        "min": 44,
+        "max": 56,
+        "result": "Snowfield or glacial rocks"
+      },
+      {
+        "min": 57,
+        "max": 64,
+        "result": "River gorge"
+      },
+      {
+        "min": 65,
+        "max": 68,
+        "result": "Crashing waterfall"
+      },
+      {
+        "min": 69,
+        "max": 72,
+        "result": "Highland lake"
+      },
+      {
+        "min": 73,
+        "max": 76,
+        "result": "Forgotten cairn"
+      },
+      {
+        "min": 77,
+        "max": 80,
+        "result": "Bridge"
+      },
+      {
+        "min": 81,
+        "max": 84,
+        "result": "Overlook"
+      },
+      {
+        "min": 85,
+        "max": 88,
+        "result": "Camp or outpost"
+      },
+      {
+        "min": 89,
+        "max": 98,
+        "result": "Something unusual or unexpected"
+      },
+      {
+        "min": 99,
+        "max": 99,
+        "result": "You transition into a new theme"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "You transition into a new domain"
+      }
+    ],
+    "description": "Treacherous paths over high mountains."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:pass:dangers",
+    "group": "Delve Domain",
+    "name": "Pass Dangers",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 31,
+        "max": 33,
+        "result": "Denizen lairs here"
+      },
+      {
+        "min": 34,
+        "max": 36,
+        "result": "Denizen hunts"
+      },
+      {
+        "min": 37,
+        "max": 39,
+        "result": "Perilous climb or descent"
+      },
+      {
+        "min": 40,
+        "max": 42,
+        "result": "Avalanche or rockslide"
+      },
+      {
+        "min": 43,
+        "max": 45,
+        "result": "Foul weather"
+      }
+    ],
+    "description": "Treacherous paths over high mountains."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:ruin:features",
+    "group": "Delve Domain",
+    "name": "Ruin Features",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 21,
+        "max": 43,
+        "result": "Crumbling corridors and chambers"
+      },
+      {
+        "min": 44,
+        "max": 56,
+        "result": "Collapsed architecture"
+      },
+      {
+        "min": 57,
+        "max": 64,
+        "result": "Rubble-choked hall"
+      },
+      {
+        "min": 65,
+        "max": 68,
+        "result": "Courtyard"
+      },
+      {
+        "min": 69,
+        "max": 72,
+        "result": "Archive or library"
+      },
+      {
+        "min": 73,
+        "max": 76,
+        "result": "Broken statuary or fading murals"
+      },
+      {
+        "min": 77,
+        "max": 80,
+        "result": "Preserved vault"
+      },
+      {
+        "min": 81,
+        "max": 84,
+        "result": "Temple to forgotten gods"
+      },
+      {
+        "min": 85,
+        "max": 88,
+        "result": "Mausoleum"
+      },
+      {
+        "min": 89,
+        "max": 98,
+        "result": "Something unusual or unexpected"
+      },
+      {
+        "min": 99,
+        "max": 99,
+        "result": "You transition into a new theme"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "You transition into a new domain"
+      }
+    ],
+    "description": "The crumbling legacy of a dead civilization."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:ruin:dangers",
+    "group": "Delve Domain",
+    "name": "Ruin Dangers",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 31,
+        "max": 33,
+        "result": "Ancient mechanism or trap"
+      },
+      {
+        "min": 34,
+        "max": 36,
+        "result": "Collapsing wall or ceiling"
+      },
+      {
+        "min": 37,
+        "max": 39,
+        "result": "Blocked or broken passage"
+      },
+      {
+        "min": 40,
+        "max": 42,
+        "result": "Unstable floor above a new danger"
+      },
+      {
+        "min": 43,
+        "max": 45,
+        "result": "Ancient secrets best left buried"
+      }
+    ],
+    "description": "The crumbling legacy of a dead civilization."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:sea_cave:features",
+    "group": "Delve Domain",
+    "name": "Sea cave Features",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 21,
+        "max": 43,
+        "result": "Watery tunnels"
+      },
+      {
+        "min": 44,
+        "max": 56,
+        "result": "Eroded chamber"
+      },
+      {
+        "min": 57,
+        "max": 64,
+        "result": "Flooded chamber"
+      },
+      {
+        "min": 65,
+        "max": 68,
+        "result": "Vast chamber"
+      },
+      {
+        "min": 69,
+        "max": 72,
+        "result": "Dry passages"
+      },
+      {
+        "min": 73,
+        "max": 76,
+        "result": "Freshwater inlet"
+      },
+      {
+        "min": 77,
+        "max": 80,
+        "result": "Rocky island"
+      },
+      {
+        "min": 81,
+        "max": 84,
+        "result": "Waterborne debris"
+      },
+      {
+        "min": 85,
+        "max": 88,
+        "result": "Shipwreck or boat"
+      },
+      {
+        "min": 89,
+        "max": 98,
+        "result": "Something unusual or unexpected"
+      },
+      {
+        "min": 99,
+        "max": 99,
+        "result": "You transition into a new theme"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "You transition into a new domain"
+      }
+    ],
+    "description": "Stone passages carved by ocean waves."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:sea_cave:dangers",
+    "group": "Delve Domain",
+    "name": "Sea cave Dangers",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 31,
+        "max": 33,
+        "result": "Denizen strikes without warning"
+      },
+      {
+        "min": 34,
+        "max": 36,
+        "result": "Denizen lurks below"
+      },
+      {
+        "min": 37,
+        "max": 39,
+        "result": "Flooding"
+      },
+      {
+        "min": 40,
+        "max": 42,
+        "result": "Rushing current"
+      },
+      {
+        "min": 43,
+        "max": 45,
+        "result": "Claustrophobic squeeze"
+      }
+    ],
+    "description": "Stone passages carved by ocean waves."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:shadowfen:features",
+    "group": "Delve Domain",
+    "name": "Shadowfen Features",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 21,
+        "max": 43,
+        "result": "Narrow path through a fetid bog"
+      },
+      {
+        "min": 44,
+        "max": 56,
+        "result": "Stagnant waterway"
+      },
+      {
+        "min": 57,
+        "max": 64,
+        "result": "Flooded thicket"
+      },
+      {
+        "min": 65,
+        "max": 68,
+        "result": "Island of dry land"
+      },
+      {
+        "min": 69,
+        "max": 72,
+        "result": "Submerged discovery"
+      },
+      {
+        "min": 73,
+        "max": 76,
+        "result": "Preserved corpses"
+      },
+      {
+        "min": 77,
+        "max": 80,
+        "result": "Overgrown structure"
+      },
+      {
+        "min": 81,
+        "max": 84,
+        "result": "Tall reeds"
+      },
+      {
+        "min": 85,
+        "max": 88,
+        "result": "Camp or outpost"
+      },
+      {
+        "min": 89,
+        "max": 98,
+        "result": "Something unusual or unexpected"
+      },
+      {
+        "min": 99,
+        "max": 99,
+        "result": "You transition into a new theme"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "You transition into a new domain"
+      }
+    ],
+    "description": "A primeval marsh, cloaked in mist."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:shadowfen:dangers",
+    "group": "Delve Domain",
+    "name": "Shadowfen Dangers",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 31,
+        "max": 33,
+        "result": "Denizen hunts"
+      },
+      {
+        "min": 34,
+        "max": 36,
+        "result": "Deep water blocks the path"
+      },
+      {
+        "min": 37,
+        "max": 39,
+        "result": "Toxic environment"
+      },
+      {
+        "min": 40,
+        "max": 42,
+        "result": "Concealing or disorienting mist"
+      },
+      {
+        "min": 43,
+        "max": 45,
+        "result": "Hidden quagmire"
+      }
+    ],
+    "description": "A primeval marsh, cloaked in mist."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:stronghold:features",
+    "group": "Delve Domain",
+    "name": "Stronghold Features",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 21,
+        "max": 43,
+        "result": "Connecting passageways"
+      },
+      {
+        "min": 44,
+        "max": 56,
+        "result": "Barracks or common quarters"
+      },
+      {
+        "min": 57,
+        "max": 64,
+        "result": "Large hall"
+      },
+      {
+        "min": 65,
+        "max": 68,
+        "result": "Workshop or library"
+      },
+      {
+        "min": 69,
+        "max": 72,
+        "result": "Command center or leadership"
+      },
+      {
+        "min": 73,
+        "max": 76,
+        "result": "Ladder or stairwell"
+      },
+      {
+        "min": 77,
+        "max": 80,
+        "result": "Storage"
+      },
+      {
+        "min": 81,
+        "max": 84,
+        "result": "Kitchen or larder"
+      },
+      {
+        "min": 85,
+        "max": 88,
+        "result": "Courtyard"
+      },
+      {
+        "min": 89,
+        "max": 98,
+        "result": "Something unusual or unexpected"
+      },
+      {
+        "min": 99,
+        "max": 99,
+        "result": "You transition into a new theme"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "You transition into a new domain"
+      }
+    ],
+    "description": "A fortress secured against trespassers."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:stronghold:dangers",
+    "group": "Delve Domain",
+    "name": "Stronghold Dangers",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 31,
+        "max": 33,
+        "result": "Blocked or guarded path"
+      },
+      {
+        "min": 34,
+        "max": 36,
+        "result": "Caught in the open"
+      },
+      {
+        "min": 37,
+        "max": 39,
+        "result": "Chokepoint"
+      },
+      {
+        "min": 40,
+        "max": 42,
+        "result": "Trap"
+      },
+      {
+        "min": 43,
+        "max": 45,
+        "result": "Alarm trigger"
+      }
+    ],
+    "description": "A fortress secured against trespassers."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:tanglewood:features",
+    "group": "Delve Domain",
+    "name": "Tanglewood Features",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 21,
+        "max": 43,
+        "result": "Dense thicket"
+      },
+      {
+        "min": 44,
+        "max": 56,
+        "result": "Overgrown path"
+      },
+      {
+        "min": 57,
+        "max": 64,
+        "result": "Waterway"
+      },
+      {
+        "min": 65,
+        "max": 68,
+        "result": "Clearing"
+      },
+      {
+        "min": 69,
+        "max": 72,
+        "result": "Elder tree"
+      },
+      {
+        "min": 73,
+        "max": 76,
+        "result": "Brambles"
+      },
+      {
+        "min": 77,
+        "max": 80,
+        "result": "Overgrown structure"
+      },
+      {
+        "min": 81,
+        "max": 84,
+        "result": "Rocky outcrop"
+      },
+      {
+        "min": 85,
+        "max": 88,
+        "result": "Camp or outpost"
+      },
+      {
+        "min": 89,
+        "max": 98,
+        "result": "Something unusual or unexpected"
+      },
+      {
+        "min": 99,
+        "max": 99,
+        "result": "You transition into a new theme"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "You transition into a new domain"
+      }
+    ],
+    "description": "A perilous forest of eternal shadow."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:tanglewood:dangers",
+    "group": "Delve Domain",
+    "name": "Tanglewood Dangers",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 31,
+        "max": 33,
+        "result": "Denizen hunts"
+      },
+      {
+        "min": 34,
+        "max": 36,
+        "result": "Denizen lairs here"
+      },
+      {
+        "min": 37,
+        "max": 39,
+        "result": "Trap or snare"
+      },
+      {
+        "min": 40,
+        "max": 42,
+        "result": "Path leads you astray"
+      },
+      {
+        "min": 43,
+        "max": 45,
+        "result": "Entangling plant life"
+      }
+    ],
+    "description": "A perilous forest of eternal shadow."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:underkeep:features",
+    "group": "Delve Domain",
+    "name": "Underkeep Features",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 21,
+        "max": 43,
+        "result": "Carved passages"
+      },
+      {
+        "min": 44,
+        "max": 56,
+        "result": "Hall or chamber"
+      },
+      {
+        "min": 57,
+        "max": 64,
+        "result": "Stairs into the depths"
+      },
+      {
+        "min": 65,
+        "max": 68,
+        "result": "Grand doorway or entrance"
+      },
+      {
+        "min": 69,
+        "max": 72,
+        "result": "Tomb or catacombs"
+      },
+      {
+        "min": 73,
+        "max": 76,
+        "result": "Rough-hewn cave"
+      },
+      {
+        "min": 77,
+        "max": 80,
+        "result": "Foundry or workshop"
+      },
+      {
+        "min": 81,
+        "max": 84,
+        "result": "Shrine or temple"
+      },
+      {
+        "min": 85,
+        "max": 88,
+        "result": "Imposing architecture or artistry"
+      },
+      {
+        "min": 89,
+        "max": 98,
+        "result": "Something unusual or unexpected"
+      },
+      {
+        "min": 99,
+        "max": 99,
+        "result": "You transition into a new theme"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "You transition into a new domain"
+      }
+    ],
+    "description": "An age-old subterranean dungeon."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:domain:underkeep:dangers",
+    "group": "Delve Domain",
+    "name": "Underkeep Dangers",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 31,
+        "max": 33,
+        "result": "Ancient mechanism or trap"
+      },
+      {
+        "min": 34,
+        "max": 36,
+        "result": "Crumbling architecture"
+      },
+      {
+        "min": 37,
+        "max": 39,
+        "result": "Blocked or broken passage"
+      },
+      {
+        "min": 40,
+        "max": 42,
+        "result": "Artifact with a hidden danger"
+      },
+      {
+        "min": 43,
+        "max": 45,
+        "result": "Denizen lurks in darkness"
+      }
+    ],
+    "description": "An age-old subterranean dungeon."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:site_name:format",
+    "group": "Delve Site Name",
+    "name": "Format",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 25,
+        "result": "[Description](id:delve/oracles/site_name/description) [Place](id:delve/oracles/site_name/place)"
+      },
+      {
+        "min": 26,
+        "max": 50,
+        "result": "[Place](id:delve/oracles/site_name/place) of [Detail](id:delve/oracles/site_name/detail)"
+      },
+      {
+        "min": 51,
+        "max": 70,
+        "result": "[Place](id:delve/oracles/site_name/place) of [Description](id:delve/oracles/site_name/description) [Detail](id:delve/oracles/site_name/detail)"
+      },
+      {
+        "min": 71,
+        "max": 80,
+        "result": "[Place](id:delve/oracles/site_name/place) of [Namesake's](id:delve/oracles/site_name/namesake) [Detail](id:delve/oracles/site_name/detail)"
+      },
+      {
+        "min": 81,
+        "max": 85,
+        "result": "[Namesake's](id:delve/oracles/site_name/namesake) [Place](id:delve/oracles/site_name/place)"
+      },
+      {
+        "min": 86,
+        "max": 95,
+        "result": "[Description](id:delve/oracles/site_name/description) [Place](id:delve/oracles/site_name/place) of [Namesake](id:delve/oracles/site_name/namesake)"
+      },
+      {
+        "min": 96,
+        "max": 100,
+        "result": "[Place](id:delve/oracles/site_name/place) of [Namesake](id:delve/oracles/site_name/namesake)"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:site_name:description",
+    "group": "Delve Site Name",
+    "name": "Description",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 2,
+        "result": "Deep"
+      },
+      {
+        "min": 3,
+        "max": 4,
+        "result": "Tainted"
+      },
+      {
+        "min": 5,
+        "max": 6,
+        "result": "Grey"
+      },
+      {
+        "min": 7,
+        "max": 8,
+        "result": "Forgotten"
+      },
+      {
+        "min": 9,
+        "max": 10,
+        "result": "Flooded"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "Forbidden"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "Barren"
+      },
+      {
+        "min": 15,
+        "max": 16,
+        "result": "Lost"
+      },
+      {
+        "min": 17,
+        "max": 18,
+        "result": "Cursed"
+      },
+      {
+        "min": 19,
+        "max": 20,
+        "result": "Fell"
+      },
+      {
+        "min": 21,
+        "max": 22,
+        "result": "Sunken"
+      },
+      {
+        "min": 23,
+        "max": 24,
+        "result": "Nightmare"
+      },
+      {
+        "min": 25,
+        "max": 26,
+        "result": "Infernal"
+      },
+      {
+        "min": 27,
+        "max": 28,
+        "result": "Dark"
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "result": "Bloodstained"
+      },
+      {
+        "min": 31,
+        "max": 32,
+        "result": "Haunted"
+      },
+      {
+        "min": 33,
+        "max": 34,
+        "result": "White"
+      },
+      {
+        "min": 35,
+        "max": 36,
+        "result": "Shrouded"
+      },
+      {
+        "min": 37,
+        "max": 38,
+        "result": "Wasted"
+      },
+      {
+        "min": 39,
+        "max": 40,
+        "result": "Grim"
+      },
+      {
+        "min": 41,
+        "max": 42,
+        "result": "Endless"
+      },
+      {
+        "min": 43,
+        "max": 44,
+        "result": "Crumbling"
+      },
+      {
+        "min": 45,
+        "max": 46,
+        "result": "Undying"
+      },
+      {
+        "min": 47,
+        "max": 48,
+        "result": "Bloodied"
+      },
+      {
+        "min": 49,
+        "max": 50,
+        "result": "Forsaken"
+      },
+      {
+        "min": 51,
+        "max": 52,
+        "result": "Silent"
+      },
+      {
+        "min": 53,
+        "max": 54,
+        "result": "Blighted"
+      },
+      {
+        "min": 55,
+        "max": 56,
+        "result": "Iron"
+      },
+      {
+        "min": 57,
+        "max": 58,
+        "result": "Frozen"
+      },
+      {
+        "min": 59,
+        "max": 60,
+        "result": "Abyssal"
+      },
+      {
+        "min": 61,
+        "max": 62,
+        "result": "Crimson"
+      },
+      {
+        "min": 63,
+        "max": 64,
+        "result": "Silver"
+      },
+      {
+        "min": 65,
+        "max": 66,
+        "result": "Desecrated"
+      },
+      {
+        "min": 67,
+        "max": 68,
+        "result": "Ashen"
+      },
+      {
+        "min": 69,
+        "max": 70,
+        "result": "Elder"
+      },
+      {
+        "min": 71,
+        "max": 72,
+        "result": "Scorched"
+      },
+      {
+        "min": 73,
+        "max": 74,
+        "result": "Unknown"
+      },
+      {
+        "min": 75,
+        "max": 76,
+        "result": "Scarred"
+      },
+      {
+        "min": 77,
+        "max": 78,
+        "result": "Broken"
+      },
+      {
+        "min": 79,
+        "max": 80,
+        "result": "Chaotic"
+      },
+      {
+        "min": 81,
+        "max": 82,
+        "result": "Black"
+      },
+      {
+        "min": 83,
+        "max": 84,
+        "result": "Hidden"
+      },
+      {
+        "min": 85,
+        "max": 86,
+        "result": "Sundered"
+      },
+      {
+        "min": 87,
+        "max": 88,
+        "result": "Shattered"
+      },
+      {
+        "min": 89,
+        "max": 90,
+        "result": "Dreaded"
+      },
+      {
+        "min": 91,
+        "max": 92,
+        "result": "Secret"
+      },
+      {
+        "min": 93,
+        "max": 94,
+        "result": "High"
+      },
+      {
+        "min": 95,
+        "max": 96,
+        "result": "Sacred"
+      },
+      {
+        "min": 97,
+        "max": 98,
+        "result": "Fallen"
+      },
+      {
+        "min": 99,
+        "max": 100,
+        "result": "Ruined"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:site_name:detail",
+    "group": "Delve Site Name",
+    "name": "Detail",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 2,
+        "result": "Blight"
+      },
+      {
+        "min": 3,
+        "max": 4,
+        "result": "Strife"
+      },
+      {
+        "min": 5,
+        "max": 6,
+        "result": "Nightfall"
+      },
+      {
+        "min": 7,
+        "max": 8,
+        "result": "Fury"
+      },
+      {
+        "min": 9,
+        "max": 10,
+        "result": "Terror"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "Truth"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "Spring"
+      },
+      {
+        "min": 15,
+        "max": 16,
+        "result": "Sanctuary"
+      },
+      {
+        "min": 17,
+        "max": 18,
+        "result": "Bone"
+      },
+      {
+        "min": 19,
+        "max": 20,
+        "result": "Specters"
+      },
+      {
+        "min": 21,
+        "max": 22,
+        "result": "Daybreak"
+      },
+      {
+        "min": 23,
+        "max": 24,
+        "result": "Doom"
+      },
+      {
+        "min": 25,
+        "max": 26,
+        "result": "Treachery"
+      },
+      {
+        "min": 27,
+        "max": 28,
+        "result": "Blood"
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "result": "War"
+      },
+      {
+        "min": 31,
+        "max": 32,
+        "result": "Torment"
+      },
+      {
+        "min": 33,
+        "max": 34,
+        "result": "Iron"
+      },
+      {
+        "min": 35,
+        "max": 36,
+        "result": "Silence"
+      },
+      {
+        "min": 37,
+        "max": 38,
+        "result": "Mist"
+      },
+      {
+        "min": 39,
+        "max": 40,
+        "result": "Isolation"
+      },
+      {
+        "min": 41,
+        "max": 42,
+        "result": "Runes"
+      },
+      {
+        "min": 43,
+        "max": 44,
+        "result": "Rot"
+      },
+      {
+        "min": 45,
+        "max": 46,
+        "result": "Corruption"
+      },
+      {
+        "min": 47,
+        "max": 48,
+        "result": "Prophecy"
+      },
+      {
+        "min": 49,
+        "max": 50,
+        "result": "Fate"
+      },
+      {
+        "min": 51,
+        "max": 52,
+        "result": "Twilight"
+      },
+      {
+        "min": 53,
+        "max": 54,
+        "result": "Power"
+      },
+      {
+        "min": 55,
+        "max": 56,
+        "result": "Darkness"
+      },
+      {
+        "min": 57,
+        "max": 58,
+        "result": "Gloom"
+      },
+      {
+        "min": 59,
+        "max": 60,
+        "result": "Storms"
+      },
+      {
+        "min": 61,
+        "max": 62,
+        "result": "Hope"
+      },
+      {
+        "min": 63,
+        "max": 64,
+        "result": "Lament"
+      },
+      {
+        "min": 65,
+        "max": 66,
+        "result": "Frost"
+      },
+      {
+        "min": 67,
+        "max": 68,
+        "result": "Souls"
+      },
+      {
+        "min": 69,
+        "max": 70,
+        "result": "Winter"
+      },
+      {
+        "min": 71,
+        "max": 72,
+        "result": "Sadness"
+      },
+      {
+        "min": 73,
+        "max": 74,
+        "result": "Desolation"
+      },
+      {
+        "min": 75,
+        "max": 76,
+        "result": "Bane"
+      },
+      {
+        "min": 77,
+        "max": 78,
+        "result": "Lies"
+      },
+      {
+        "min": 79,
+        "max": 80,
+        "result": "Ash"
+      },
+      {
+        "min": 81,
+        "max": 82,
+        "result": "Banishment"
+      },
+      {
+        "min": 83,
+        "max": 84,
+        "result": "Shadow"
+      },
+      {
+        "min": 85,
+        "max": 86,
+        "result": "Madness"
+      },
+      {
+        "min": 87,
+        "max": 88,
+        "result": "Stone"
+      },
+      {
+        "min": 89,
+        "max": 90,
+        "result": "Secrets"
+      },
+      {
+        "min": 91,
+        "max": 92,
+        "result": "Despair"
+      },
+      {
+        "min": 93,
+        "max": 94,
+        "result": "Blades"
+      },
+      {
+        "min": 95,
+        "max": 96,
+        "result": "Dread"
+      },
+      {
+        "min": 97,
+        "max": 98,
+        "result": "Light"
+      },
+      {
+        "min": 99,
+        "max": 100,
+        "result": "Wrath"
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:site_name:namesake",
+    "group": "Delve Site Name",
+    "name": "Namesake",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 2,
+        "result": "Breckon"
+      },
+      {
+        "min": 3,
+        "max": 4,
+        "result": "Issara"
+      },
+      {
+        "min": 5,
+        "max": 6,
+        "result": "Milenna"
+      },
+      {
+        "min": 7,
+        "max": 8,
+        "result": "Thorval"
+      },
+      {
+        "min": 9,
+        "max": 10,
+        "result": "Khulan"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "Aurvang"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "Kalida"
+      },
+      {
+        "min": 15,
+        "max": 16,
+        "result": "Keeara"
+      },
+      {
+        "min": 17,
+        "max": 18,
+        "result": "Andor"
+      },
+      {
+        "min": 19,
+        "max": 20,
+        "result": "Zakaria"
+      },
+      {
+        "min": 21,
+        "max": 22,
+        "result": "Willa"
+      },
+      {
+        "min": 23,
+        "max": 24,
+        "result": "Etana"
+      },
+      {
+        "min": 25,
+        "max": 26,
+        "result": "Valgard"
+      },
+      {
+        "min": 27,
+        "max": 28,
+        "result": "Kenrick"
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "result": "Wyland"
+      },
+      {
+        "min": 31,
+        "max": 32,
+        "result": "Sidura"
+      },
+      {
+        "min": 33,
+        "max": 34,
+        "result": "Svala"
+      },
+      {
+        "min": 35,
+        "max": 36,
+        "result": "Kajir"
+      },
+      {
+        "min": 37,
+        "max": 38,
+        "result": "Saiven"
+      },
+      {
+        "min": 39,
+        "max": 40,
+        "result": "Callwen"
+      },
+      {
+        "min": 41,
+        "max": 42,
+        "result": "Zhan"
+      },
+      {
+        "min": 43,
+        "max": 44,
+        "result": "Solana"
+      },
+      {
+        "min": 45,
+        "max": 46,
+        "result": "Ildar"
+      },
+      {
+        "min": 47,
+        "max": 48,
+        "result": "Keelan"
+      },
+      {
+        "min": 49,
+        "max": 50,
+        "result": "Thrain"
+      },
+      {
+        "min": 51,
+        "max": 52,
+        "result": "Kynan"
+      },
+      {
+        "min": 53,
+        "max": 54,
+        "result": "Jadina"
+      },
+      {
+        "min": 55,
+        "max": 56,
+        "result": "Radek"
+      },
+      {
+        "min": 57,
+        "max": 58,
+        "result": "Wulan"
+      },
+      {
+        "min": 59,
+        "max": 60,
+        "result": "Garion"
+      },
+      {
+        "min": 61,
+        "max": 62,
+        "result": "Eysa"
+      },
+      {
+        "min": 63,
+        "max": 64,
+        "result": "Kolor"
+      },
+      {
+        "min": 65,
+        "max": 66,
+        "result": "Katarra"
+      },
+      {
+        "min": 67,
+        "max": 68,
+        "result": "Dain"
+      },
+      {
+        "min": 69,
+        "max": 70,
+        "result": "Farina"
+      },
+      {
+        "min": 71,
+        "max": 72,
+        "result": "Yala"
+      },
+      {
+        "min": 73,
+        "max": 74,
+        "result": "Kodroth"
+      },
+      {
+        "min": 75,
+        "max": 76,
+        "result": "Morien"
+      },
+      {
+        "min": 77,
+        "max": 78,
+        "result": "Akida"
+      },
+      {
+        "min": 79,
+        "max": 80,
+        "result": "Haldorr"
+      },
+      {
+        "min": 81,
+        "max": 82,
+        "result": "Nyrad"
+      },
+      {
+        "min": 83,
+        "max": 84,
+        "result": "Edda"
+      },
+      {
+        "min": 85,
+        "max": 86,
+        "result": "Jorund"
+      },
+      {
+        "min": 87,
+        "max": 88,
+        "result": "Morraine"
+      },
+      {
+        "min": 89,
+        "max": 90,
+        "result": "Lindar"
+      },
+      {
+        "min": 91,
+        "max": 92,
+        "result": "Sithra"
+      },
+      {
+        "min": 93,
+        "max": 94,
+        "result": "Torgan"
+      },
+      {
+        "min": 95,
+        "max": 96,
+        "result": "Arnorr"
+      },
+      {
+        "min": 97,
+        "max": 98,
+        "result": "Thyri"
+      },
+      {
+        "min": 99,
+        "max": 100,
+        "result": "Erisia"
+      }
+    ],
+    "description": "You may also use your preferred name randomizer to generate a Namesake for your site. If you want to add details for the Namesake, use the [Character oracles](id:classic/collections/oracles/character) in *Ironsworn Core*. This may help inspire a deeper understanding of the history of the site."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:site_name:place",
+    "group": "Delve Site Name",
+    "name": "Place",
+    "dice": "1d100",
+    "entries": [
+      {
+        "min": 1,
+        "max": 6,
+        "result": "[Barrow](id:delve/site_domains/barrow)"
+      },
+      {
+        "min": 7,
+        "max": 18,
+        "result": "[Cavern](id:delve/site_domains/cavern)"
+      },
+      {
+        "min": 19,
+        "max": 28,
+        "result": "[Frozen Cavern](id:delve/site_domains/frozen_cavern)"
+      },
+      {
+        "min": 29,
+        "max": 32,
+        "result": "[Icereach](id:delve/site_domains/icereach)"
+      },
+      {
+        "min": 33,
+        "max": 38,
+        "result": "[Mine](id:delve/site_domains/mine)"
+      },
+      {
+        "min": 39,
+        "max": 48,
+        "result": "[Pass](id:delve/site_domains/pass)"
+      },
+      {
+        "min": 49,
+        "max": 58,
+        "result": "[Ruin](id:delve/site_domains/ruin)"
+      },
+      {
+        "min": 59,
+        "max": 68,
+        "result": "[Sea Cave](id:delve/site_domains/sea_cave)"
+      },
+      {
+        "min": 69,
+        "max": 78,
+        "result": "[Shadowfen](id:delve/site_domains/shadowfen)"
+      },
+      {
+        "min": 79,
+        "max": 83,
+        "result": "[Stronghold](id:delve/site_domains/stronghold)"
+      },
+      {
+        "min": 84,
+        "max": 95,
+        "result": "[Tanglewood](id:delve/site_domains/tanglewood)"
+      },
+      {
+        "min": 96,
+        "max": 100,
+        "result": "[Underkeep](id:delve/site_domains/underkeep)"
+      }
+    ]
   }
 ]
