@@ -5,6 +5,7 @@ import { config } from 'dotenv';
 import { connectToDb } from './db/mongo';
 import { generateNarration } from './llm/llmClient';
 import oracleRoutes from './routes/oracles';
+import moveRoutes from './routes/moves';
 
 config({ path: '../.env.development' });
 
@@ -42,6 +43,7 @@ async function startServer(): Promise<void> {
   });
 
   app.use('/api/oracles', oracleRoutes);
+  app.use('/api/moves', moveRoutes);
 
   app.listen(PORT, () => {
     console.log(`Forgesworn Hearth backend running on port ${PORT}`);
