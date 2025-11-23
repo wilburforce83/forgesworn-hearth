@@ -1,0 +1,37 @@
+[
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:reveal_danger",
+    "group": "Delve",
+    "name": "Reveal a Danger",
+    "dice": "1d100",
+    "entries": [
+      { "min": 1, "max": 10, "result": "An alarm is triggered or guardians are alerted" },
+      { "min": 11, "max": 20, "result": "A hidden trap is sprung" },
+      { "min": 21, "max": 30, "result": "A path is blocked by a recent collapse" },
+      { "min": 31, "max": 40, "result": "You are separated or disoriented" },
+      { "min": 41, "max": 50, "result": "A rival or hostile denizen arrives" },
+      { "min": 51, "max": 60, "result": "Resources are depleted or equipment fails" },
+      { "min": 61, "max": 70, "result": "A clue is misleading or a false trail" },
+      { "min": 71, "max": 80, "result": "You attract unwanted attention from within" },
+      { "min": 81, "max": 90, "result": "A lurking horror reveals its presence" },
+      { "min": 91, "max": 100, "result": "Roll twice and combine the threats" }
+    ],
+    "description": "Complications that appear while exploring a site."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:delve:feature",
+    "group": "Delve",
+    "name": "Discover a Feature",
+    "dice": "1d100",
+    "entries": [
+      { "min": 1, "max": 20, "result": "Ancient carving depicting forgotten oaths" },
+      { "min": 21, "max": 40, "result": "Collapsed hall exposing a hidden chamber" },
+      { "min": 41, "max": 60, "result": "Still pool reflecting distant lights" },
+      { "min": 61, "max": 80, "result": "Makeshift camp left by a previous delver" },
+      { "min": 81, "max": 100, "result": "Whispering winds carrying ominous voices" }
+    ],
+    "description": "Details to flesh out chambers, passages, or rooms."
+  }
+]

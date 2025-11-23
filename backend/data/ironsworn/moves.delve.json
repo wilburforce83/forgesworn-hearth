@@ -1,0 +1,52 @@
+[
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "delve_the_depths",
+    "name": "Delve the Depths",
+    "category": "delve",
+    "rollType": "action",
+    "statsUsed": ["edge", "shadow", "wits"],
+    "rankOptions": ["Troublesome", "Dangerous", "Formidable", "Extreme", "Epic"],
+    "text": {
+      "summary": "Explore a perilous site to advance deeper.",
+      "trigger": "When you traverse a perilous site in search of objectives, roll to delve.",
+      "outcomes": {
+        "strongHit": "You make good progress and avoid new dangers. Mark progress according to the site rank.",
+        "weakHit": "You mark progress but encounter a complication or danger.",
+        "miss": "You are waylaid by a peril or discover a new threat. Pay the price."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "find_an_opportunity",
+    "name": "Find an Opportunity",
+    "category": "delve",
+    "rollType": "special",
+    "text": {
+      "summary": "A fortunate event or helpful discovery is revealed.",
+      "trigger": "When an opportunity is revealed within a site, envision it and take an appropriate bonus.",
+      "outcomes": {
+        "strongHit": "You capitalize on the moment. Choose an immediate benefit such as +1 momentum or progress.",
+        "weakHit": "The opportunity comes with a cost or complication. Gain a benefit but also a new threat.",
+        "miss": "The supposed opportunity was a trap or distraction. Face a new peril."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "escape_the_depths",
+    "name": "Escape the Depths",
+    "category": "delve",
+    "rollType": "progress",
+    "text": {
+      "summary": "Flee or withdraw from a perilous site.",
+      "trigger": "When you attempt to escape a site and get to safety, roll your progress.",
+      "outcomes": {
+        "strongHit": "You get out quickly or avoid pursuit. You and any allies are safe.",
+        "weakHit": "You escape but the situation remains tense or you leave something behind.",
+        "miss": "You are pursued, trapped, or face a new calamity within the depths."
+      }
+    }
+  }
+]

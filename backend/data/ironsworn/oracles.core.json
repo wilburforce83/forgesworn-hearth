@@ -1,0 +1,57 @@
+[
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:oracle:action",
+    "group": "Core",
+    "name": "Action",
+    "dice": "1d100",
+    "entries": [
+      { "min": 1, "max": 10, "result": "Clash" },
+      { "min": 11, "max": 20, "result": "Secure" },
+      { "min": 21, "max": 30, "result": "Summon" },
+      { "min": 31, "max": 40, "result": "Gather" },
+      { "min": 41, "max": 50, "result": "Reveal" },
+      { "min": 51, "max": 60, "result": "Defy" },
+      { "min": 61, "max": 70, "result": "Endure" },
+      { "min": 71, "max": 80, "result": "Protect" },
+      { "min": 81, "max": 90, "result": "Seize" },
+      { "min": 91, "max": 100, "result": "Transform" }
+    ],
+    "description": "Broad actions to pair with Themes for prompts."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:oracle:theme",
+    "group": "Core",
+    "name": "Theme",
+    "dice": "1d100",
+    "entries": [
+      { "min": 1, "max": 10, "result": "Vengeance" },
+      { "min": 11, "max": 20, "result": "Mysticism" },
+      { "min": 21, "max": 30, "result": "Community" },
+      { "min": 31, "max": 40, "result": "Decay" },
+      { "min": 41, "max": 50, "result": "Trade" },
+      { "min": 51, "max": 60, "result": "Safety" },
+      { "min": 61, "max": 70, "result": "Fear" },
+      { "min": 71, "max": 80, "result": "Secrets" },
+      { "min": 81, "max": 90, "result": "Honor" },
+      { "min": 91, "max": 100, "result": "Chaos" }
+    ],
+    "description": "Pair with Action to inspire situations and clues."
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "oracleId": "ironsworn:oracle:region",
+    "group": "Core",
+    "name": "Region",
+    "dice": "1d100",
+    "entries": [
+      { "min": 1, "max": 20, "result": "Barrier Islands" },
+      { "min": 21, "max": 40, "result": "Hinterlands" },
+      { "min": 41, "max": 60, "result": "Deep Wilds" },
+      { "min": 61, "max": 80, "result": "Ragged Coast" },
+      { "min": 81, "max": 100, "result": "Shattered Wastes" }
+    ],
+    "description": "Where in the Ironlands the current scene unfolds."
+  }
+]

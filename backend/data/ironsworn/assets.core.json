@@ -1,0 +1,92 @@
+[
+  {
+    "rulesetId": "ironsworn-core",
+    "assetId": "path_bladebound",
+    "name": "Blade-Bound",
+    "type": "path",
+    "category": "Oathbound",
+    "summary": "A sentient blade guides your sworn quest.",
+    "source": "Core",
+    "abilities": [
+      {
+        "index": 1,
+        "text": "Your blade speaks in moments of need. When you Secure an Advantage by listening to its counsel, add +1 and take +1 momentum on a hit."
+      },
+      {
+        "index": 2,
+        "text": "When you Strike or Clash alongside the blade's urging, mark a checkbox to add +1 harm.",
+        "requiresCheckbox": true
+      },
+      {
+        "index": 3,
+        "text": "When you Fulfill Your Vow tied to the blade's purpose, take +2 momentum."
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "assetId": "companion_hawk",
+    "name": "Hawk",
+    "type": "companion",
+    "summary": "A keen-eyed raptor aids your travels.",
+    "source": "Core",
+    "abilities": [
+      {
+        "index": 1,
+        "text": "When your hawk scouts ahead to Gather Information, take +1. On a hit, take +1 momentum."
+      },
+      {
+        "index": 2,
+        "text": "When your hawk distracts a foe and you Strike at range, inflict +1 harm."
+      },
+      {
+        "index": 3,
+        "text": "When your hawk delivers a small object or message, add +1 and take +1 momentum on a hit."
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "assetId": "combat_talent_skirmisher",
+    "name": "Skirmisher",
+    "type": "combat_talent",
+    "summary": "You fight on the move with reach weapons or spears.",
+    "source": "Core",
+    "abilities": [
+      {
+        "index": 1,
+        "text": "When you Face Danger or Secure an Advantage by keeping your distance, add +1 and take +1 momentum on a hit."
+      },
+      {
+        "index": 2,
+        "text": "When you Strike or Clash after repositioning, inflict +1 harm."
+      },
+      {
+        "index": 3,
+        "text": "When you Turn the Tide, take +1 momentum and add +1 to your next move."
+      }
+    ]
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "assetId": "ritual_augury",
+    "name": "Augury",
+    "type": "ritual",
+    "summary": "You read omens in the bones, runes, or flame.",
+    "source": "Core",
+    "abilities": [
+      {
+        "index": 1,
+        "text": "When you perform an augury, roll +wits. On a hit, ask the oracle a single open-ended question about your path forward."
+      },
+      {
+        "index": 2,
+        "text": "When you Aid an Ally after performing an augury for them, take +1 on your Secure an Advantage."
+      },
+      {
+        "index": 3,
+        "text": "When you read omens for a coming battle, take +1 momentum now and +1 on your first Strike or Clash."
+      }
+    ]
+  }
+]

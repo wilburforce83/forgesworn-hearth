@@ -1,0 +1,21 @@
+{
+  "rulesetId": "ironsworn-core",
+  "name": "Ironsworn",
+  "version": "1.3",
+  "dice": {
+    "action": { "sides": 6, "count": 1 },
+    "challenge": { "sides": 10, "count": 2 }
+  },
+  "moveSetKeys": ["adventure", "relationship", "combat", "quest", "delve", "session"],
+  "oracleTableIds": [
+    "ironsworn:oracle:action",
+    "ironsworn:oracle:theme",
+    "ironsworn:oracle:region",
+    "ironsworn:delve:reveal_danger"
+  ],
+  "assetPackIds": ["ironsworn:assets:core"],
+  "metadata": {
+    "theme": "Iron vows and perilous journeys through the Ironlands",
+    "description": "A solo/coop-first fantasy adventure game of sworn quests and harsh frontiers."
+  }
+}

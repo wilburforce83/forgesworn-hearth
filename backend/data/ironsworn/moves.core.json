@@ -1,0 +1,53 @@
+[
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "face_danger",
+    "name": "Face Danger",
+    "category": "adventure",
+    "rollType": "action",
+    "statsUsed": ["edge", "heart", "iron", "shadow", "wits"],
+    "text": {
+      "summary": "Risk something in a dangerous situation.",
+      "trigger": "When you attempt something risky or react under fire, envision your approach and roll.",
+      "outcomes": {
+        "strongHit": "You are successful. Take +1 momentum.",
+        "weakHit": "You succeed, but face a troublesome cost or complication.",
+        "miss": "You fail, or a new danger is revealed. Pay the price."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "secure_an_advantage",
+    "name": "Secure an Advantage",
+    "category": "adventure",
+    "rollType": "action",
+    "statsUsed": ["edge", "heart", "iron", "shadow", "wits"],
+    "text": {
+      "summary": "Gain leverage or prepare for what's next.",
+      "trigger": "When you assess a situation, make preparations, or attempt to gain leverage, roll.",
+      "outcomes": {
+        "strongHit": "You gain advantage. Take +2 momentum or +1 on your next move.",
+        "weakHit": "Your advantage is short-lived. Take +1 momentum.",
+        "miss": "You fail or reveal a new danger. Pay the price."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "gather_information",
+    "name": "Gather Information",
+    "category": "adventure",
+    "rollType": "action",
+    "statsUsed": ["wits", "shadow"],
+    "text": {
+      "summary": "Ask questions, study a situation, or survey the surroundings.",
+      "trigger": "When you search for clues, ask questions, or follow a track, roll.",
+      "outcomes": {
+        "strongHit": "You discover something helpful and specific. Take +2 momentum.",
+        "weakHit": "The information complicates your quest or introduces a new danger. Take +1 momentum.",
+        "miss": "Your investigation exposes a dire threat or reveals an unwelcome truth. Pay the price."
+      }
+    }
+  }
+]
