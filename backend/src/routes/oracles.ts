@@ -6,9 +6,18 @@ const router = Router();
 router.get('/:oracleId/roll', async (req, res, next) => {
   try {
     const { oracleId } = req.params;
-    const fixedRollValue = req.query.fixedRoll ? Number(req.query.fixedRoll) : undefined;
+    const rollParam = req.query.roll;
+
+    let fixedRoll: number | undefined;
+    if (typeof rollParam === 'string') {
+      const parsed = Number(rollParam);
+      if (Number.isFinite(parsed)) {
+        fixedRoll = parsed;
+      }
+    }
+
     const result = await rollOracle(oracleId, {
-      fixedRoll: Number.isFinite(fixedRollValue) ? fixedRollValue : undefined,
+      fixedRoll,
     });
     res.json(result);
   } catch (error) {

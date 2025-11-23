@@ -85,7 +85,15 @@ export async function rollOracle(
   const oracle = await loadOracle(collection, oracleId);
 
   const maxRoll = parseDice(oracle.dice, oracle.entries);
-  const roll = options.fixedRoll ?? rollDie(maxRoll);
+  let roll: number;
+  if (options.fixedRoll !== undefined) {
+    if (!Number.isInteger(options.fixedRoll) || options.fixedRoll < 1 || options.fixedRoll > maxRoll) {
+      throw new Error(`fixedRoll must be an integer between 1 and ${maxRoll}, got ${options.fixedRoll}`);
+    }
+    roll = options.fixedRoll;
+  } else {
+    roll = rollDie(maxRoll);
+  }
 
   const matchedRow = findMatchingRow(oracle.entries, roll);
   if (matchedRow) {

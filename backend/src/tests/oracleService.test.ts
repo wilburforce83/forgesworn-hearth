@@ -45,7 +45,25 @@ async function runTests() {
   try {
     // Fixed roll should return deterministic row.
     const fixed = await rollOracle('test:base', { fixedRoll: 1 });
+    assert.equal(fixed.roll, 1, 'roll should reflect provided value');
     assert.equal(fixed.row.result, 'low', 'expected first row on low roll');
+
+    // Fixed roll validation.
+    let invalidLow = false;
+    try {
+      await rollOracle('test:base', { fixedRoll: 0 });
+    } catch (error) {
+      invalidLow = true;
+    }
+    assert.ok(invalidLow, 'expected error for roll below range');
+
+    let invalidHigh = false;
+    try {
+      await rollOracle('test:base', { fixedRoll: 101 });
+    } catch (error) {
+      invalidHigh = true;
+    }
+    assert.ok(invalidHigh, 'expected error for roll above range');
 
     // Fallback should resolve and surface resolvedFrom.
     const fallback = await rollOracle('test:partial', { fixedRoll: 10 });
