@@ -1,35 +1,307 @@
 [
   {
     "rulesetId": "ironsworn-core",
+    "key": "advance",
+    "name": "Advance",
+    "category": "session",
+    "rollType": "special",
+    "statsUsed": [],
+    "text": {
+      "summary": "Spend experience to gain or upgrade assets.",
+      "trigger": "When you have enough experience (typically 2 XP) and take time to train, acquire a new asset or mark an ability on an existing one.",
+      "outcomes": {
+        "strongHit": "Spend the XP to gain the asset or ability. No roll is made for this move.",
+        "weakHit": "Spend the XP to gain the asset or ability. No roll is made for this move.",
+        "miss": "Spend the XP to gain the asset or ability. No roll is made for this move."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "aid_your_ally",
+    "name": "Aid Your Ally",
+    "category": "relationship",
+    "rollType": "action",
+    "statsUsed": ["edge", "heart", "iron", "shadow", "wits"],
+    "text": {
+      "summary": "Support another PC's move.",
+      "trigger": "When you Secure an Advantage or Compel on behalf of an ally to set them up, roll using the appropriate stat.",
+      "outcomes": {
+        "strongHit": "Your ally takes +2 on their next move and you take +1 momentum.",
+        "weakHit": "Your ally takes +1 on their next move but you are exposed to danger or cost.",
+        "miss": "Your aid backfires or puts you both in trouble. Pay the Price."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "ask_the_oracle",
+    "name": "Ask the Oracle",
+    "category": "session",
+    "rollType": "special",
+    "statsUsed": [],
+    "text": {
+      "summary": "Get a prompt or answer from the oracle tables.",
+      "trigger": "When you are unsure of the outcome or need inspiration, choose your method (yes/no with odds, pick a table, or roll twice for action/theme) and consult the oracle.",
+      "outcomes": {
+        "strongHit": "Use the oracle result to guide the fiction. No roll is made for this move.",
+        "weakHit": "Use the oracle result to guide the fiction. No roll is made for this move.",
+        "miss": "Use the oracle result to guide the fiction. No roll is made for this move."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "battle",
+    "name": "Battle",
+    "category": "combat",
+    "rollType": "action",
+    "statsUsed": ["edge", "heart", "iron", "shadow", "wits"],
+    "text": {
+      "summary": "Resolve a decisive battle in one move.",
+      "trigger": "When you fight a chaotic battle and it cannot be broken into smaller exchanges, choose your approach and roll.",
+      "outcomes": {
+        "strongHit": "The battle ends in your favor. Choose two: inflict savage harm, suffer little harm, take +2 momentum, take +1 spirit.",
+        "weakHit": "The battle ends, but choose one benefit above and also endure a cost or complication.",
+        "miss": "You are routed or overwhelmed. Pay the Price and the battle continues against you."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "clash",
+    "name": "Clash",
+    "category": "combat",
+    "rollType": "action",
+    "statsUsed": ["iron", "edge"],
+    "text": {
+      "summary": "Trade blows when you do not have initiative.",
+      "trigger": "When you exchange strikes with the foe while they have the initiative, roll +iron in close quarters or +edge at range.",
+      "outcomes": {
+        "strongHit": "You inflict harm and gain +1 momentum. You retain initiative.",
+        "weakHit": "You inflict harm but also endure harm or a negative effect. Initiative stays with the foe.",
+        "miss": "You are outmatched. Endure Harm or suffer a dire cost. Initiative stays with the foe." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "companion_aid",
+    "name": "Companion Aid",
+    "category": "relationship",
+    "rollType": "special",
+    "statsUsed": [],
+    "text": {
+      "summary": "Leverage a companion's help when an ability provides assistance.",
+      "trigger": "When a companion's ability says it aids your action, apply the listed bonus to your next move.",
+      "outcomes": {
+        "strongHit": "Take the companion's bonus (often +1 or +1 harm) on your next appropriate move.",
+        "weakHit": "Take the bonus but also mark a minor cost such as -1 momentum or companion health -1 if noted.",
+        "miss": "The companion's aid falters. Pay the Price or mark companion harm if appropriate." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "companion_takes_a_hit",
+    "name": "Companion Takes a Hit",
+    "category": "suffer",
+    "rollType": "action",
+    "statsUsed": ["companion_health"],
+    "text": {
+      "summary": "See how a companion weathers harm.",
+      "trigger": "When your companion faces harm, roll +companion's health.",
+      "outcomes": {
+        "strongHit": "Your companion rallies; take +1 momentum or +1 companion health (max at its rating).",
+        "weakHit": "Your companion is battered. Choose one: companion health -1 or you take -1 momentum.",
+        "miss": "Your companion is out of action or destroyed; Pay the Price and set companion health to 0." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "compel",
+    "name": "Compel",
+    "category": "relationship",
+    "rollType": "action",
+    "statsUsed": ["heart", "iron", "shadow"],
+    "text": {
+      "summary": "Persuade, threaten, or lie to someone.",
+      "trigger": "When you try to convince, charm, coerce, or trick someone, roll +heart, or +iron if threatening, or +shadow if lying or bluffing.",
+      "outcomes": {
+        "strongHit": "They do what you want or share what you need. Take +1 momentum.",
+        "weakHit": "They will do it, but only if you promise something in return or accept a cost.",
+        "miss": "They refuse, counter, or make a demand. Pay the Price." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "end_the_fight",
+    "name": "End the Fight",
+    "category": "combat",
+    "rollType": "progress",
+    "statsUsed": [],
+    "text": {
+      "summary": "Resolve the fight when you think victory is at hand.",
+      "trigger": "When you have the foe at a disadvantage and want to resolve the combat, roll the fight's progress against the challenge dice.",
+      "outcomes": {
+        "strongHit": "The fight ends decisively. Choose two: take +1 momentum, take +1 spirit, avoid harm/complication, or mark a clear victory toward your objective.",
+        "weakHit": "The fight ends, but choose one benefit above and also accept a cost or complication.",
+        "miss": "The foe endures or strikes back. Pay the Price and the fight continues or turns against you."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "endure_harm",
+    "name": "Endure Harm",
+    "category": "suffer",
+    "rollType": "action",
+    "statsUsed": ["health", "iron"],
+    "text": {
+      "summary": "Absorb physical injury.",
+      "trigger": "When you face physical damage, roll +health. If your health is 0, roll +iron instead.",
+      "outcomes": {
+        "strongHit": "Shake it off. Choose one: take +1 momentum or +1 health.",
+        "weakHit": "Press on. Take -1 momentum.",
+        "miss": "The harm is worse than it seemed. Suffer an additional -1 health or Face Death if at 0 health." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "endure_stress",
+    "name": "Endure Stress",
+    "category": "suffer",
+    "rollType": "action",
+    "statsUsed": ["spirit", "heart"],
+    "text": {
+      "summary": "Withstand fear, loss, or mental strain.",
+      "trigger": "When you face mental shock, loneliness, or horror, roll +spirit. If your spirit is 0, roll +heart instead.",
+      "outcomes": {
+        "strongHit": "You steel yourself. Choose one: take +1 momentum or +1 spirit.",
+        "weakHit": "Press on. Take -1 momentum.",
+        "miss": "Your resolve falters. Suffer an additional -1 spirit or Face Despair if at 0 spirit." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "enter_the_fray",
+    "name": "Enter the Fray",
+    "category": "combat",
+    "rollType": "action",
+    "statsUsed": ["edge", "heart", "iron", "shadow", "wits"],
+    "text": {
+      "summary": "Establish initiative at the start of a fight.",
+      "trigger": "When you initiate combat or are forced into it, choose your approach and roll (+edge on the move, +heart to stand with allies or show courage, +iron up close, +shadow to ambush, +wits to use a plan).",
+      "outcomes": {
+        "strongHit": "Take +2 momentum and gain initiative.",
+        "weakHit": "You gain initiative but choose one: take +1 momentum or face a small complication.",
+        "miss": "Your foe has initiative. Pay the Price." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
     "key": "face_danger",
     "name": "Face Danger",
     "category": "adventure",
     "rollType": "action",
     "statsUsed": ["edge", "heart", "iron", "shadow", "wits"],
     "text": {
-      "summary": "Risk something in a dangerous situation.",
-      "trigger": "When you attempt something risky or react under fire, envision your approach and roll.",
+      "summary": "Act under fire or risk.",
+      "trigger": "When you attempt something risky or react to an imminent threat, roll with the stat that matches your approach.",
       "outcomes": {
-        "strongHit": "You are successful. Take +1 momentum.",
-        "weakHit": "You succeed, but face a troublesome cost or complication.",
-        "miss": "You fail, or a new danger is revealed. Pay the price."
+        "strongHit": "You succeed. Take +1 momentum.",
+        "weakHit": "You succeed but face a troublesome cost or complication.",
+        "miss": "You fail or a new danger is revealed. Pay the Price." 
       }
     }
   },
   {
     "rulesetId": "ironsworn-core",
-    "key": "secure_an_advantage",
-    "name": "Secure an Advantage",
-    "category": "adventure",
+    "key": "face_death",
+    "name": "Face Death",
+    "category": "suffer",
     "rollType": "action",
-    "statsUsed": ["edge", "heart", "iron", "shadow", "wits"],
+    "statsUsed": ["heart"],
     "text": {
-      "summary": "Gain leverage or prepare for what's next.",
-      "trigger": "When you assess a situation, make preparations, or attempt to gain leverage, roll.",
+      "summary": "Confront mortality when grievously wounded or doomed.",
+      "trigger": "When you suffer a lethal blow or face certain death, roll +heart.",
       "outcomes": {
-        "strongHit": "You gain advantage. Take +2 momentum or +1 on your next move.",
-        "weakHit": "Your advantage is short-lived. Take +1 momentum.",
-        "miss": "You fail or reveal a new danger. Pay the price."
+        "strongHit": "You cling to life. Take +1 momentum and remain alive.",
+        "weakHit": "You survive but at a great cost: endure a permanent burden, mark a debility, or Pay the Price.",
+        "miss": "Death takes you, or you are lost beyond recovery." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "face_despair",
+    "name": "Face Despair",
+    "category": "suffer",
+    "rollType": "action",
+    "statsUsed": ["heart"],
+    "text": {
+      "summary": "Confront hopelessness when your spirit is broken.",
+      "trigger": "When your spirit is 0 and you cannot continue, roll +heart.",
+      "outcomes": {
+        "strongHit": "You find resolve. Take +1 spirit and +1 momentum.",
+        "weakHit": "You push through. Take +1 spirit but also take -1 momentum or mark a mental debility.",
+        "miss": "You succumb to despair. You cannot progress until hope is restored; Pay the Price."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "forge_a_bond",
+    "name": "Forge a Bond",
+    "category": "relationship",
+    "rollType": "action",
+    "statsUsed": ["heart"],
+    "text": {
+      "summary": "Earn a lasting connection.",
+      "trigger": "When you spend significant time helping a person or community and prove your loyalty, roll +heart.",
+      "outcomes": {
+        "strongHit": "You earn the bond. Mark the bond progress and take +1 spirit.",
+        "weakHit": "You are granted the bond but must swear a vow or make a promise to honor it.",
+        "miss": "Your attempt is rejected or exposes a misunderstanding. Pay the Price." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "forsake_your_vow",
+    "name": "Forsake Your Vow",
+    "category": "quest",
+    "rollType": "special",
+    "statsUsed": [],
+    "text": {
+      "summary": "Abandon a sworn quest.",
+      "trigger": "When you renounce or cannot complete a vow, act to forsake it.",
+      "outcomes": {
+        "strongHit": "Clear all progress on the vow and Endure Stress at -2. No roll is made for this move.",
+        "weakHit": "Clear all progress on the vow and Endure Stress at -2. No roll is made for this move.",
+        "miss": "Clear all progress on the vow and Endure Stress at -2. No roll is made for this move."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "fulfill_your_vow",
+    "name": "Fulfill Your Vow",
+    "category": "quest",
+    "rollType": "progress",
+    "statsUsed": [],
+    "text": {
+      "summary": "Resolve a vow using its progress track.",
+      "trigger": "When you believe you have completed a vow, roll the vow's progress against the challenge dice.",
+      "outcomes": {
+        "strongHit": "Your vow is fulfilled. Mark experience per rank (1/2/3/4/5).",
+        "weakHit": "Your vow is fulfilled, but there is more to do or a complication arises. Mark the experience and Pay the Price.",
+        "miss": "You have been false or the goal eludes you. Pay the Price and your quest is undone."
       }
     }
   },
@@ -41,12 +313,250 @@
     "rollType": "action",
     "statsUsed": ["wits", "shadow"],
     "text": {
-      "summary": "Ask questions, study a situation, or survey the surroundings.",
-      "trigger": "When you search for clues, ask questions, or follow a track, roll.",
+      "summary": "Ask questions, study, or follow clues.",
+      "trigger": "When you search, investigate, or ask questions, roll +wits. If you investigate secretly, roll +shadow.",
       "outcomes": {
         "strongHit": "You discover something helpful and specific. Take +2 momentum.",
-        "weakHit": "The information complicates your quest or introduces a new danger. Take +1 momentum.",
-        "miss": "Your investigation exposes a dire threat or reveals an unwelcome truth. Pay the price."
+        "weakHit": "The information complicates your quest or introduces new danger. Take +1 momentum.",
+        "miss": "Your investigation reveals a dire threat or false lead. Pay the Price." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "heal",
+    "name": "Heal",
+    "category": "adventure",
+    "rollType": "action",
+    "statsUsed": ["wits", "iron"],
+    "text": {
+      "summary": "Treat injuries for yourself, an ally, or a companion.",
+      "trigger": "When you tend wounds or stabilize an ally/companion, roll +wits. If you treat your own serious injury, roll +iron.",
+      "outcomes": {
+        "strongHit": "Choose two: take +2 health (yourself, ally, or companion), take +1 spirit, take +1 momentum.",
+        "weakHit": "Choose one of the above, and Sacrifice Resources (supply -1).",
+        "miss": "The care is ineffective or harmful. Pay the Price." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "make_camp",
+    "name": "Make Camp",
+    "category": "adventure",
+    "rollType": "action",
+    "statsUsed": ["supply"],
+    "text": {
+      "summary": "Rest and recover in the wilds.",
+      "trigger": "When you rest and consume resources in a dangerous area, roll +supply.",
+      "outcomes": {
+        "strongHit": "Choose two: recover +1 health, +1 spirit, or +1 momentum; take +1 supply; or prepare by taking +1 on your next Undertake a Journey or Resupply.",
+        "weakHit": "Choose one benefit above and take -1 supply.",
+        "miss": "Your rest is cut short or threatened. Pay the Price and take -1 supply." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "overcome_despair",
+    "name": "Overcome Despair",
+    "category": "suffer",
+    "rollType": "action",
+    "statsUsed": ["heart"],
+    "text": {
+      "summary": "Recover hope after facing despair.",
+      "trigger": "When meaningful comfort, victory, or fellowship offers you hope after despair, roll +heart.",
+      "outcomes": {
+        "strongHit": "Cast off despair. Clear the impact, set spirit to 1, and take +1 momentum.",
+        "weakHit": "You rise slowly. Set spirit to 1 but take -1 momentum or mark a temporary cost.",
+        "miss": "Hope slips away. Pay the Price and remain in despair." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "pay_the_price",
+    "name": "Pay the Price",
+    "category": "session",
+    "rollType": "special",
+    "statsUsed": [],
+    "text": {
+      "summary": "Resolve the cost of a miss or complication.",
+      "trigger": "When a move results in a cost or hardship, envision the most obvious negative outcome. If unsure, roll on the Pay the Price table or Ask the Oracle.",
+      "outcomes": {
+        "strongHit": "Apply the consequence the situation demands. No roll is made for this move unless using the oracle table.",
+        "weakHit": "Apply the consequence the situation demands. No roll is made for this move unless using the oracle table.",
+        "miss": "Apply the consequence the situation demands. No roll is made for this move unless using the oracle table."
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "reach_a_milestone",
+    "name": "Reach a Milestone",
+    "category": "quest",
+    "rollType": "special",
+    "statsUsed": [],
+    "text": {
+      "summary": "Mark progress on a vow when you make meaningful headway.",
+      "trigger": "When you take a significant step toward fulfilling a vow, mark progress on that vow track per its rank.",
+      "outcomes": {
+        "strongHit": "Mark the progress. No roll is made.",
+        "weakHit": "Mark the progress. No roll is made.",
+        "miss": "Mark the progress. No roll is made." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "reach_your_destination",
+    "name": "Reach Your Destination",
+    "category": "adventure",
+    "rollType": "progress",
+    "statsUsed": [],
+    "text": {
+      "summary": "Finish a journey using its progress track.",
+      "trigger": "When your journey progress suggests you have arrived, roll the journey's progress against the challenge dice.",
+      "outcomes": {
+        "strongHit": "You reach the destination. Take +1 momentum.",
+        "weakHit": "You arrive but face a complication, cost, or delay. Take +1 momentum.",
+        "miss": "You are waylaid or arrive to find trouble. Pay the Price and remain on the road." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "resupply",
+    "name": "Resupply",
+    "category": "adventure",
+    "rollType": "action",
+    "statsUsed": ["wits", "edge", "heart"],
+    "text": {
+      "summary": "Obtain needed supplies.",
+      "trigger": "When you hunt, forage, barter, or steal to bolster your supply, roll +wits (scavenge/forage), +edge (raid or stealth), or +heart (barter or negotiate).",
+      "outcomes": {
+        "strongHit": "Take +2 supply, or take +1 supply and +1 momentum.",
+        "weakHit": "Take +1 supply but face a cost, complication, or new danger.",
+        "miss": "Your search goes badly. Pay the Price." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "secure_an_advantage",
+    "name": "Secure an Advantage",
+    "category": "adventure",
+    "rollType": "action",
+    "statsUsed": ["edge", "heart", "iron", "shadow", "wits"],
+    "text": {
+      "summary": "Prepare or gain leverage.",
+      "trigger": "When you assess a situation, make preparations, or attempt to gain leverage, roll with the stat that fits your approach.",
+      "outcomes": {
+        "strongHit": "Take +2 momentum or +1 on your next move (one ally may take this instead).",
+        "weakHit": "Take +1 momentum.",
+        "miss": "Your attempt backfires or reveals a danger. Pay the Price." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "sojourn",
+    "name": "Sojourn",
+    "category": "relationship",
+    "rollType": "action",
+    "statsUsed": ["heart"],
+    "text": {
+      "summary": "Recover and seek aid in a community.",
+      "trigger": "When you spend time in a community seeking recovery, comfort, or aid, roll +heart (add +1 if you share a bond).",
+      "outcomes": {
+        "strongHit": "Choose two recover actions (such as heal +2, spirit +2, supply +2, take +2 momentum, or provision allies). Each chosen action costs -1 supply unless the community helps.",
+        "weakHit": "Choose one recover action above, and take +1 momentum. Any aid comes with a condition or cost.",
+        "miss": "Your stay is cut short or tense. Pay the Price." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "strike",
+    "name": "Strike",
+    "category": "combat",
+    "rollType": "action",
+    "statsUsed": ["iron", "edge"],
+    "text": {
+      "summary": "Attack when you have initiative.",
+      "trigger": "When you attack a foe while you have initiative, roll +iron in close combat or +edge at range.",
+      "outcomes": {
+        "strongHit": "Inflict harm and take +1 momentum. You retain initiative.",
+        "weakHit": "Inflict harm, but lose initiative or face a counter.",
+        "miss": "Your attack fails or you are countered. Pay the Price and lose initiative." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "swear_an_iron_vow",
+    "name": "Swear an Iron Vow",
+    "category": "quest",
+    "rollType": "action",
+    "statsUsed": ["heart", "iron"],
+    "text": {
+      "summary": "Commit to a quest with ironclad intent.",
+      "trigger": "When you swear to complete a quest, roll +heart. If you share a bond with the beneficiary, add +1.",
+      "outcomes": {
+        "strongHit": "You are sworn and true. Take +2 momentum and begin a progress track per the vow's rank.",
+        "weakHit": "You are determined, but they ask something of you or reveal a complication. Take +1 momentum.",
+        "miss": "Your vow is ill-fated. Pay the Price and face a dire warning or immediate hardship." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "test_your_bond",
+    "name": "Test Your Bond",
+    "category": "relationship",
+    "rollType": "action",
+    "statsUsed": ["heart"],
+    "text": {
+      "summary": "Call on a bond for support or favor.",
+      "trigger": "When your bond is tested or you ask a bonded ally/community for help, roll +heart.",
+      "outcomes": {
+        "strongHit": "The bond holds. Choose one: take +2 momentum or +1 spirit.",
+        "weakHit": "They grant aid but with a demand or complication.",
+        "miss": "The bond is broken or denied. Erase the bond and Pay the Price." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "turn_the_tide",
+    "name": "Turn the Tide",
+    "category": "combat",
+    "rollType": "special",
+    "statsUsed": [],
+    "text": {
+      "summary": "Seize a final chance in a fight.",
+      "trigger": "Once per fight, after you miss or have initiative against you, you may act decisively: take +1 momentum, gain initiative, and make a move (not a progress move) with +1.",
+      "outcomes": {
+        "strongHit": "Apply the bonus to your next move. If that move hits, keep initiative.",
+        "weakHit": "Apply the bonus, but if that move is a weak hit, you lose initiative after resolving it.",
+        "miss": "Apply the bonus, but if that move misses, a dire cost is imposed in addition to the miss." 
+      }
+    }
+  },
+  {
+    "rulesetId": "ironsworn-core",
+    "key": "undertake_a_journey",
+    "name": "Undertake a Journey",
+    "category": "adventure",
+    "rollType": "action",
+    "statsUsed": ["edge", "wits", "heart"],
+    "text": {
+      "summary": "Travel through peril toward a destination.",
+      "trigger": "When you set out across hazardous lands, roll +edge (on the move), +wits (using knowledge), or +heart (guided by a fellow traveler).",
+      "outcomes": {
+        "strongHit": "Mark progress and take +1 momentum.",
+        "weakHit": "Mark progress, but suffer -1 supply.",
+        "miss": "You face a hardship or peril. Pay the Price and mark progress." 
       }
     }
   }
