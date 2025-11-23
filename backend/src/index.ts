@@ -4,6 +4,7 @@ import cors from 'cors';
 import { config } from 'dotenv';
 import { connectToDb } from './db/mongo';
 import { generateNarration } from './llm/llmClient';
+import oracleRoutes from './routes/oracles';
 
 config({ path: '../.env.development' });
 
@@ -39,6 +40,8 @@ async function startServer(): Promise<void> {
       res.status(500).json({ error: error instanceof Error ? error.message : 'Unknown error' });
     }
   });
+
+  app.use('/api/oracles', oracleRoutes);
 
   app.listen(PORT, () => {
     console.log(`Forgesworn Hearth backend running on port ${PORT}`);
