@@ -1,5 +1,12 @@
 import mongoose, { Types } from 'mongoose';
-import CampaignModel, { Campaign, Character, SessionLogEntry, Hex } from '../models/Campaign';
+import CampaignModel, {
+  Campaign,
+  Character,
+  SessionLogEntry,
+  Hex,
+  Npc,
+  Location,
+} from '../models/Campaign';
 
 let connectPromise: Promise<typeof mongoose> | null = null;
 
@@ -116,6 +123,118 @@ export async function setHexMap(campaignId: string, hexMap: Hex[]): Promise<Camp
   }
 
   campaign.hexMap = hexMap;
+  await campaign.save();
+  return campaign;
+}
+
+export async function addNpcToCampaign(campaignId: string, npc: Npc): Promise<Campaign> {
+  await ensureMongooseConnection();
+  const campaign = await CampaignModel.findOne({ campaignId });
+  if (!campaign) {
+    throw new Error(`Campaign not found for id: ${campaignId}`);
+  }
+
+  const newNpc = { ...npc, npcId: npc.npcId ?? new Types.ObjectId().toString() };
+  campaign.npcs.push(newNpc);
+  await campaign.save();
+  return campaign;
+}
+
+export async function updateNpcInCampaign(
+  campaignId: string,
+  npcId: string,
+  updates: Partial<Npc>
+): Promise<Campaign> {
+  await ensureMongooseConnection();
+  const campaign = await CampaignModel.findOne({ campaignId });
+  if (!campaign) {
+    throw new Error(`Campaign not found for id: ${campaignId}`);
+  }
+
+  const idx = campaign.npcs.findIndex((n: Npc) => n.npcId === npcId);
+  if (idx === -1) {
+    throw new Error(`NPC not found for id: ${npcId} in campaign ${campaignId}`);
+  }
+
+  const target = campaign.npcs[idx] as unknown as Npc;
+  Object.assign(target, updates);
+  target.npcId = npcId;
+  await campaign.save();
+  return campaign;
+}
+
+export async function removeNpcFromCampaign(campaignId: string, npcId: string): Promise<Campaign> {
+  await ensureMongooseConnection();
+  const campaign = await CampaignModel.findOne({ campaignId });
+  if (!campaign) {
+    throw new Error(`Campaign not found for id: ${campaignId}`);
+  }
+
+  const originalLength = campaign.npcs.length;
+  campaign.npcs = campaign.npcs.filter((n: Npc) => n.npcId !== npcId);
+  if (campaign.npcs.length === originalLength) {
+    throw new Error(`NPC not found for id: ${npcId} in campaign ${campaignId}`);
+  }
+
+  await campaign.save();
+  return campaign;
+}
+
+export async function addLocationToCampaign(
+  campaignId: string,
+  location: Location
+): Promise<Campaign> {
+  await ensureMongooseConnection();
+  const campaign = await CampaignModel.findOne({ campaignId });
+  if (!campaign) {
+    throw new Error(`Campaign not found for id: ${campaignId}`);
+  }
+
+  const newLocation = { ...location, locationId: location.locationId ?? new Types.ObjectId().toString() };
+  campaign.locations.push(newLocation);
+  await campaign.save();
+  return campaign;
+}
+
+export async function updateLocationInCampaign(
+  campaignId: string,
+  locationId: string,
+  updates: Partial<Location>
+): Promise<Campaign> {
+  await ensureMongooseConnection();
+  const campaign = await CampaignModel.findOne({ campaignId });
+  if (!campaign) {
+    throw new Error(`Campaign not found for id: ${campaignId}`);
+  }
+
+  const idx = campaign.locations.findIndex((l: Location) => l.locationId === locationId);
+  if (idx === -1) {
+    throw new Error(`Location not found for id: ${locationId} in campaign ${campaignId}`);
+  }
+
+  const target = campaign.locations[idx] as unknown as Location;
+  Object.assign(target, updates);
+  target.locationId = locationId;
+  await campaign.save();
+  return campaign;
+}
+
+export async function removeLocationFromCampaign(
+  campaignId: string,
+  locationId: string
+): Promise<Campaign> {
+  await ensureMongooseConnection();
+  const campaign = await CampaignModel.findOne({ campaignId });
+  if (!campaign) {
+    throw new Error(`Campaign not found for id: ${campaignId}`);
+  }
+
+  const originalLength = campaign.locations.length;
+  campaign.locations = campaign.locations.filter((l: Location) => l.locationId !== locationId);
+  if (campaign.locations.length === originalLength) {
+    throw new Error(`Location not found for id: ${locationId} in campaign ${campaignId}`);
+  }
+
   await campaign.save();
   return campaign;
 }

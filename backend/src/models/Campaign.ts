@@ -61,6 +61,31 @@ export interface SessionLogEntry {
   details?: string;
 }
 
+export interface Npc {
+  npcId: string;
+  name: string;
+  role?: string;
+  disposition?: 'friendly' | 'neutral' | 'hostile' | 'unknown';
+  descriptors?: string[];
+  description?: string;
+  locationId?: string;
+  hex?: { x: number; y: number };
+  isFoe?: boolean;
+  isImportant?: boolean;
+}
+
+export interface Location {
+  locationId: string;
+  name: string;
+  type: string;
+  summary?: string;
+  description?: string;
+  hex: { x: number; y: number };
+  tags?: string[];
+  siteDomain?: string;
+  siteTheme?: string;
+}
+
 export interface Campaign extends Document {
   campaignId: string;
   name: string;
@@ -70,6 +95,8 @@ export interface Campaign extends Document {
   party: Character[];
   hexMap: Hex[];
   sessionLog: SessionLogEntry[];
+  npcs: Npc[];
+  locations: Location[];
 }
 
 const CharacterSchema = new Schema<Character>(
@@ -156,6 +183,43 @@ const SessionLogEntrySchema = new Schema<SessionLogEntry>(
   { _id: false }
 );
 
+const NpcSchema = new Schema<Npc>(
+  {
+    npcId: { type: String, required: true },
+    name: { type: String, required: true },
+    role: { type: String },
+    disposition: { type: String, enum: ['friendly', 'neutral', 'hostile', 'unknown'] },
+    descriptors: [{ type: String }],
+    description: { type: String },
+    locationId: { type: String },
+    hex: {
+      x: { type: Number },
+      y: { type: Number },
+    },
+    isFoe: { type: Boolean },
+    isImportant: { type: Boolean },
+  },
+  { _id: false }
+);
+
+const LocationSchema = new Schema<Location>(
+  {
+    locationId: { type: String, required: true },
+    name: { type: String, required: true },
+    type: { type: String, required: true },
+    summary: { type: String },
+    description: { type: String },
+    hex: {
+      x: { type: Number, required: true },
+      y: { type: Number, required: true },
+    },
+    tags: [{ type: String }],
+    siteDomain: { type: String },
+    siteTheme: { type: String },
+  },
+  { _id: false }
+);
+
 const CampaignSchema = new Schema<Campaign>(
   {
     campaignId: { type: String, required: true, unique: true },
@@ -164,6 +228,8 @@ const CampaignSchema = new Schema<Campaign>(
     party: { type: [CharacterSchema], default: [] },
     hexMap: { type: [HexSchema], default: [] },
     sessionLog: { type: [SessionLogEntrySchema], default: [] },
+    npcs: { type: [NpcSchema], default: [] },
+    locations: { type: [LocationSchema], default: [] },
   },
   { timestamps: true }
 );

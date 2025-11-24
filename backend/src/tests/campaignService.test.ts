@@ -8,8 +8,14 @@ import {
   getCampaignById,
   setHexMap,
   updateCharacterInCampaign,
+  addNpcToCampaign,
+  updateNpcInCampaign,
+  removeNpcFromCampaign,
+  addLocationToCampaign,
+  updateLocationInCampaign,
+  removeLocationFromCampaign,
 } from '../services/campaignService';
-import { Character, Hex } from '../models/Campaign';
+import { Character, Hex, Location } from '../models/Campaign';
 
 async function setupDatabase() {
   const mongod = await MongoMemoryServer.create();
@@ -92,6 +98,44 @@ async function runTests() {
     const withHexes = await setHexMap('storm-scarred-coast', hexes);
     assert.equal(withHexes.hexMap.length, 3);
     assert.equal(withHexes.hexMap[1].biome, 'hills');
+
+    // NPC CRUD
+    const withNpc = await addNpcToCampaign('storm-scarred-coast', {
+      npcId: 'npc-1',
+      name: 'Ragna',
+      role: 'guide',
+    });
+    assert.equal(withNpc.npcs.length, 1);
+    assert.equal(withNpc.npcs[0].name, 'Ragna');
+
+    const updatedNpc = await updateNpcInCampaign('storm-scarred-coast', 'npc-1', {
+      disposition: 'friendly',
+    });
+    assert.equal(updatedNpc.npcs[0].disposition, 'friendly');
+
+    const removedNpc = await removeNpcFromCampaign('storm-scarred-coast', 'npc-1');
+    assert.equal(removedNpc.npcs.length, 0);
+
+    // Location CRUD
+    const location: Location = {
+      locationId: 'loc-1',
+      name: 'Frostharbor',
+      type: 'settlement',
+      hex: { x: 0, y: 1 },
+    };
+    const withLocation = await addLocationToCampaign('storm-scarred-coast', location);
+    assert.equal(withLocation.locations.length, 1);
+    assert.equal(withLocation.locations[0].name, 'Frostharbor');
+
+    const updatedLocation = await updateLocationInCampaign('storm-scarred-coast', 'loc-1', {
+      summary: 'Small coastal outpost',
+      tags: ['coastal'],
+    });
+    assert.equal(updatedLocation.locations[0].summary, 'Small coastal outpost');
+    assert.deepEqual(updatedLocation.locations[0].tags, ['coastal']);
+
+    const removedLocation = await removeLocationFromCampaign('storm-scarred-coast', 'loc-1');
+    assert.equal(removedLocation.locations.length, 0);
 
     console.log('campaignService tests passed');
   } finally {

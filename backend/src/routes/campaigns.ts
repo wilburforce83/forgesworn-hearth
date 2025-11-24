@@ -6,8 +6,14 @@ import {
   addCharacterToCampaign,
   updateCharacterInCampaign,
   setHexMap,
+  addNpcToCampaign,
+  updateNpcInCampaign,
+  removeNpcFromCampaign,
+  addLocationToCampaign,
+  updateLocationInCampaign,
+  removeLocationFromCampaign,
 } from '../services/campaignService';
-import { Character, SessionLogEntry, Hex } from '../models/Campaign';
+import { Character, SessionLogEntry, Hex, Npc, Location } from '../models/Campaign';
 
 const router = Router();
 
@@ -83,6 +89,94 @@ router.put('/:campaignId/hexmap', async (req, res, next) => {
     const campaign = await setHexMap(campaignId, hexes);
     res.json(campaign);
   } catch (error) {
+    next(error);
+  }
+});
+
+router.post('/:campaignId/npcs', async (req, res, next) => {
+  try {
+    const { campaignId } = req.params;
+    const npc = req.body as Npc;
+    const campaign = await addNpcToCampaign(campaignId, npc);
+    res.json(campaign);
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('Campaign not found')) {
+      res.status(404).json({ error: error.message });
+      return;
+    }
+    next(error);
+  }
+});
+
+router.patch('/:campaignId/npcs/:npcId', async (req, res, next) => {
+  try {
+    const { campaignId, npcId } = req.params;
+    const updates = req.body as Partial<Npc>;
+    const campaign = await updateNpcInCampaign(campaignId, npcId, updates);
+    res.json(campaign);
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('not found')) {
+      res.status(404).json({ error: error.message });
+      return;
+    }
+    next(error);
+  }
+});
+
+router.delete('/:campaignId/npcs/:npcId', async (req, res, next) => {
+  try {
+    const { campaignId, npcId } = req.params;
+    const campaign = await removeNpcFromCampaign(campaignId, npcId);
+    res.json(campaign);
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('not found')) {
+      res.status(404).json({ error: error.message });
+      return;
+    }
+    next(error);
+  }
+});
+
+router.post('/:campaignId/locations', async (req, res, next) => {
+  try {
+    const { campaignId } = req.params;
+    const location = req.body as Location;
+    const campaign = await addLocationToCampaign(campaignId, location);
+    res.json(campaign);
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('Campaign not found')) {
+      res.status(404).json({ error: error.message });
+      return;
+    }
+    next(error);
+  }
+});
+
+router.patch('/:campaignId/locations/:locationId', async (req, res, next) => {
+  try {
+    const { campaignId, locationId } = req.params;
+    const updates = req.body as Partial<Location>;
+    const campaign = await updateLocationInCampaign(campaignId, locationId, updates);
+    res.json(campaign);
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('not found')) {
+      res.status(404).json({ error: error.message });
+      return;
+    }
+    next(error);
+  }
+});
+
+router.delete('/:campaignId/locations/:locationId', async (req, res, next) => {
+  try {
+    const { campaignId, locationId } = req.params;
+    const campaign = await removeLocationFromCampaign(campaignId, locationId);
+    res.json(campaign);
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('not found')) {
+      res.status(404).json({ error: error.message });
+      return;
+    }
     next(error);
   }
 });
