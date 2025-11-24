@@ -7,6 +7,7 @@ import { generateNarration } from './llm/llmClient';
 import oracleRoutes from './routes/oracles';
 import moveRoutes from './routes/moves';
 import campaignRoutes from './routes/campaigns';
+import generatorRoutes from './routes/generators';
 
 config({ path: '../.env.development' });
 
@@ -46,6 +47,7 @@ async function startServer(): Promise<void> {
   app.use('/api/oracles', oracleRoutes);
   app.use('/api/moves', moveRoutes);
   app.use('/api/campaigns', campaignRoutes);
+  app.use('/api/generators', generatorRoutes);
 
   app.listen(PORT, () => {
     console.log(`Forgesworn Hearth backend running on port ${PORT}`);
