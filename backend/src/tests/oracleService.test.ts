@@ -1,6 +1,6 @@
 import { strict as assert } from 'assert';
 import { MongoMemoryServer } from 'mongodb-memory-server';
-import { connectToDb, getDb } from '../db/mongo';
+import { connectToDb, getDb, closeDb } from '../db/mongo';
 import { rollOracle } from '../services/oracleService';
 
 async function setupDatabase() {
@@ -90,6 +90,7 @@ async function runTests() {
 
     console.log('oracleService tests passed');
   } finally {
+    await closeDb();
     await client.close();
     await mongod.stop();
   }

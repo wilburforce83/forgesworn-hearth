@@ -3,7 +3,7 @@ import { MongoMemoryServer } from 'mongodb-memory-server';
 import path from 'path';
 import fs from 'fs';
 import mongoose from 'mongoose';
-import { connectToDb, getDb } from '../db/mongo';
+import { connectToDb, getDb, closeDb } from '../db/mongo';
 import { generateLocation, generateNpc } from '../services/generatorService';
 import { createCampaign, setHexMap } from '../services/campaignService';
 import { Hex } from '../models/Campaign';
@@ -58,6 +58,7 @@ async function runTests() {
 
     console.log('generatorService tests passed');
   } finally {
+    await closeDb();
     await mongoose.disconnect();
     await mongod.stop();
   }

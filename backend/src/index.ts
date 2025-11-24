@@ -8,6 +8,7 @@ import oracleRoutes from './routes/oracles';
 import moveRoutes from './routes/moves';
 import campaignRoutes from './routes/campaigns';
 import generatorRoutes from './routes/generators';
+import hexRoutes from './routes/hex';
 
 config({ path: '../.env.development' });
 
@@ -48,6 +49,7 @@ async function startServer(): Promise<void> {
   app.use('/api/moves', moveRoutes);
   app.use('/api/campaigns', campaignRoutes);
   app.use('/api/generators', generatorRoutes);
+  app.use('/api/hex', hexRoutes);
 
   app.listen(PORT, () => {
     console.log(`Forgesworn Hearth backend running on port ${PORT}`);

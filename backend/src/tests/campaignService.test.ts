@@ -16,6 +16,7 @@ import {
   removeLocationFromCampaign,
 } from '../services/campaignService';
 import { Character, Hex, Location } from '../models/Campaign';
+import { closeDb } from '../db/mongo';
 
 async function setupDatabase() {
   const mongod = await MongoMemoryServer.create();
@@ -139,6 +140,7 @@ async function runTests() {
 
     console.log('campaignService tests passed');
   } finally {
+    await closeDb();
     await mongoose.disconnect();
     await mongod.stop();
   }

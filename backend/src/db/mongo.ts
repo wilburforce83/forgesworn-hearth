@@ -11,7 +11,13 @@ export async function connectToDb(): Promise<MongoClient> {
   }
 
   if (client) {
-    return client;
+    try {
+      await client.db().command({ ping: 1 });
+      return client;
+    } catch {
+      client = null;
+      db = null;
+    }
   }
 
   client = new MongoClient(uri);
@@ -32,4 +38,12 @@ export function getDb(): Db {
     throw new Error('Database connection has not been established. Call connectToDb() first.');
   }
   return db;
+}
+
+export async function closeDb(): Promise<void> {
+  if (client) {
+    await client.close();
+    client = null;
+    db = null;
+  }
 }

@@ -1,6 +1,6 @@
 import { strict as assert } from 'assert';
 import { MongoMemoryServer } from 'mongodb-memory-server';
-import { connectToDb, getDb } from '../db/mongo';
+import { connectToDb, getDb, closeDb } from '../db/mongo';
 import { MoveDefinition } from '../models/move';
 import { rollMove } from '../services/moveService';
 
@@ -79,6 +79,7 @@ async function runTests() {
 
     console.log('moveService tests passed');
   } finally {
+    await closeDb();
     await client.close();
     await mongod.stop();
   }
