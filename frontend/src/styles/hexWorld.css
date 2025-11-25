@@ -1,0 +1,65 @@
+.hex-world-viewport {
+  position: relative;
+  width: 900px;
+  height: 520px;
+  overflow: hidden;
+  background: #111;
+}
+
+.hex-world-inner {
+  position: absolute;
+  transform-origin: 0 0;
+}
+
+.hex-tile {
+  position: absolute;
+  width: var(--hex-width);
+  height: var(--hex-height);
+  box-sizing: border-box;
+  background-color: #b48a60;
+  border: 0.75px solid #b48a60;
+  clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+  cursor: pointer;
+}
+
+.hex-tile::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  box-sizing: border-box;
+  clip-path: inherit;
+  background-color: var(--hex-fill, transparent);
+  background-image: var(--hex-image, none);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.hex-tile-undiscovered {
+  background-color: #a67c52;
+}
+
+.map-screen {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
