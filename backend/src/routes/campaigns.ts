@@ -3,6 +3,8 @@ import {
   appendSessionLogEntry,
   createCampaign,
   getCampaignById,
+  listCampaigns,
+  updateCampaign,
   addCharacterToCampaign,
   updateCharacterInCampaign,
   setHexMap,
@@ -16,6 +18,15 @@ import {
 import { Character, SessionLogEntry, Hex, Npc, Location } from '../models/Campaign';
 
 const router = Router();
+
+router.get('/', async (_req, res, next) => {
+  try {
+    const campaigns = await listCampaigns();
+    res.json(campaigns);
+  } catch (error) {
+    next(error);
+  }
+});
 
 router.post('/', async (req, res, next) => {
   try {
@@ -37,6 +48,25 @@ router.get('/:campaignId', async (req, res, next) => {
     }
     res.json(campaign);
   } catch (error) {
+    next(error);
+  }
+});
+
+router.patch('/:campaignId', async (req, res, next) => {
+  try {
+    const { campaignId } = req.params;
+    const updates = req.body as Partial<{
+      name: string;
+      worldTruths: string[];
+      hexMap: Hex[];
+    }>;
+    const campaign = await updateCampaign(campaignId, updates);
+    res.json(campaign);
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('not found')) {
+      res.status(404).json({ error: error.message });
+      return;
+    }
     next(error);
   }
 });

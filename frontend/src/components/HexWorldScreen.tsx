@@ -26,7 +26,7 @@ function ensureTile(map: TileMap, coord: HexCoord): TileState {
   return tile;
 }
 
-export function HexWorldScreen() {
+export function HexWorldScreen({ onDiscoverTile }: { onDiscoverTile?: (coord: HexCoord) => void }) {
   const [center, setCenter] = useState<HexCoord>({ q: 0, r: 0 });
   const [tiles, setTiles] = useState<TileMap>(() => new Map());
   const [zoom, setZoom] = useState(1);
@@ -61,6 +61,7 @@ export function HexWorldScreen() {
       }
       return next;
     });
+    onDiscoverTile?.(coord);
   };
 
   const visible = useMemo(() => {

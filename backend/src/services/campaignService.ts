@@ -52,6 +52,36 @@ export async function getCampaignById(campaignId: string): Promise<Campaign | nu
   return CampaignModel.findOne({ campaignId });
 }
 
+export async function listCampaigns(): Promise<Pick<Campaign, 'campaignId' | 'name' | 'updatedAt'>[]> {
+  await ensureMongooseConnection();
+  const docs = await CampaignModel.find({}, { campaignId: 1, name: 1, updatedAt: 1, _id: 0 })
+    .sort({ updatedAt: -1 })
+    .lean();
+  return docs.map((doc) => ({
+    campaignId: doc.campaignId,
+    name: doc.name,
+    updatedAt: doc.updatedAt,
+  })) as Pick<Campaign, 'campaignId' | 'name' | 'updatedAt'>[];
+}
+
+export async function updateCampaign(
+  campaignId: string,
+  updates: Partial<Pick<Campaign, 'name' | 'worldTruths' | 'hexMap'>>
+): Promise<Campaign> {
+  await ensureMongooseConnection();
+  const campaign = await CampaignModel.findOne({ campaignId });
+  if (!campaign) {
+    throw new Error(`Campaign not found for id: ${campaignId}`);
+  }
+
+  if (updates.name !== undefined) campaign.name = updates.name;
+  if (updates.worldTruths !== undefined) campaign.worldTruths = updates.worldTruths;
+  if (updates.hexMap !== undefined) campaign.hexMap = updates.hexMap;
+
+  await campaign.save();
+  return campaign;
+}
+
 export async function addCharacterToCampaign(
   campaignId: string,
   character: Character

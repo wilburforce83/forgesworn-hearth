@@ -108,11 +108,13 @@ export function HexWorldMap({
                 ...commonStyle,
                 ['--hex-image' as any]: `url(${biome.tilePath})`,
                 ['--hex-fill' as any]: 'transparent',
+                ['--hex-filter' as any]: 'saturate(0.75) brightness(0.9)',
               }
             : {
                 ...commonStyle,
-                ['--hex-image' as any]: 'none',
-                ['--hex-fill' as any]: '#000',
+                ['--hex-image' as any]: 'url(/tiles/blank.png)',
+                ['--hex-fill' as any]: 'transparent',
+                ['--hex-filter' as any]: 'none',
               };
           return (
             <div

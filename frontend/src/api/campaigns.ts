@@ -41,7 +41,14 @@ function rememberCampaign(summary: CampaignSummary) {
 }
 
 export async function listCampaigns(): Promise<CampaignSummary[]> {
-  return readStoredCampaigns();
+  try {
+    const remote = await request<CampaignSummary[]>('/campaigns');
+    persistCampaigns(remote);
+    return remote;
+  } catch (error) {
+    console.warn('Failed to fetch campaigns from API, falling back to local', error);
+    return readStoredCampaigns();
+  }
 }
 
 export async function createCampaign(body: CreateCampaignRequest): Promise<CampaignDto> {
@@ -57,6 +64,25 @@ export async function getCampaign(campaignId: string): Promise<CampaignDto> {
   const campaign = await request<CampaignDto>(`/campaigns/${campaignId}`);
   rememberCampaign({ campaignId: campaign.campaignId, name: campaign.name });
   return campaign;
+}
+
+export async function updateCampaign(
+  campaignId: string,
+  body: Partial<Pick<CampaignDto, 'name' | 'worldTruths' | 'hexMap'>>
+): Promise<CampaignDto> {
+  const updated = await request<CampaignDto>(`/campaigns/${campaignId}`, {
+    method: 'PATCH',
+    body: JSON.stringify(body),
+  });
+  rememberCampaign({ campaignId: updated.campaignId, name: updated.name });
+  return updated;
+}
+
+export async function setHexMap(campaignId: string, hexes: CampaignDto['hexMap']) {
+  return request<CampaignDto>(`/campaigns/${campaignId}/hexmap`, {
+    method: 'PUT',
+    body: JSON.stringify(hexes),
+  });
 }
 
 export async function addCharacter(
